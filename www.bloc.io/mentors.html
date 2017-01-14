@@ -1,0 +1,2658 @@
+<!DOCTYPE html>
+<html data-ng-app='NgBloc' itemscope='' itemtype='http://schema.org/Product'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"a93f3122a8","applicationID":"442416","transactionName":"JlxYRUsJCQ5RS00NBQtXX19eSQgHWk0NExc=","queueTime":36,"applicationTime":16,"agentToken":null,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQIDUldUGwcEVlVTAQ=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),s.xhrWrappable&&t(9),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),c=t(7),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),c.on(m,function(){this.bstStart=Date.now()}),c.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(17)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",c)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),c=t(16),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[y[n]];return f&&f.push([g,n,r,i]),i}}function p(t,e){v[t]=h(t).concat(e)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var v={},y={},g={on:p,emit:n,get:m,listeners:h,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(15),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=g.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(v,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(15),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(12);var w=""+location,v={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},y=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:a(),origin:w,features:{},xhrWrappable:y};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,10,4,3]);</script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700%7COpen+Sans+Condensed:700" media="screen" rel="stylesheet" />
+<link href="https://cdn1.bloc.io/assets/application-b7c7d1541a4a48edb60dde0064587e17.css" media="all" rel="stylesheet" />
+<script type="text/javascript">
+//<![CDATA[
+window.gon={};gon.footer_email_params={"channel":"footer","course_kind":"generic"};gon.utm_params=["utm_ad","utm_adgroup","utm_bonus","utm_campaign","utm_content","utm_keyword","utm_medium","utm_source"];
+//]]>
+</script>
+<title>Bloc | Coding Bootcamp - Find A Code Mentor</title>
+<meta content='Learn design, web or mobile app development with a code mentor.  Bloc code Mentors have an average of 10 years experience.' name='description'>
+<!-- / Canonical URL -->
+<!-- / Responsive Enabled -->
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<meta content='code mentor, coding mentors, Bloc.io, programming and design instructors' name='keywords'>
+<!-- Google -->
+<meta content='z3HPw1Nm4ihrRs_dA0-OZbMNipfhdT0vu3g4s5tRSQ8' name='google-site-verification'>
+<!-- Twitter Card data -->
+<meta content='summary' name='twitter:card'>
+<meta content='@trybloc' name='twitter:site'>
+<meta content='Bloc' name='twitter:title'>
+<meta content='Learn design, web or mobile app development with a code mentor.  Bloc code Mentors have an average of 10 years experience.' name='twitter:description'>
+<meta content='https://cdn3.bloc.io/assets/logos/bloc-logo-square-500x500-white-f85bec150478dc93d64865b33941ab6d.png' name='twitter:image'>
+<!-- Open Graph data -->
+<meta content='Bloc | Coding Bootcamp - Find A Code Mentor' property='og:title'>
+<meta content='website' property='og:type'>
+<meta content='https://www.bloc.io/mentors' property='og:url'>
+<meta content='https://cdn3.bloc.io/assets/logos/bloc-logo-square-500x500-white-f85bec150478dc93d64865b33941ab6d.png' property='og:image'>
+<meta content='Learn design, web or mobile app development with a code mentor.  Bloc code Mentors have an average of 10 years experience.' property='og:description'>
+<meta content='Bloc' property='og:site_name'>
+<meta content='1932106' property='fb:admins'>
+<!-- Schema markup -->
+<meta content='Bloc | Coding Bootcamp - Find A Code Mentor' itemprop='name'>
+<meta content='Learn design, web or mobile app development with a code mentor.  Bloc code Mentors have an average of 10 years experience.' itemprop='description'>
+<meta content='https://cdn3.bloc.io/assets/logos/bloc-logo-square-500x500-white-f85bec150478dc93d64865b33941ab6d.png' itemprop='image'>
+<!-- Taboola tracking -->
+
+
+<script>
+  var env = "production";
+  var _rollbarConfig = {
+      accessToken: "4b86c2fdc5454fbea1382e5fff6f9889",
+      captureUncaught: true,
+      logLevel: 'error',
+      payload: {
+        environment: env
+      }
+  };
+  
+  
+  !function(a,b){function c(b){this.shimId=++h,this.notifier=null,this.parentShim=b,this.logger=function(){},a.console&&void 0===a.console.shimId&&(this.logger=a.console.log)}function d(b,c,d){!d[4]&&a._rollbarWrappedError&&(d[4]=a._rollbarWrappedError,a._rollbarWrappedError=null),b.uncaughtError.apply(b,d),c&&c.apply(a,d)}function e(b){var d=c;return g(function(){if(this.notifier)return this.notifier[b].apply(this.notifier,arguments);var c=this,e="scope"===b;e&&(c=new d(this));var f=Array.prototype.slice.call(arguments,0),g={shim:c,method:b,args:f,ts:new Date};return a._rollbarShimQueue.push(g),e?c:void 0})}function f(a,b){if(b.hasOwnProperty&&b.hasOwnProperty("addEventListener")){var c=b.addEventListener;b.addEventListener=function(b,d,e){c.call(this,b,a.wrap(d),e)};var d=b.removeEventListener;b.removeEventListener=function(a,b,c){d.call(this,a,b&&b._wrapped?b._wrapped:b,c)}}}function g(a,b){return b=b||this.logger,function(){try{return a.apply(this,arguments)}catch(c){b("Rollbar internal error:",c)}}}var h=0;c.init=function(a,b){var e=b.globalAlias||"Rollbar";if("object"==typeof a[e])return a[e];a._rollbarShimQueue=[],a._rollbarWrappedError=null,b=b||{};var h=new c;return g(function(){if(h.configure(b),b.captureUncaught){var c=a.onerror;a.onerror=function(){var a=Array.prototype.slice.call(arguments,0);d(h,c,a)};var g,i,j="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(g=0;g<j.length;++g)i=j[g],a[i]&&a[i].prototype&&f(h,a[i].prototype)}return a[e]=h,h},h.logger)()},c.prototype.loadFull=function(a,b,c,d){var e=g(function(){var a=b.createElement("script"),e=b.getElementsByTagName("script")[0];a.src=d.rollbarJsUrl,a.async=!c,a.onload=f,e.parentNode.insertBefore(a,e)},this.logger),f=g(function(){if(void 0===a._rollbarPayloadQueue)for(var b,c,d,e,f=new Error("rollbar.js did not load");b=a._rollbarShimQueue.shift();)for(d=b.args,e=0;e<d.length;++e)if(c=d[e],"function"==typeof c){c(f);break}},this.logger);g(function(){c?e():a.addEventListener?a.addEventListener("load",e,!1):a.attachEvent("onload",e)},this.logger)()},c.prototype.wrap=function(b){try{if("function"!=typeof b)return b;if(b._isWrap)return b;if(!b._wrapped){b._wrapped=function(){try{return b.apply(this,arguments)}catch(c){throw a._rollbarWrappedError=c,c}},b._wrapped._isWrap=!0;for(var c in b)b.hasOwnProperty(c)&&(b._wrapped[c]=b[c])}return b._wrapped}catch(d){return b}};for(var i="log,debug,info,warn,warning,error,critical,global,configure,scope,uncaughtError".split(","),j=0;j<i.length;++j)c.prototype[i[j]]=e(i[j]);var k="//d37gvrvc0wt4s1.cloudfront.net/js/v1.1/rollbar.min.js";_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||k;var l=c.init(a,_rollbarConfig);l.loadFull(a,b,!1,_rollbarConfig)}(window,document);
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash-compat/3.10.1/lodash.min.js"></script>
+<script src="https://cdn1.bloc.io/webpack/init-bundle-d5548dadeeea4f4647bd.js"></script>
+<script>
+  Bloc = window.Bloc
+  Bloc = (typeof Bloc !== "undefined" && Bloc !== null) ? Bloc : {};
+  Bloc.login_url = "/users/auth/facebook";
+  Bloc.facebook_image_url = "https://cdn1.bloc.io/assets/facebook-a1675421f41dd6897a434ee2aa147c9f.jpg";
+  Bloc.current_visit = {"old_id":null,"visit_token":null,"visitor_token":null,"ip":"37.32.55.98","user_agent":"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36","referrer":"https://www.google.no/","landing_page":"https://www.bloc.io/","user_id":null,"user_type":null,"referring_domain":"www.google.no","search_keyword":null,"browser":"Chrome","os":"Windows 10","device_type":"Desktop","country":"Norway","region":"Hordaland Fylke","city":"Forde","utm_source":null,"utm_medium":null,"utm_term":null,"utm_content":null,"utm_campaign":null,"created_at":"2017-01-12T18:22:50.549Z","id":"4984ad7c-43d0-44da-a3c3-db26ff561895","visitor_id":"e372f50d-5f0d-447f-9a46-5859296ac216","screen_height":615,"screen_width":1093,"started_at":"2017-01-12T18:22:50.544Z"};
+</script>
+<script>
+  Bloc.current_user = {};
+</script>
+<script>
+  Bloc.current_user.role = "visitor"
+</script>
+
+
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="fCGFYIjjvfbeV84SoFxQykmdNG32ZcvMH1fyaB/Qm50=" name="csrf-token" />
+
+
+</head>
+<body class='full-page-base-style' ng_class="{ 'showing-mobile-nav': isShowingMobileNav }">
+<div class='default-js-flash-container'>
+
+</div>
+
+<div class='MentorsIndex landing-new context-container--white'>
+<div class='landing-navigation hidden-xs hidden-sm'>
+<div class='container'>
+<a id='top'></a>
+<div class='links pull-left'>
+<div class='logo'>
+<div class='header-logo'>
+<a href="index.html"><img alt="Logo white" height="30" src="https://cdn1.bloc.io/assets/landing/logo-white-8288ab35ab214ba341ab283ea2c79200.png" width="80" />
+</a></div>
+
+</div>
+<div class='dropdown' dropdown_selector='.course-dropdown-menu' menu_dropdown>
+<span>Programs</span>
+<div class='course-dropdown-menu ng-cloak'>
+<div class='inner'>
+<div class='course-links'>
+<section class='tracks'>
+<div class='label'>Become a Software Developer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="software-developer-track.html"><i class='fa fa-tasks fa-fw'></i>
+Software Developer Track
+</a></li>
+</ul>
+</section>
+<section class='tracks'>
+<div class='label'>Become a Web Developer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="web-developer-career-track.html"><i class='fa fa-cubes fa-fw'></i>
+Part-Time Web Developer Track
+</a></li>
+</ul>
+</section>
+<section class='tracks'>
+<div class='label'>Become a Designer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="design-bootcamp.html"><i class='fa fa-picture-o fa-fw'></i>
+Designer Track
+</a></li>
+</ul>
+</section>
+<section class='courses'>
+<div class='label'>Broaden Your Skills</div>
+<ul>
+<li class='course-icon-link web-dev'>
+<a href="web-development-bootcamp.html"><i class='fa fa-terminal fa-fw'></i>
+Rails Fundamentals
+</a></li>
+<li class='course-icon-link frontend'>
+<a href="frontend-development-bootcamp.html"><i class='fa fa-code fa-fw'></i>
+Frontend Fundamentals
+</a></li>
+<li class='course-icon-link design'>
+<a href="ux-design-bootcamp.html"><i class='fa fa-picture-o fa-fw'></i>
+UX/UI Design Fundamentals
+</a></li>
+<li class='course-icon-link android'>
+<a href="android-bootcamp.html"><i class='fa fa-android fa-fw'></i>
+Android Fundamentals
+</a></li>
+<li class='course-icon-link ios'>
+<a href="ios-bootcamp.html"><i class='fa fa-apple fa-fw'></i>
+iOS Fundamentals
+</a></li>
+</ul>
+</section>
+</div>
+
+</div>
+</div>
+</div>
+<a href='mentors.html'>Mentors</a>
+<a href='alumni.html'>Alumni</a>
+</div>
+<div class='links pull-right'>
+<a href="sign_in.html">Log in
+</a><div class='divider'>
+|
+</div>
+<a class='enroll-btn btn' href='enrollments/new-course_kind=web_dev.html'>Enroll </a>
+
+</div>
+<div class='clear'></div>
+</div>
+</div>
+<div class='mobile-nav-container visible-xs visible-sm' ng_class="{'full-height': menuOpen}" ng_controller='MobileNavCtrl' ng_init='init()'>
+<div class='mobile-nav-header'>
+<div class='bloc-main'>
+<a href="index.html"><img alt="Square 50x50 black" src="https://cdn0.bloc.io/assets/logos/square-50x50-black-0b7e99cf95d6360357a703be16f3ad42.png" />
+</a></div>
+<div class='menu-button' ng_click='toggleMenu()' ng_hide='menuOpen'></div>
+<div class='menu-x ng-cloak icon fa fa-close' ng_click='toggleMenu()' ng_hide='!menuOpen'></div>
+</div>
+<div class='mobile-menu ng-cloak'>
+<div class='mobile-nav' ng_class='{"left": subNavPosition + "%"}'>
+<ul class='mobile-list-nav'>
+<li ng_class='{active: tog==1}' ng_click='toggleProgramList()'>
+Programs
+</li>
+<li ng_class='{active: tog==2}' ng_click='toggleAboutList()'>
+About
+</li>
+<li ng_class='{active: tog==3}' ng_click='toggleContactList()'>
+Contact
+</li>
+</ul>
+</div>
+<div class='mobile-subnav-list' ng_style='{"left": subNavPosition + "%"}'>
+<div class='list-group'>
+<ul class='link-list'>
+<li>
+<a href="enrollments/new-token=TODAY.html">Enroll</a>
+</li>
+<li>
+<a href="sign_in.html">Log in / Register</a>
+</li>
+</ul>
+<div class='label'>Become a Software Developer</div>
+<ul class='link-list'>
+<li>
+<a href="software-developer-track.html"><i class='icon fa fa-tasks'></i>
+Software Developer Track
+</a></li>
+</ul>
+<div class='label'>Become a Web Developer</div>
+<ul class='link-list'>
+<li>
+<a href="web-developer-career-track.html"><i class='icon fa fa-desktop fa-fw'></i>
+Full Stack Web Developer Track
+</a></li>
+</ul>
+<div class='label'>Become a Designer</div>
+<ul class='link-list'>
+<li>
+<a href="design-bootcamp.html"><i class='icon fa fa-picture-o fa-fw'></i>
+Designer Track
+</a></li>
+</ul>
+<div class='label'>
+Broaden Your Skills
+</div>
+<ul class='link-list'>
+<li>
+<a href="web-development-bootcamp.html"><i class='icon icon-web-development'></i>
+Rails Fundamentals
+</a></li>
+<li>
+<a href="frontend-development-bootcamp.html"><i class='icon icon-frontend'></i>
+Frontend Fundamentals
+</a></li>
+<li>
+<a href="android-bootcamp.html"><i class='icon icon-android'></i>
+Android Fundamentals
+</a></li>
+<li>
+<a href="ios-bootcamp.html"><i class='icon icon-ios'></i>
+iOS Fundamentals
+</a></li>
+<li>
+<a href="ux-design-bootcamp.html"><i class='icon icon-design'></i>
+UX/UI Design Fundamentals
+</a></li>
+</ul>
+</div>
+<div class='list-group'>
+<ul class='link-list'>
+<li>
+<a href="mentors.html">Mentors</a>
+</li>
+<li>
+<a href="alumni.html">Alumni</a>
+</li>
+<li>
+<a href="about.html">Our Team | Jobs</a>
+</li>
+<li>
+<a href="http://try.bloc.io/dev-bootcamp-for-veterans/" target="_blank">Bloc Veterans Program</a>
+</li>
+<li>
+<a href="http://try.bloc.io/new-relic-bootcamp-diversity-scholarship/" target="_blank">Bloc&#39;s Diversity Scholarship</a>
+</li>
+<li>
+<a href="faq.html">FAQ</a>
+</li>
+<li>
+<a href="http://blog.bloc.io">Blog</a>
+</li>
+<li>
+<a href="http://code.bloc.io" target="_blank">Engineering Blog</a>
+</li>
+<li>
+<a href="privacy.html">Privacy Policy</a>
+</li>
+<li>
+<a href="terms.html">Terms of Service</a>
+</li>
+</ul>
+</div>
+<div class='list-group'>
+<div class='nav-email-form'>
+<div class='label no-border'>
+Sign Up For Our Mailing List
+</div>
+<form class='emelyn-form-elements' id='nav_email_capture' name='nav_email_capture'>
+<div class='input-wrapper email'>
+<input class="input-dark" id="email" name="email" ng_model="subscription.email" required="required" type="email" />
+</div>
+<div class='input-wrapper submit'>
+<input class='btn btn-mini' id='nav_email_signup_btn' ng_click='submit()' ng_disabled='isSubmitDisabled()' type='submit' value='Send'>
+</div>
+</form>
+</div>
+<ul class='link-list'>
+<li class='contact'>
+<a href="mailto:hello@bloc.io"><i class='icon fa fa-envelope-o fa-nav'></i>
+hello@bloc.io
+</a></li>
+<li class='contact'>
+<span>
+<i class='icon fa fa-phone fa-nav'></i>
+<div class='contact-wrapper'>
+Considering enrolling?
+<br>
+(404) 480-2562
+</div>
+</span>
+</li>
+<li class='contact'>
+<span>
+<i class='icon fa fa-phone fa-nav'></i>
+<div class='contact-wrapper'>
+Partnership / Corporate Inquiries?
+<br>
+(650) 741-5692
+</div>
+</span>
+</li>
+</ul>
+<div class='footer'>
+<div class='social-link-list-wrapper'>
+<ul class='social-link-list'>
+<li>
+<a href="https://www.facebook.com/trybloc" target="_blank"><i class='fa fa-facebook'></i>
+</a></li>
+<li>
+<a href="https://twitter.com/trybloc" target="_blank"><i class='fa fa-twitter'></i>
+</a></li>
+<li>
+<a href="https://plus.google.com/112610125572984281932" rel="publisher" target="_blank"><i class='fa fa-google-plus'></i>
+</a></li>
+<li>
+<a href="https://www.youtube.com/user/BlocContent" target="_blank"><i class='fa fa-youtube'></i>
+</a></li>
+</ul>
+
+</div>
+<div class='copyright'>
+COPYRIGHT ©  2017 BLOC
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class='MentorsIndex-container'>
+<!-- ------------------------------------------------------------------------- -->
+<!-- Header -->
+<!-- ------------------------------------------------------------------------- -->
+<header class='MentorsQuotes'>
+<h1 class='MentorsQuotes-title'>Incredible mentorship. An incredible experience.</h1>
+<div class='MentorQuoteCarousel ng-cloak' mentor_quote_carousel>
+<div class='MentorQuoteSlide' ng_click='slideClicked($event)'>
+<div class='MentorQuote'>
+<div class='MentorQuote-label'>THE VALUE OF MENTORSHIP</div>
+<div class='MentorQuote-body'>A mentor is an understatement for Levi. Not only did Levi teach the curriculum, he filled in any gaps of my development knowledge and pushed me to go further.</div>
+<div class='MentorQuote-source'>
+<div class='MentorQuote-source-photo'>
+<img alt="Kevin lowe" src="https://cdn3.bloc.io/assets/landing/mentors/students/kevin-lowe-40386b905685843f925aa5f54e885473.jpg" />
+</div>
+<div class='MentorQuote-source-text'>
+<div class='MentorQuote-source-name'>Kevin Lowe</div>
+<div class='MentorQuote-source-course'>Full Stack Web Development</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorQuoteSlide' ng_click='slideClicked($event)'>
+<div class='MentorQuote'>
+<div class='MentorQuote-label'>GETTING UNSTUCK</div>
+<div class='MentorQuote-body'>There have been times I've wanted to give up, and each time [Ben]'s been there to help me through it. I consider him both a mentor and a friend.</div>
+<div class='MentorQuote-source'>
+<div class='MentorQuote-source-photo'>
+<img alt="Tim bain" src="https://cdn1.bloc.io/assets/landing/mentors/students/tim-bain-3b9df5a9f136693d133833da7d0497d3.jpg" />
+</div>
+<div class='MentorQuote-source-text'>
+<div class='MentorQuote-source-name'>Tim Bain</div>
+<div class='MentorQuote-source-course'>Frontend Fundamentals</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorQuoteSlide' ng_click='slideClicked($event)'>
+<div class='MentorQuote'>
+<div class='MentorQuote-label'>THE VALUE OF MENTORSHIP</div>
+<div class='MentorQuote-body'>I've always said that the mentor relationship is Bloc's differentiator, and John was the one who shaped that difference for me. Patient, friendly, and knowledgeable, he was critical to my success in Bloc.</div>
+<div class='MentorQuote-source'>
+<div class='MentorQuote-source-photo'>
+<img alt="Trisha hadley" src="https://cdn1.bloc.io/assets/landing/mentors/students/trisha-hadley-4dea3ee0cda3735cfbfcd0d2e3edcc30.jpg" />
+</div>
+<div class='MentorQuote-source-text'>
+<div class='MentorQuote-source-name'>Trisha Hadley</div>
+<div class='MentorQuote-source-course'>Rails Fundamentals</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorQuoteSlide' ng_click='slideClicked($event)'>
+<div class='MentorQuote'>
+<div class='MentorQuote-label'>HELP DURING CHALLENGES</div>
+<div class='MentorQuote-body'>He (Matthew Maxwell) has demonstrated a tremendous amount of empathy, patience, knowledge when I've struggled with some of the more difficult assignments. </div>
+<div class='MentorQuote-source'>
+<div class='MentorQuote-source-photo'>
+<img alt="Jim syphokham" src="https://cdn1.bloc.io/assets/landing/mentors/students/jim-syphokham-032b869dd0a5bb791be09e21cbe060d9.jpg" />
+</div>
+<div class='MentorQuote-source-text'>
+<div class='MentorQuote-source-name'>Jim Syphokham</div>
+<div class='MentorQuote-source-course'>Frontend Fundamentals</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorQuoteSlide' ng_click='slideClicked($event)'>
+<div class='MentorQuote'>
+<div class='MentorQuote-label'>LEARNING BEYOND THE BASICS</div>
+<div class='MentorQuote-body'>Matt has an amazing ability to guide you through extremely complex concepts, helping you to understand not just the &quot;how&quot; but also the &quot;why&quot;.</div>
+<div class='MentorQuote-source'>
+<div class='MentorQuote-source-photo'>
+<img alt="Sam dennon" src="https://cdn2.bloc.io/assets/landing/mentors/students/sam-dennon-e296c09d38006325b6ee52915ead49f0.jpg" />
+</div>
+<div class='MentorQuote-source-text'>
+<div class='MentorQuote-source-name'>Sam Dennon</div>
+<div class='MentorQuote-source-course'>Frontend Fundamentals</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorQuoteSlide' ng_click='slideClicked($event)'>
+<div class='MentorQuote'>
+<div class='MentorQuote-label'>GROWTH BEYOND TECHNICAL SKILLS</div>
+<div class='MentorQuote-body'>Sharon is incredibly knowledgeable and I feel super lucky to be working with her as my mentor. She challenges me and has made me infinitely better as a designer.</div>
+<div class='MentorQuote-source'>
+<div class='MentorQuote-source-photo'>
+<img alt="Rebecca bennitt" src="https://cdn2.bloc.io/assets/landing/mentors/students/rebecca-bennitt-af51db38b546989de9cb65502d52b2de.jpg" />
+</div>
+<div class='MentorQuote-source-text'>
+<div class='MentorQuote-source-name'>Rebecca Bennitt</div>
+<div class='MentorQuote-source-course'>UX/UI Design Fundamentals</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorQuoteSlide' ng_click='slideClicked($event)'>
+<div class='MentorQuote'>
+<div class='MentorQuote-label'>GETTING UNSTUCK</div>
+<div class='MentorQuote-body'>Pair programming with [my mentor] also improved my front end skills — I had a knowledgeable resource for all of my questions that wasnt Stack Overflow!</div>
+<div class='MentorQuote-source'>
+<div class='MentorQuote-source-photo'>
+<img alt="Lindsey maratta" src="https://cdn1.bloc.io/assets/landing/mentors/students/lindsey-maratta-b912c2b672692b271a80f306e623c1a7.jpg" />
+</div>
+<div class='MentorQuote-source-text'>
+<div class='MentorQuote-source-name'>Lindsey Maratta</div>
+<div class='MentorQuote-source-course'>UX/UI Design Fundamentals</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- ------------------------------------------------------------------------- -->
+<!-- Experience -->
+<!-- ------------------------------------------------------------------------- -->
+<section class='MentorsExperience MentorsIndex-section'>
+<h1 class='MentorsIndex-section-title MentorsExperience-title'>
+Our mentors are experienced.
+</h1>
+<p class='MentorsExperience-subtitle'>
+Bloc mentors have an average of over 9 years of experience in their field.
+</p>
+<div class='CompanyGrid'>
+<div class='CompanyGrid-item'>
+<img alt="Google" height="41" src="https://cdn3.bloc.io/assets/landing/mentors/logos/google-dd247ef91159da79db9d78881d80d563.png" width="124" />
+</div>
+<div class='CompanyGrid-item'>
+<img alt="Apple" height="55" src="https://cdn0.bloc.io/assets/landing/mentors/logos/apple-3e7ce9ef9fc6a45cec0589918cb1828e.png" width="44" />
+</div>
+<div class='CompanyGrid-item'>
+<img alt="Uber" height="21" src="https://cdn3.bloc.io/assets/landing/mentors/logos/uber-f13a63744de75f02b93c88e69b6c36f3.png" width="137" />
+</div>
+<div class='CompanyGrid-item'>
+<img alt="Netflix" height="32" src="https://cdn1.bloc.io/assets/landing/mentors/logos/netflix-f20daeee1226500b370ded9c77e90623.png" width="112" />
+</div>
+<div class='CompanyGrid-item'>
+<img alt="Amazon" height="50" src="https://cdn1.bloc.io/assets/landing/mentors/logos/amazon-d51be37614768c809ee80259e0af63ff.png" width="118" />
+</div>
+<div class='CompanyGrid-item'>
+<img alt="Heroku" height="42" src="https://cdn1.bloc.io/assets/landing/mentors/logos/heroku-9124ae2b09dee116f772daecf156ebb3.png" width="136" />
+</div>
+</div>
+</section>
+<!-- ------------------------------------------------------------------------- -->
+<!-- GivingBack -->
+<!-- ------------------------------------------------------------------------- -->
+<section class='GivingBack MentorsIndex-section'>
+<h1 class='MentorsIndex-section-title GivingBack-title'>Our mentors give back to the technical community.</h1>
+<div class='GivingBackGrid'>
+<div class='GivingBackGrid-item'>
+<div class='MentorStory'>
+<div class='MentorStory-photo'><img alt="Bobbilee" src="https://cdn0.bloc.io/assets/landing/mentors/stories/bobbilee-5a3304b01a9091b2b6d1333dec595ae1.jpg" /></div>
+<div class='MentorStory-text'>
+<h1 class='MentorStory-title'>Bobbilee organizes Rails Camp USA West Coast</h1>
+<p class='MentorStore-body'>
+Bobbilee continues her passion for mentoring by organizing and leading Rails Camp USA West Coast, a yearly non-traditional unconference for unplugging and expanding knowledge in the development and design community.
+</p>
+</div>
+</div>
+</div>
+<div class='GivingBackGrid-item'>
+<div class='MentorStory'>
+<div class='MentorStory-photo'><img alt="Elliot" src="https://cdn2.bloc.io/assets/landing/mentors/stories/elliot-9a82f12bf8b58a4c910cfbe28b87438f.jpg" /></div>
+<div class='MentorStory-text'>
+<h1 class='MentorStory-title'>Eliot gives back to the open source community</h1>
+<p class='MentorStore-body'>Eliot contributes to popular repositories, including Rails and Ember. He also makes screencasts to help teach experienced frontend developers from all over the world under Web Dev Break.</p>
+</div>
+</div>
+</div>
+<div class='GivingBackGrid-item'>
+<div class='MentorStory'>
+<div class='MentorStory-photo'><img alt="Brittany" src="https://cdn0.bloc.io/assets/landing/mentors/stories/brittany-177c60cc4f89e961c77d4c9998e7566c.jpg" /></div>
+<div class='MentorStory-text'>
+<h1 class='MentorStory-title'>Brittany helps local students at Railsbridge in Pittsburgh</h1>
+<p class='MentorStore-body'>And passes on the passion for teaching to her students. Alumni Jake Wengroff says, “I finally got to meet Brittany Martin! I was in Pittsburgh last weekend for her Railsbridge event, where I served as a TA."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ------------------------------------------------------------------------- -->
+<!-- MentorsLead -->
+<!-- ------------------------------------------------------------------------- -->
+<section class='MentorsLead'>
+<div class='MentorsLead-text'>
+<h1 class='MentorsLead-title'>Leading the way in mentorship.</h1>
+<p class='MentorsLead-subtitle'>Levi Kennedy, Lead Mentor</p>
+<p class='MentorsLead-body'>We’re dedicated to providing our students with the best mentorship experience in the industry. Our Mentorship team is dedicated to helping our mentors improve their craft. Each mentor works with a Lead Mentor to improve their education skills. Just like our students, we never stop learning.</p>
+<div class='MentorsLead-stats'>
+<div class='MentorsLead-stat'>
+<div class='MentorsLead-stat-value'>10+</div>
+<div class='MentorsLead-stat-label'>years of<br> experience</div>
+</div>
+<div class='MentorsLead-stat'>
+<div class='MentorsLead-stat-value'>30+</div>
+<div class='MentorsLead-stat-label'>students<br> with bloc</div>
+</div>
+</div>
+</div>
+<div class='MentorsLead-photo'>
+<img alt="Levi" src="https://cdn2.bloc.io/assets/landing/mentors/levi-7644f6a206c3986e3cd640193e8fc7db.jpg" />
+</div>
+</section>
+<section class='MentorsLead-mobile'></section>
+<!-- ------------------------------------------------------------------------- -->
+<!-- AllMentors -->
+<!-- ------------------------------------------------------------------------- -->
+<section class='AllMentors MentorsIndex-section'>
+<h1 class='MentorsIndex-section-title AllMentors-title'>Meet our mentor community.</h1>
+<div class='MentorFaceGrid'>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2364248'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2364248'">
+<img alt="Me" src="https://cdn-photos.bloc.io/mentor_data_photos/square/233/me.jpeg?1480089710" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Abraham Alvarez</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2305850'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2305850'">
+<img alt="Aa1" src="https://cdn-photos.bloc.io/mentor_data_photos/square/201/aa1.JPG?1437422758" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Amber Aultman</div>
+<div class='MentorFaceGrid-field'>UX/UI Design</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/amberaultman" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/amberaultman" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/amberaultman" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://amberaultman.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard456756'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard456756'">
+<img alt="Ryan balfanz panel" src="https://cdn-photos.bloc.io/mentor_data_photos/square/8/ryan_balfanz_panel.jpg?1380742629" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Ryan Balfanz</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/ryanbalfanz" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/RyanBalfanz" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/RyanBalfanz" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="https://ryanbalfanz.com/" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard267'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard267'">
+<img alt="Timothy head shot 1000" src="https://cdn-photos.bloc.io/mentor_data_photos/square/5/timothy-head-shot-1000.jpg?1450732613" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Timothy Barnes</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/barnes7td" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/barnes7td" target="_blank"><i class='fa fa-twitter'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard539470'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard539470'">
+<img alt="Profile business smile white 450" src="https://cdn-photos.bloc.io/mentor_data_photos/square/20/profile_business_smile-white-450.jpg?1438450413" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Chris Beck</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/beckchristopher" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/cbeck" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/christopherbeck" target="_blank"><i class='fa fa-twitter'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2302490'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2302490'">
+<img alt="2" src="https://cdn-photos.bloc.io/mentor_data_photos/square/171/2.JPG?1428587145" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Fábio Bernardo</div>
+<div class='MentorFaceGrid-field'>Mobile Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://pt.linkedin.com/in/fbernardo" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/fbernardo" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/fbbernardo" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://www.fbernardo.org/?ref=bloc" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard1994246'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard1994246'">
+<img alt="Screen shot 2015 07 20 at 11.35.05 pm" src="https://cdn-photos.bloc.io/mentor_data_photos/square/84/Screen_Shot_2015-07-20_at_11.35.05_PM.png?1443678437" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Shannon Bertucci</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/shannonio" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/shshshano" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://www.shannon.io" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2303216'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2303216'">
+<img alt="Bloc mentor" src="https://cdn-photos.bloc.io/mentor_data_photos/square/182/bloc-mentor.jpg?1442807665" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Ezekiel Binion</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/pub/ezekiel-binion/9/2b7/870" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/ebinion" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/ebinion" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://www.ezekielbinion.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2348651'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2348651'">
+<img alt="Img 7672 1 small" src="https://cdn-photos.bloc.io/mentor_data_photos/square/220/IMG_7672_1-small.jpg?1469200698" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Caila Blanton</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="http://www.alarksnest.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2300706'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2300706'">
+<img alt="Matt born 28" src="https://cdn-photos.bloc.io/mentor_data_photos/square/156/Matt-Born-28.jpg?1423544090" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Matt Born</div>
+<div class='MentorFaceGrid-field'>UX/UI Design</div>
+<div class='MentorFaceGrid-links'>
+<a href="http://linkedin.com/in/mattborn" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/mattborn" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/matthewcyan" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://mattborn.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2367142'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2367142'">
+<img alt="Party time" src="https://cdn-photos.bloc.io/mentor_data_photos/square/244/Party_Time.png?1482194649" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Mike Branski</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://linkedin.com/in/mikebranski" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/mikebranski" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/mikebranski" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://mikebranski.com/" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2291642'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2291642'">
+<img alt="Niki brown" src="https://cdn-photos.bloc.io/mentor_data_photos/square/118/niki-brown.jpg?1413835948" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Niki Brown</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/niki-brown-70849883?trk=hp-identity-photo" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/nikibrown" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/nikibrown" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://nikibrown.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard1627720'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard1627720'">
+<img alt="Bloc panel" src="https://cdn-photos.bloc.io/mentor_data_photos/square/78/bloc_panel.JPG?1402724759" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Falko Buttler</div>
+<div class='MentorFaceGrid-field'>Mobile Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/falkobuttler" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/buddy0815" target="_blank"><i class='fa fa-twitter'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2300202'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2300202'">
+<img alt="Coconuteating" src="https://cdn-photos.bloc.io/mentor_data_photos/square/145/CoconutEating.jpg?1421647958" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Antonio Carella</div>
+<div class='MentorFaceGrid-field'>Mobile Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/antoniocarella" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/acarella" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/portmantonio" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://www.antoniocarella.com/" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2290632'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2290632'">
+<img alt="Screen shot 2014 10 20 at 5.17.18 pm" src="https://cdn-photos.bloc.io/mentor_data_photos/square/116/Screen_Shot_2014-10-20_at_5.17.18_PM.PNG?1413839909" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Mark Carpenter</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/dothework" target="_blank"><i class='fa fa-github'></i>
+</a><a href="http://talkingalexa.com/" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2365755'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2365755'">
+<img alt="Img 0305" src="https://cdn-photos.bloc.io/mentor_data_photos/square/239/IMG_0305.jpg?1480999141" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Jesse Carrigan</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2308458'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2308458'">
+<img alt="Me" src="https://cdn-photos.bloc.io/mentor_data_photos/square/208/me.jpg?1441799492" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Morgan Carter</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/morgoe" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/morgoe876" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://morgancarter.com.au" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2303246'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2303246'">
+<img alt="Andrei 450x450" src="https://cdn-photos.bloc.io/mentor_data_photos/square/183/andrei_450x450.jpg?1432153705" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Andrei Catinean</div>
+<div class='MentorFaceGrid-field'>Mobile Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/Electryc" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/Electryc" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://catinean.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard592292'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard592292'">
+<img alt="Img 2749" src="https://cdn-photos.bloc.io/mentor_data_photos/square/47/IMG_2749.jpg?1397781560" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Joseph Caudle</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/jcaudle" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/josephcaudle" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://josephcaudle.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2362536'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2362536'">
+<img alt="Me" src="https://cdn-photos.bloc.io/mentor_data_photos/square/227/me.jpg?1478623250" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Carrie Coxwell</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="http://thislady.rocks" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard955868'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard955868'">
+<img alt="Kc 300" src="https://cdn-photos.bloc.io/mentor_data_photos/square/30/kc-300.jpg?1400120651" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Kurt Cunningham</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/kurtcunningham" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/kurtcunningham" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://kurtcunningham.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard1149970'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard1149970'">
+<img alt="Mike work" src="https://cdn-photos.bloc.io/mentor_data_photos/square/39/Mike_work.png?1455632646" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Mike Dekker</div>
+<div class='MentorFaceGrid-field'>UX/UI Design</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://id.linkedin.com/in/dekkermichael" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/mikedekkercom" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/mikedekkercom" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://www.mikedekker.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard670353'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard670353'">
+<img alt="Aaeaaqaaaaaaaaicaaaajge5owu4m2nhltjlmgitnguxzi04ztbilthmnjuwmdc0y2e2zg" src="https://cdn-photos.bloc.io/mentor_data_photos/square/216/AAEAAQAAAAAAAAIcAAAAJGE5OWU4M2NhLTJlMGItNGUxZi04ZTBiLThmNjUwMDc0Y2E2Zg.jpg?1465069305" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Brian Douglas</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/brianldouglas" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/bdougie" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/bdougieYO" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://blog.briandouglas.me" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2345361'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2345361'">
+<img alt="Ba9a6047 k" src="https://cdn-photos.bloc.io/mentor_data_photos/square/219/BA9A6047_k.jpg?1476327253" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Kinsey Ann Durham</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/kinseyanndurham" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/durhamka" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/KinseyAnnDurham" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://www.kinseyanndurham.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2294249'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2294249'">
+<img alt="Panel" src="https://cdn-photos.bloc.io/mentor_data_photos/square/128/panel.jpg?1414677513" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Jason Dziak</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/tenwatt" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/tenwatt" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://www.jasondziak.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2355824'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2355824'">
+<img alt="422589e7 2336 47e7 9e44 1376e71b02cf" src="https://cdn-photos.bloc.io/mentor_data_photos/square/222/422589E7-2336-47E7-9E44-1376E71B02CF.JPG?1474946539" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Vincent Eberle</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/vincenteberle" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/veberle162" target="_blank"><i class='fa fa-github'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2304671'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2304671'">
+<img alt="Headshot 800x800" src="https://cdn-photos.bloc.io/mentor_data_photos/square/186/headshot_800x800.jpg?1434142045" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Dennis Eusebio</div>
+<div class='MentorFaceGrid-field'>UX/UI Design</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/denniseusebio" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/thoughtandtheory" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/thoughtntheory" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://www.thoughtandtheory.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard529277'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard529277'">
+<img alt="Charlie profile" src="https://cdn-photos.bloc.io/mentor_data_photos/square/18/charlie_profile.jpg?1381252027" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Charlie Gaines</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/beaugaines" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/perfectidiot" target="_blank"><i class='fa fa-twitter'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard986990'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard986990'">
+<img alt="Bloc avatar" src="https://cdn-photos.bloc.io/mentor_data_photos/square/32/bloc-avatar.jpg?1452617821" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Chris Gillis</div>
+<div class='MentorFaceGrid-field'>UX/UI Design</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/chrisgillis" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/chrisgillisbloc" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/cgillisdesign" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://chrisgillisdesign.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard1496032'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard1496032'">
+<img alt="Bobbilee" src="https://cdn-photos.bloc.io/mentor_data_photos/square/72/bobbilee.jpg?1400437180" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Bobbilee Hartman</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/bobbilee19" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/bobbilee19" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://www.bobbileehartman.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2366806'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2366806'">
+<img alt="Me2" src="https://cdn-photos.bloc.io/mentor_data_photos/square/242/me2.jpg?1481604892" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Allen Hunn</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2300174'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2300174'">
+<img alt="Ilija2" src="https://cdn-photos.bloc.io/mentor_data_photos/square/140/ilija2.png?1421702326" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Dalibor Ilijevski</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://rs.linkedin.com/in/daliborilijevski" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/il1ja" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/il1ja" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="https://sites.google.com/site/daliborilijevski/" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2081214'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2081214'">
+<img alt="Photo2 sq color2" src="https://cdn-photos.bloc.io/mentor_data_photos/square/87/photo2-sq-color2.png?1409701615" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Paul Jacobs</div>
+<div class='MentorFaceGrid-field'>Mobile Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/codehearted" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/codehearted" target="_blank"><i class='fa fa-twitter'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard53'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard53'">
+<img alt="Me" src="https://cdn-photos.bloc.io/mentor_data_photos/square/221/me.jpg?1471386615" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Mike Jewett</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/mikesjewett" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/mikesjewett" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/mikesjewett" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="https://www.linkedin.com/in/mikesjewett" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2362520'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2362520'">
+<img alt="X" src="https://cdn-photos.bloc.io/mentor_data_photos/square/228/x.jpeg?1478661010" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Dylan Karr</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/dylankarr" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/dylankarr" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://www.dylankarr.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2300883'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2300883'">
+<img alt="1402805 10100266786983882 8624565999765580325 o" src="https://cdn-photos.bloc.io/mentor_data_photos/square/161/1402805_10100266786983882_8624565999765580325_o.jpg?1424821551" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Levi Kennedy</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard285'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard285'">
+<img alt="Bloc panel" src="https://cdn-photos.bloc.io/mentor_data_photos/square/22/bloc_panel.jpg?1389729932" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Joey Kirk</div>
+<div class='MentorFaceGrid-field'>UX/UI Design</div>
+<div class='MentorFaceGrid-links'>
+<a href="http://www.linkedin.com/in/joeykirk" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/madebymunsters" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/joeykirk" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://www.joeykirk.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2363234'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2363234'">
+<img alt="Photo on 7 7 16 at 9.14 am  2" src="https://cdn-photos.bloc.io/mentor_data_photos/square/229/Photo-on-7-7-16-at-9.14-AM-_2.jpg?1479160403" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Junior Klegseth</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/jklegseth" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/jklegseth" target="_blank"><i class='fa fa-github'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard1754128'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard1754128'">
+<img alt="Me5sq" src="https://cdn-photos.bloc.io/mentor_data_photos/square/81/me5Sq.jpg?1404243033" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Matthew Knippen</div>
+<div class='MentorFaceGrid-field'>Mobile Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/mknippen" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/mknippen" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/mknippen" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://www.zwiffer.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard1330599'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard1330599'">
+<img alt="11174299 10100252165944646 7689895657487967232 o" src="https://cdn-photos.bloc.io/mentor_data_photos/square/49/11174299_10100252165944646_7689895657487967232_o.jpg?1432139135" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Jason LaChapelle</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/pub/jason-lachapelle/3/579/953" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/jaylach" target="_blank"><i class='fa fa-github'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2287594'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2287594'">
+<img alt="Jeff smile" src="https://cdn-photos.bloc.io/mentor_data_photos/square/103/jeff-smile.JPG?1412991827" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Jeff Lau</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/jefflau" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/_jefflau" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://jefflau.net" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2362517'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2362517'">
+<img alt="Bloc profile" src="https://cdn-photos.bloc.io/mentor_data_photos/square/226/bloc_profile.jpg?1478568487" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Christine Le</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2363828'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2363828'">
+<img alt="Img 1428" src="https://cdn-photos.bloc.io/mentor_data_photos/square/232/IMG_1428.jpg?1481268254" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Kevin Lee</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/lekeve" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/LeKeve" target="_blank"><i class='fa fa-github'></i>
+</a><a href="http://lekeve.com/" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard952431'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard952431'">
+<img alt="Picture 6" src="https://cdn-photos.bloc.io/mentor_data_photos/square/185/Picture_6.jpg?1434789774" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Luca Leone</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://it.linkedin.com/in/luc4leone/it" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/luc4leone" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/luc4leone" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://dontpuzzle.me" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard1445871'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard1445871'">
+<img alt="12828923 10153294297677714 3830949275855168470 o" src="https://cdn-photos.bloc.io/mentor_data_photos/square/114/12828923_10153294297677714_3830949275855168470_o.jpg?1466908559" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Alissa Likavec</div>
+<div class='MentorFaceGrid-field'>UX/UI Design</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/alissalikavec" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/alissalikavec" target="_blank"><i class='fa fa-twitter'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard290'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard290'">
+<img alt="Adam louis panel" src="https://cdn-photos.bloc.io/mentor_data_photos/square/3/adam_louis_panel.jpg?1380742621" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Adam Louis</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/gadtfly" target="_blank"><i class='fa fa-github'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2358296'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2358296'">
+<img alt="Profile picture" src="https://cdn-photos.bloc.io/mentor_data_photos/square/223/profile_picture.jpeg?1475962826" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Kevin Lowe</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/iamkevinlowe" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/iamkevinlowe" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://iamkevinlowe.github.io/" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2302893'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2302893'">
+<img alt="Sushi" src="https://cdn-photos.bloc.io/mentor_data_photos/square/178/sushi.jpg?1430842135" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Michael Lustig</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/lustigdev" target="_blank"><i class='fa fa-github'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2333190'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2333190'">
+<img alt="Screen shot 2016 08 19 at 1.25.41 pm" src="https://cdn-photos.bloc.io/mentor_data_photos/square/212/Screen_Shot_2016-08-19_at_1.25.41_PM.png?1471638377" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Rob Madden</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/rob-madden" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/robmadden" target="_blank"><i class='fa fa-github'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2361681'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2361681'">
+<img alt="302150e" src="https://cdn-photos.bloc.io/mentor_data_photos/square/225/302150e.jpg?1478029547" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Varun Mangla</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2364962'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2364962'">
+<img alt="Myface" src="https://cdn-photos.bloc.io/mentor_data_photos/square/235/myFace.jpg?1480436566" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Robert Mangold</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/robert-mangold-863a778" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/rixulzad" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/RobertMangold" target="_blank"><i class='fa fa-twitter'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard623967'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard623967'">
+<img alt="Unnamed 2" src="https://cdn-photos.bloc.io/mentor_data_photos/square/154/unnamed-2.jpg?1423266658" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Brittany Martin</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/Brit200313" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/BrittJMartin" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://sfviapgh.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard1320341'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard1320341'">
+<img alt="Profile with falcon" src="https://cdn-photos.bloc.io/mentor_data_photos/square/48/Profile_With_Falcon.jpg?1397167444" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Matthew Maxwell</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/matthewchristophermaxwell" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/mmaxwell" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/matthew_maxwell" target="_blank"><i class='fa fa-twitter'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2290942'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2290942'">
+<img alt="Kevin" src="https://cdn-photos.bloc.io/mentor_data_photos/square/129/kevin.jpg?1440705247" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Kevin McGillivray</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/kmcgillivray" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/kev_mcg" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://kevinmcgillivray.net" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard1054814'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard1054814'">
+<img alt="Bloc tm panel" src="https://cdn-photos.bloc.io/mentor_data_photos/square/35/bloc_tm_panel.png?1392327376" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Terry Million</div>
+<div class='MentorFaceGrid-field'>UX/UI Design</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/terrymillion" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/terrymillion" target="_blank"><i class='fa fa-twitter'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2363254'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2363254'">
+<img alt="Picture" src="https://cdn-photos.bloc.io/mentor_data_photos/square/231/picture.jpg?1479253438" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Ryan Milstead</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/ryanmilstead" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/RyanMilstead1" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/ryanmilstead" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://ryanmilstead.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2363272'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2363272'">
+<img alt="Moemonty photo small" src="https://cdn-photos.bloc.io/mentor_data_photos/square/230/moemonty-photo-small.jpg?1479239908" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Moises Montenegro</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/Moemonty" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/Moemonty" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://www.moemonty.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard537104'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard537104'">
+<img alt="Aaaa" src="https://cdn-photos.bloc.io/mentor_data_photos/square/17/aaaa.png?1395868580" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Ben Neely</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/bmneely" target="_blank"><i class='fa fa-github'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2302437'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2302437'">
+<img alt="5544943" src="https://cdn-photos.bloc.io/mentor_data_photos/square/170/5544943.png?1428529358" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Richard Newman</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/richardnewman24" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/rdnewman" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/rdnewman" target="_blank"><i class='fa fa-twitter'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2365010'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2365010'">
+<img alt="Mike nichols" src="https://cdn-photos.bloc.io/mentor_data_photos/square/237/mike-nichols.jpg?1480463528" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Mike Nichols</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/sonofnun" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/mnichols" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://github.com/mnichols" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2165807'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2165807'">
+<img alt="Dc02aecc 3cf3 4731 910d 3c8fdf4dec5d" src="https://cdn-photos.bloc.io/mentor_data_photos/square/90/DC02AECC-3CF3-4731-910D-3C8FDF4DEC5D.jpeg?1452112176" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Joe Norton</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/joenorton24" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/joenorton24" target="_blank"><i class='fa fa-twitter'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard1384591'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard1384591'">
+<img alt="Facebook 342538789" src="https://cdn-photos.bloc.io/mentor_data_photos/square/54/facebook_342538789.jpg?1398188876" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>John O'Connor</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/sax1johno" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/sax1johno" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://www.johnwoconnor.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2365753'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2365753'">
+<img alt="Shopvenure pinball 622 110" src="https://cdn-photos.bloc.io/mentor_data_photos/square/240/ShopVenure_Pinball_622_110.jpg?1480977585" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Jesse Pledger</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/jesse-pledger-29946aa4?trk=nav_responsive_tab_profile" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/essn" target="_blank"><i class='fa fa-github'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2345139'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2345139'">
+<img alt="Portrait" src="https://cdn-photos.bloc.io/mentor_data_photos/square/218/portrait.jpg?1466556396" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Wilson Rector</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2292457'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2292457'">
+<img alt=" dsc6897" src="https://cdn-photos.bloc.io/mentor_data_photos/square/125/_DSC6897.jpg?1414031716" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Rizwan Reza</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/rizwanreza" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/rizwanreza" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://rizwanreza.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2364973'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2364973'">
+<img alt="13147732 10156879128945076 266763468583327395 o" src="https://cdn-photos.bloc.io/mentor_data_photos/square/236/13147732_10156879128945076_266763468583327395_o.jpg?1480456680" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Chris Roberson</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="http://www.chrisronline.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2302787'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2302787'">
+<img alt="Dscn3239" src="https://cdn-photos.bloc.io/mentor_data_photos/square/176/DSCN3239.JPG?1429500089" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>David Roberts</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/droberts10" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/droberts84" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/drobtravels" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://www.drob.net" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard523127'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard523127'">
+<img alt="14258 3810405625408 1723311348 n 2" src="https://cdn-photos.bloc.io/mentor_data_photos/square/93/14258_3810405625408_1723311348_n-2.jpg?1411777397" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Jose Sanchez</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/devtheory" target="_blank"><i class='fa fa-github'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard972519'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard972519'">
+<img alt="Fintech profile pic" src="https://cdn-photos.bloc.io/mentor_data_photos/square/28/fintech_profile_pic.jpg?1451363696" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>John Sawers</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/johnksawers" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/johnksawers" target="_blank"><i class='fa fa-twitter'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2289140'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2289140'">
+<img alt="Headshot smallest" src="https://cdn-photos.bloc.io/mentor_data_photos/square/108/Headshot_smallest.jpg?1422576782" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Steve Schauer</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/steveschauer" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/steveschauer" target="_blank"><i class='fa fa-twitter'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2364951'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2364951'">
+<img alt="14671182 10154355580785971 1297031452055501734 n" src="https://cdn-photos.bloc.io/mentor_data_photos/square/234/14671182_10154355580785971_1297031452055501734_n.jpg?1480375575" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Tessa Siegel</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="http://tessasiegel.com/" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard1329746'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard1329746'">
+<img alt="Ben dog" src="https://cdn-photos.bloc.io/mentor_data_photos/square/143/ben_dog.jpg?1421714301" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Ben Simmons</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/bdsimmons" target="_blank"><i class='fa fa-github'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2344341'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2344341'">
+<img alt="Raj profile 1000px" src="https://cdn-photos.bloc.io/mentor_data_photos/square/217/raj-profile-1000px.jpg?1466470112" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Rajeev Singh</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/rajeevvsingh" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/R-V-S" target="_blank"><i class='fa fa-github'></i>
+</a><a href="http://rajeevsingh.ninja" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2370117'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2370117'">
+<img alt="Tim 2016 500" src="https://cdn-photos.bloc.io/mentor_data_photos/square/246/tim-2016_500.jpg?1483991018" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Tim Smith</div>
+<div class='MentorFaceGrid-field'>UX/UI Design</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/smithtimmytim" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/smithtimmytim" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/smithytimmytim" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="https://ttimsmith.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard946'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard946'">
+<img alt="Alex" src="https://cdn-photos.bloc.io/mentor_data_photos/square/188/alex.png?1434059977" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Alex Spencer</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/aspencer8111" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/alexspencer" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://www.alexspencer.net" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard1421298'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard1421298'">
+<img alt="Photo2" src="https://cdn-photos.bloc.io/mentor_data_photos/square/65/photo2.jpg?1424748553" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Phil Spitler</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/philspitler" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/philspitler" target="_blank"><i class='fa fa-twitter'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2304890'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2304890'">
+<img alt="25x250" src="https://cdn-photos.bloc.io/mentor_data_photos/square/194/25X250.jpg?1434551124" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Caron Stace</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://uk.linkedin.com/in/caronstace" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/stacca" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/caronstace" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://www.caronstace.co.uk" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2299843'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2299843'">
+<img alt="Alex" src="https://cdn-photos.bloc.io/mentor_data_photos/square/175/Alex.png?1429242990" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Alex Stophel</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/alexstophel" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/alexstophel" target="_blank"><i class='fa fa-twitter'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard1432883'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard1432883'">
+<img alt="Eliot in a box 450x450px 60pc" src="https://cdn-photos.bloc.io/mentor_data_photos/square/82/eliot-in-a-box-450x450px-60pc.jpg?1404834774" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Eliot Sykes</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/eliotsykes" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/eliotsykes" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="https://eliotsykes.com/" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2299042'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2299042'">
+<img alt="Me in truck" src="https://cdn-photos.bloc.io/mentor_data_photos/square/163/me-in-truck.jpg?1424919584" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Matt Thompson</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://github.com/mjthompsgb" target="_blank"><i class='fa fa-github'></i>
+</a><a href="http://www.matthewt.me" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2305710'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2305710'">
+<img alt="Pic" src="https://cdn-photos.bloc.io/mentor_data_photos/square/199/pic.jpg?1436562065" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Sharon Torres</div>
+<div class='MentorFaceGrid-field'>UX/UI Design</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/pub/sharon-torres/2/a95/872" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/sktorres" target="_blank"><i class='fa fa-github'></i>
+</a><a href="http://www.krop.com/sharonktorres/" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2299934'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2299934'">
+<img alt="123" src="https://cdn-photos.bloc.io/mentor_data_photos/square/135/123.png?1421975230" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>John Uke</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/johnuke" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/boblikesoup" target="_blank"><i class='fa fa-github'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2305598'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2305598'">
+<img alt="Unnamed" src="https://cdn-photos.bloc.io/mentor_data_photos/square/198/unnamed.jpg?1456802675" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Aaron Uyehara</div>
+<div class='MentorFaceGrid-field'>Web Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/aaronuyehara" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/tykewpm" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/tykewpm" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="https://aaronuyehara.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2331664'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2331664'">
+<img alt="Img 20160207 113247 2" src="https://cdn-photos.bloc.io/mentor_data_photos/square/211/IMG_20160207_113247-2.jpg?1455072339" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Cyle Ven Dawson</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/cyledawson" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/dawsonc623" target="_blank"><i class='fa fa-github'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2292007'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2292007'">
+<img alt="16249694410 4d41fe2b1e o" src="https://cdn-photos.bloc.io/mentor_data_photos/square/122/16249694410_4d41fe2b1e_o.jpg?1453872484" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Michael Verde</div>
+<div class='MentorFaceGrid-field'>Mobile Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://ca.linkedin.com/in/michaelverde" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/nerdyverde" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/michaelverde" target="_blank"><i class='fa fa-twitter'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='MentorFaceGrid-item'>
+<div class='FlipContainer' ng_class="{'FlipContainer--flipped': activeCard == 'flipcard2307929'}">
+<div class='FlipContainer-flipper'>
+<div class='FlipContainer-front'>
+<div class='MentorFaceGrid-item-photo' ng_click="activeCard = 'flipcard2307929'">
+<img alt="Zach z   1 copy" src="https://cdn-photos.bloc.io/mentor_data_photos/square/207/Zach_Z_-_1_copy.png?1441144884" />
+</div>
+</div>
+<div class='FlipContainer-back'>
+<div class='MentorFaceGrid-details'>
+<div class='MentorFaceGrid-name'>Zach Zimbler</div>
+<div class='MentorFaceGrid-field'>Software Development</div>
+<div class='MentorFaceGrid-links'>
+<a href="https://www.linkedin.com/in/zzimbler" target="_blank"><i class='fa fa-linkedin'></i>
+</a><a href="https://github.com/zzimbler" target="_blank"><i class='fa fa-github'></i>
+</a><a href="https://twitter.com/zzimbler" target="_blank"><i class='fa fa-twitter'></i>
+</a><a href="http://zzimbler.com" target="_blank"><i class='fa fa-link'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class='MentorsCTA MentorsIndex-section'>
+<h2 class='MentorsCTA-title'>
+Learn about mentorship at our online info session for our Software Developer Program.
+</h2>
+<div class='MentorsCTA-form'>
+<infosession_form button_text='Register' channel='software_dev_track' course_kind='software_dev_track' dates='["2017-01-16T17:00:00.000Z","2017-01-17T01:00:00.000Z","2017-01-17T17:00:00.000Z","2017-01-23T17:00:00.000Z","2017-01-24T01:00:00.000Z","2017-01-24T17:00:00.000Z"]' infosession_title='Software Developer Track Info Session' show_syllabus_button='false'></infosession_form>
+</div>
+</section>
+</div>
+</div>
+
+<div class='full-page-footer hidden-xs'>
+<div class='container'>
+<div class='column-wrapper'>
+<div class='column'>
+<h6>Programs</h6>
+<div class='course-links'>
+<section class='tracks'>
+<div class='label'>Become a Software Developer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="software-developer-track.html"><i class='fa fa-tasks fa-fw'></i>
+Software Developer Track
+</a></li>
+</ul>
+</section>
+<section class='tracks'>
+<div class='label'>Become a Web Developer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="web-developer-career-track.html"><i class='fa fa-cubes fa-fw'></i>
+Part-Time Web Developer Track
+</a></li>
+</ul>
+</section>
+<section class='tracks'>
+<div class='label'>Become a Designer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="design-bootcamp.html"><i class='fa fa-picture-o fa-fw'></i>
+Designer Track
+</a></li>
+</ul>
+</section>
+<section class='courses'>
+<div class='label'>Broaden Your Skills</div>
+<ul>
+<li class='course-icon-link web-dev'>
+<a href="web-development-bootcamp.html"><i class='fa fa-terminal fa-fw'></i>
+Rails Fundamentals
+</a></li>
+<li class='course-icon-link frontend'>
+<a href="frontend-development-bootcamp.html"><i class='fa fa-code fa-fw'></i>
+Frontend Fundamentals
+</a></li>
+<li class='course-icon-link design'>
+<a href="ux-design-bootcamp.html"><i class='fa fa-picture-o fa-fw'></i>
+UX/UI Design Fundamentals
+</a></li>
+<li class='course-icon-link android'>
+<a href="android-bootcamp.html"><i class='fa fa-android fa-fw'></i>
+Android Fundamentals
+</a></li>
+<li class='course-icon-link ios'>
+<a href="ios-bootcamp.html"><i class='fa fa-apple fa-fw'></i>
+iOS Fundamentals
+</a></li>
+</ul>
+</section>
+</div>
+
+</div>
+<div class='column'>
+<h6>About Bloc</h6>
+<ul>
+<li>
+<a href="about.html">Our Team | Jobs</a>
+</li>
+<li>
+<a href="http://try.bloc.io/dev-bootcamp-for-veterans/" target="_blank">Bloc Veterans Program</a>
+</li>
+<li>
+<a href="http://try.bloc.io/new-relic-bootcamp-diversity-scholarship/" target="_blank">Bloc&#39;s Diversity Scholarship</a>
+</li>
+<li>
+<a href="faq.html">FAQ</a>
+</li>
+<li>
+<a href="http://blog.bloc.io">Blog</a>
+</li>
+<li>
+<a href="http://code.bloc.io" target="_blank">Engineering Blog</a>
+</li>
+<li>
+<a href="privacy.html">Privacy Policy</a>
+</li>
+<li>
+<a href="terms.html">Terms of Service</a>
+</li>
+<li>
+<a href="https://blog.bloc.io/bloc-reviews-from-real-students/">Read Reviews of Bloc</a>
+</li>
+<li>
+<a href="Bloc-Catalog.pdf">Course Catalog</a>
+</li>
+</ul>
+</div>
+<div class='column'>
+<h6>Made By Bloc</h6>
+<ul>
+<li>
+<a href="http://try.bloc.io/tech-talks/" target="_blank">Tech Talks &amp; Resources</a>
+</li>
+<li>
+<a href="coding-bootcamp-calculator.html">Coding Bootcamp Calculator</a>
+</li>
+<li>
+<a href="coding-bootcamp-comparison.html">Programming Bootcamp Comparison</a>
+</li>
+<li>
+
+</li>
+<li>
+
+</li>
+<li>
+
+</li>
+<li>
+<a href="ruby-warrior.html">Ruby Warrior</a>
+</li>
+<li>
+<a href="https://bloc.io/learn-to-code">Bootcamp Selector</a>
+</li>
+</ul>
+<h6>HIRE OUR GRADS</h6>
+<ul class='contact-list'>
+<li>
+<i class='fa fa-envelope-o'></i>
+<div class='contact-wrapper'>
+<a href="mailto:outcomes@bloc.io">Contact Career Services</a>
+</div>
+</li>
+</ul>
+</div>
+<div class='column'>
+<h6>Sign Up For Our Mailing List</h6>
+<div class='footer-email-form' ng_controller='FooterEmail.controller'>
+<form class='emelyn-form-elements' id='footer_email_capture' name='footer_email_capture'>
+<input class="input-dark email" id="email" name="email" ng_model="subscription.email" required="required" type="email" />
+<input class='btn btn-dark-gray btn-mini submit' id='footer_email_signup_btn' ng_click='submit()' ng_disabled='isSubmitDisabled()' type='submit' value='Send'>
+</form>
+</div>
+<ul class='contact-list'>
+<li>
+<i class='fa fa-envelope-o'></i>
+<div class='contact-wrapper'>
+<a href="mailto:hello@bloc.io">hello@bloc.io</a>
+</div>
+</li>
+<li>
+<i class='fa fa-phone'></i>
+<div class='contact-wrapper'>
+Considering enrolling?
+<br>
+(404) 480-2562
+</div>
+</li>
+<li>
+<i class='fa fa-phone'></i>
+<div class='contact-wrapper'>
+Partnership / Corporate Inquiries?
+<br>
+(650) 741-5682
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class='bottom'>
+<p class='copyright'>Copyright © 2017 Bloc</p>
+<ul class='social-link-list'>
+<li>
+<a href="https://www.facebook.com/trybloc" target="_blank"><i class='fa fa-facebook'></i>
+</a></li>
+<li>
+<a href="https://twitter.com/trybloc" target="_blank"><i class='fa fa-twitter'></i>
+</a></li>
+<li>
+<a href="https://plus.google.com/112610125572984281932" rel="publisher" target="_blank"><i class='fa fa-google-plus'></i>
+</a></li>
+<li>
+<a href="https://www.youtube.com/user/BlocContent" target="_blank"><i class='fa fa-youtube'></i>
+</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<script defer="defer" src="https://cdn1.bloc.io/webpack/lightweight_ng-bundle-d5548dadeeea4f4647bd.js"></script>
+<script defer type='text/javascript'>
+// Leave this in its own script tag so it won't blow up the rest of the JS.
+$.getScript('//munchkin.marketo.net/munchkin.js', initMunchkin);
+function initMunchkin () {
+  Munchkin.init("412-ZQR-205", {
+    domainLevel: 2
+  });
+}
+
+
+</script>
+<script defer type='text/javascript'>
+Analytics.quantcast.setup("p-fzmcqmjeqmw-j");
+Analytics.segment.setup("aoqc6vja9l", Bloc.current_user)
+
+
+</script>
+
+
+<script>
+  console.log("No referrer override.");
+</script>
+
+<script src="https://cdn0.bloc.io/assets/mixpanel_tracking-f7fa15a586fa60d3cb902445d4b203fb.js"></script>
+
+<noscript>
+<div style='display: none;'></div>
+<img alt='Quantcast' border='0' height='1' src='https://pixel.quantserve.com/pixel/p-fzmcqmjeqmw-j.gif' width='1'>
+</noscript>
+</body>
+</html>

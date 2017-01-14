@@ -1,0 +1,12 @@
+.title {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.no-bullet {
+  list-style-type: none;
+}
+
+.bold {
+  font-weight: bold;
+}

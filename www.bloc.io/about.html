@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html data-ng-app='NgBloc' itemscope='' itemtype='http://schema.org/Product'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"a93f3122a8","applicationID":"442416","transactionName":"JlxYRUsJCQ5RS00NBQtXX19eSQQAW0wW","queueTime":4,"applicationTime":14,"agentToken":null,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQIDUldUGwcEVlVTAQ=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),s.xhrWrappable&&t(9),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),c=t(7),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),c.on(m,function(){this.bstStart=Date.now()}),c.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(17)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",c)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),c=t(16),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[y[n]];return f&&f.push([g,n,r,i]),i}}function p(t,e){v[t]=h(t).concat(e)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var v={},y={},g={on:p,emit:n,get:m,listeners:h,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(15),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=g.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(v,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(15),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(12);var w=""+location,v={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},y=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:a(),origin:w,features:{},xhrWrappable:y};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,10,4,3]);</script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700%7COpen+Sans+Condensed:700" media="screen" rel="stylesheet" />
+<link href="https://cdn1.bloc.io/assets/application-b7c7d1541a4a48edb60dde0064587e17.css" media="all" rel="stylesheet" />
+<script type="text/javascript">
+//<![CDATA[
+window.gon={};gon.footer_email_params={"channel":"footer","course_kind":"generic"};gon.utm_params=["utm_ad","utm_adgroup","utm_bonus","utm_campaign","utm_content","utm_keyword","utm_medium","utm_source"];
+//]]>
+</script>
+<title>Bloc | Coding Bootcamp - About Us</title>
+<meta content="Learn to code and become a web developer in Ruby on Rails, HTML, CSS, Javascript, and jQuery in Bloc's Intense Online Web Development Apprenticeship." name='description'>
+<!-- / Canonical URL -->
+<!-- / Responsive Enabled -->
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<meta content='about us, about bloc.io' name='keywords'>
+<!-- Google -->
+<meta content='z3HPw1Nm4ihrRs_dA0-OZbMNipfhdT0vu3g4s5tRSQ8' name='google-site-verification'>
+<!-- Twitter Card data -->
+<meta content='summary' name='twitter:card'>
+<meta content='@trybloc' name='twitter:site'>
+<meta content='Bloc' name='twitter:title'>
+<meta content="Learn to code and become a web developer in Ruby on Rails, HTML, CSS, Javascript, and jQuery in Bloc's Intense Online Web Development Apprenticeship." name='twitter:description'>
+<meta content='https://cdn3.bloc.io/assets/logos/bloc-logo-square-500x500-white-f85bec150478dc93d64865b33941ab6d.png' name='twitter:image'>
+<!-- Open Graph data -->
+<meta content='Bloc | Coding Bootcamp - About Us' property='og:title'>
+<meta content='website' property='og:type'>
+<meta content='https://www.bloc.io/about' property='og:url'>
+<meta content='https://cdn3.bloc.io/assets/logos/bloc-logo-square-500x500-white-f85bec150478dc93d64865b33941ab6d.png' property='og:image'>
+<meta content="Learn to code and become a web developer in Ruby on Rails, HTML, CSS, Javascript, and jQuery in Bloc's Intense Online Web Development Apprenticeship." property='og:description'>
+<meta content='Bloc' property='og:site_name'>
+<meta content='1932106' property='fb:admins'>
+<!-- Schema markup -->
+<meta content='Bloc | Coding Bootcamp - About Us' itemprop='name'>
+<meta content="Learn to code and become a web developer in Ruby on Rails, HTML, CSS, Javascript, and jQuery in Bloc's Intense Online Web Development Apprenticeship." itemprop='description'>
+<meta content='https://cdn3.bloc.io/assets/logos/bloc-logo-square-500x500-white-f85bec150478dc93d64865b33941ab6d.png' itemprop='image'>
+<!-- Taboola tracking -->
+
+
+<script>
+  var env = "production";
+  var _rollbarConfig = {
+      accessToken: "4b86c2fdc5454fbea1382e5fff6f9889",
+      captureUncaught: true,
+      logLevel: 'error',
+      payload: {
+        environment: env
+      }
+  };
+  
+  
+  !function(a,b){function c(b){this.shimId=++h,this.notifier=null,this.parentShim=b,this.logger=function(){},a.console&&void 0===a.console.shimId&&(this.logger=a.console.log)}function d(b,c,d){!d[4]&&a._rollbarWrappedError&&(d[4]=a._rollbarWrappedError,a._rollbarWrappedError=null),b.uncaughtError.apply(b,d),c&&c.apply(a,d)}function e(b){var d=c;return g(function(){if(this.notifier)return this.notifier[b].apply(this.notifier,arguments);var c=this,e="scope"===b;e&&(c=new d(this));var f=Array.prototype.slice.call(arguments,0),g={shim:c,method:b,args:f,ts:new Date};return a._rollbarShimQueue.push(g),e?c:void 0})}function f(a,b){if(b.hasOwnProperty&&b.hasOwnProperty("addEventListener")){var c=b.addEventListener;b.addEventListener=function(b,d,e){c.call(this,b,a.wrap(d),e)};var d=b.removeEventListener;b.removeEventListener=function(a,b,c){d.call(this,a,b&&b._wrapped?b._wrapped:b,c)}}}function g(a,b){return b=b||this.logger,function(){try{return a.apply(this,arguments)}catch(c){b("Rollbar internal error:",c)}}}var h=0;c.init=function(a,b){var e=b.globalAlias||"Rollbar";if("object"==typeof a[e])return a[e];a._rollbarShimQueue=[],a._rollbarWrappedError=null,b=b||{};var h=new c;return g(function(){if(h.configure(b),b.captureUncaught){var c=a.onerror;a.onerror=function(){var a=Array.prototype.slice.call(arguments,0);d(h,c,a)};var g,i,j="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(g=0;g<j.length;++g)i=j[g],a[i]&&a[i].prototype&&f(h,a[i].prototype)}return a[e]=h,h},h.logger)()},c.prototype.loadFull=function(a,b,c,d){var e=g(function(){var a=b.createElement("script"),e=b.getElementsByTagName("script")[0];a.src=d.rollbarJsUrl,a.async=!c,a.onload=f,e.parentNode.insertBefore(a,e)},this.logger),f=g(function(){if(void 0===a._rollbarPayloadQueue)for(var b,c,d,e,f=new Error("rollbar.js did not load");b=a._rollbarShimQueue.shift();)for(d=b.args,e=0;e<d.length;++e)if(c=d[e],"function"==typeof c){c(f);break}},this.logger);g(function(){c?e():a.addEventListener?a.addEventListener("load",e,!1):a.attachEvent("onload",e)},this.logger)()},c.prototype.wrap=function(b){try{if("function"!=typeof b)return b;if(b._isWrap)return b;if(!b._wrapped){b._wrapped=function(){try{return b.apply(this,arguments)}catch(c){throw a._rollbarWrappedError=c,c}},b._wrapped._isWrap=!0;for(var c in b)b.hasOwnProperty(c)&&(b._wrapped[c]=b[c])}return b._wrapped}catch(d){return b}};for(var i="log,debug,info,warn,warning,error,critical,global,configure,scope,uncaughtError".split(","),j=0;j<i.length;++j)c.prototype[i[j]]=e(i[j]);var k="//d37gvrvc0wt4s1.cloudfront.net/js/v1.1/rollbar.min.js";_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||k;var l=c.init(a,_rollbarConfig);l.loadFull(a,b,!1,_rollbarConfig)}(window,document);
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash-compat/3.10.1/lodash.min.js"></script>
+<script src="https://cdn1.bloc.io/webpack/init-bundle-d5548dadeeea4f4647bd.js"></script>
+<script>
+  Bloc = window.Bloc
+  Bloc = (typeof Bloc !== "undefined" && Bloc !== null) ? Bloc : {};
+  Bloc.login_url = "/users/auth/facebook";
+  Bloc.facebook_image_url = "https://cdn1.bloc.io/assets/facebook-a1675421f41dd6897a434ee2aa147c9f.jpg";
+  Bloc.current_visit = null;
+</script>
+<script>
+  Bloc.current_user = {};
+</script>
+<script>
+  Bloc.current_user.role = "visitor"
+</script>
+
+
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="DNTQQbqvDjYA+zGAz7gZw8lBbz02fg/VX9kjWkFZcLg=" name="csrf-token" />
+
+
+</head>
+<body class='full-page-base-style' ng_class="{ 'showing-mobile-nav': isShowingMobileNav }">
+<div class='default-js-flash-container'>
+
+</div>
+
+<div class='AboutPage landing-new context-container--white'>
+<div class='landing-navigation hidden-xs hidden-sm'>
+<div class='container'>
+<a id='top'></a>
+<div class='links pull-left'>
+<div class='logo'>
+<div class='header-logo'>
+<a href="index.html"><img alt="Logo white" height="30" src="https://cdn1.bloc.io/assets/landing/logo-white-8288ab35ab214ba341ab283ea2c79200.png" width="80" />
+</a></div>
+
+</div>
+<div class='dropdown' dropdown_selector='.course-dropdown-menu' menu_dropdown>
+<span>Programs</span>
+<div class='course-dropdown-menu ng-cloak'>
+<div class='inner'>
+<div class='course-links'>
+<section class='tracks'>
+<div class='label'>Become a Software Developer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="software-developer-track.html"><i class='fa fa-tasks fa-fw'></i>
+Software Developer Track
+</a></li>
+</ul>
+</section>
+<section class='tracks'>
+<div class='label'>Become a Web Developer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="web-developer-career-track.html"><i class='fa fa-cubes fa-fw'></i>
+Part-Time Web Developer Track
+</a></li>
+</ul>
+</section>
+<section class='tracks'>
+<div class='label'>Become a Designer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="design-bootcamp.html"><i class='fa fa-picture-o fa-fw'></i>
+Designer Track
+</a></li>
+</ul>
+</section>
+<section class='courses'>
+<div class='label'>Broaden Your Skills</div>
+<ul>
+<li class='course-icon-link web-dev'>
+<a href="web-development-bootcamp.html"><i class='fa fa-terminal fa-fw'></i>
+Rails Fundamentals
+</a></li>
+<li class='course-icon-link frontend'>
+<a href="frontend-development-bootcamp.html"><i class='fa fa-code fa-fw'></i>
+Frontend Fundamentals
+</a></li>
+<li class='course-icon-link design'>
+<a href="ux-design-bootcamp.html"><i class='fa fa-picture-o fa-fw'></i>
+UX/UI Design Fundamentals
+</a></li>
+<li class='course-icon-link android'>
+<a href="android-bootcamp.html"><i class='fa fa-android fa-fw'></i>
+Android Fundamentals
+</a></li>
+<li class='course-icon-link ios'>
+<a href="ios-bootcamp.html"><i class='fa fa-apple fa-fw'></i>
+iOS Fundamentals
+</a></li>
+</ul>
+</section>
+</div>
+
+</div>
+</div>
+</div>
+<a href='mentors.html'>Mentors</a>
+<a href='alumni.html'>Alumni</a>
+</div>
+<div class='links pull-right'>
+<a href="sign_in.html">Log in
+</a><div class='divider'>
+|
+</div>
+<a class='enroll-btn btn' href='enrollments/new-course_kind=web_dev.html'>Enroll </a>
+
+</div>
+<div class='clear'></div>
+</div>
+</div>
+<div class='mobile-nav-container visible-xs visible-sm' ng_class="{'full-height': menuOpen}" ng_controller='MobileNavCtrl' ng_init='init()'>
+<div class='mobile-nav-header'>
+<div class='bloc-main'>
+<a href="index.html"><img alt="Square 50x50 black" src="https://cdn0.bloc.io/assets/logos/square-50x50-black-0b7e99cf95d6360357a703be16f3ad42.png" />
+</a></div>
+<div class='menu-button' ng_click='toggleMenu()' ng_hide='menuOpen'></div>
+<div class='menu-x ng-cloak icon fa fa-close' ng_click='toggleMenu()' ng_hide='!menuOpen'></div>
+</div>
+<div class='mobile-menu ng-cloak'>
+<div class='mobile-nav' ng_class='{"left": subNavPosition + "%"}'>
+<ul class='mobile-list-nav'>
+<li ng_class='{active: tog==1}' ng_click='toggleProgramList()'>
+Programs
+</li>
+<li ng_class='{active: tog==2}' ng_click='toggleAboutList()'>
+About
+</li>
+<li ng_class='{active: tog==3}' ng_click='toggleContactList()'>
+Contact
+</li>
+</ul>
+</div>
+<div class='mobile-subnav-list' ng_style='{"left": subNavPosition + "%"}'>
+<div class='list-group'>
+<ul class='link-list'>
+<li>
+<a href="enrollments/new-token=TODAY.html">Enroll</a>
+</li>
+<li>
+<a href="sign_in.html">Log in / Register</a>
+</li>
+</ul>
+<div class='label'>Become a Software Developer</div>
+<ul class='link-list'>
+<li>
+<a href="software-developer-track.html"><i class='icon fa fa-tasks'></i>
+Software Developer Track
+</a></li>
+</ul>
+<div class='label'>Become a Web Developer</div>
+<ul class='link-list'>
+<li>
+<a href="web-developer-career-track.html"><i class='icon fa fa-desktop fa-fw'></i>
+Full Stack Web Developer Track
+</a></li>
+</ul>
+<div class='label'>Become a Designer</div>
+<ul class='link-list'>
+<li>
+<a href="design-bootcamp.html"><i class='icon fa fa-picture-o fa-fw'></i>
+Designer Track
+</a></li>
+</ul>
+<div class='label'>
+Broaden Your Skills
+</div>
+<ul class='link-list'>
+<li>
+<a href="web-development-bootcamp.html"><i class='icon icon-web-development'></i>
+Rails Fundamentals
+</a></li>
+<li>
+<a href="frontend-development-bootcamp.html"><i class='icon icon-frontend'></i>
+Frontend Fundamentals
+</a></li>
+<li>
+<a href="android-bootcamp.html"><i class='icon icon-android'></i>
+Android Fundamentals
+</a></li>
+<li>
+<a href="ios-bootcamp.html"><i class='icon icon-ios'></i>
+iOS Fundamentals
+</a></li>
+<li>
+<a href="ux-design-bootcamp.html"><i class='icon icon-design'></i>
+UX/UI Design Fundamentals
+</a></li>
+</ul>
+</div>
+<div class='list-group'>
+<ul class='link-list'>
+<li>
+<a href="mentors.html">Mentors</a>
+</li>
+<li>
+<a href="alumni.html">Alumni</a>
+</li>
+<li>
+<a href="about.html">Our Team | Jobs</a>
+</li>
+<li>
+<a href="http://try.bloc.io/dev-bootcamp-for-veterans/" target="_blank">Bloc Veterans Program</a>
+</li>
+<li>
+<a href="http://try.bloc.io/new-relic-bootcamp-diversity-scholarship/" target="_blank">Bloc&#39;s Diversity Scholarship</a>
+</li>
+<li>
+<a href="faq.html">FAQ</a>
+</li>
+<li>
+<a href="http://blog.bloc.io">Blog</a>
+</li>
+<li>
+<a href="http://code.bloc.io" target="_blank">Engineering Blog</a>
+</li>
+<li>
+<a href="privacy.html">Privacy Policy</a>
+</li>
+<li>
+<a href="terms.html">Terms of Service</a>
+</li>
+</ul>
+</div>
+<div class='list-group'>
+<div class='nav-email-form'>
+<div class='label no-border'>
+Sign Up For Our Mailing List
+</div>
+<form class='emelyn-form-elements' id='nav_email_capture' name='nav_email_capture'>
+<div class='input-wrapper email'>
+<input class="input-dark" id="email" name="email" ng_model="subscription.email" required="required" type="email" />
+</div>
+<div class='input-wrapper submit'>
+<input class='btn btn-mini' id='nav_email_signup_btn' ng_click='submit()' ng_disabled='isSubmitDisabled()' type='submit' value='Send'>
+</div>
+</form>
+</div>
+<ul class='link-list'>
+<li class='contact'>
+<a href="mailto:hello@bloc.io"><i class='icon fa fa-envelope-o fa-nav'></i>
+hello@bloc.io
+</a></li>
+<li class='contact'>
+<span>
+<i class='icon fa fa-phone fa-nav'></i>
+<div class='contact-wrapper'>
+Considering enrolling?
+<br>
+(404) 480-2562
+</div>
+</span>
+</li>
+<li class='contact'>
+<span>
+<i class='icon fa fa-phone fa-nav'></i>
+<div class='contact-wrapper'>
+Partnership / Corporate Inquiries?
+<br>
+(650) 741-5692
+</div>
+</span>
+</li>
+</ul>
+<div class='footer'>
+<div class='social-link-list-wrapper'>
+<ul class='social-link-list'>
+<li>
+<a href="https://www.facebook.com/trybloc" target="_blank"><i class='fa fa-facebook'></i>
+</a></li>
+<li>
+<a href="https://twitter.com/trybloc" target="_blank"><i class='fa fa-twitter'></i>
+</a></li>
+<li>
+<a href="https://plus.google.com/112610125572984281932" rel="publisher" target="_blank"><i class='fa fa-google-plus'></i>
+</a></li>
+<li>
+<a href="https://www.youtube.com/user/BlocContent" target="_blank"><i class='fa fa-youtube'></i>
+</a></li>
+</ul>
+
+</div>
+<div class='copyright'>
+COPYRIGHT ©  2017 BLOC
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class='AboutHeader'>
+<div class='container'>
+<div class='AboutHeader-text'>
+<h1>Our mission: help everyone pursue their craft and improve their lives</h1>
+<h2 class='h3'>Bloc is an online education company with intensive mentor-led programs for aspiring developers and designers.</h2>
+<p>Bloc relies on the time-tested apprenticeship model to help students start new careers. We combine experienced mentors and project-based curriculum to offer students around the world a more accessible and effective way alternative to traditional degrees or in-person bootcamps.</p>
+</div>
+</div>
+</div>
+<!-- -------------------------------------------------------------------------- -->
+<!-- LEADERSHIP -->
+<!-- -------------------------------------------------------------------------- -->
+<section class='AboutSection'>
+<div class='container'>
+<div class='AboutSection-header'>
+<h2>Leadership</h2>
+</div>
+<div class='FeatureGrid'>
+<div class='FeatureGrid-item'>
+<!-- / HACK: easy way to get a uniq key for each bio so we can hide/show it with angular. -->
+<!-- / Doesn't require a controller or directive or anything. -->
+<!-- / We should probably abstract this though. -->
+<div class='FeaturedMember'>
+<div class='FeaturedMember-photo'><img alt="Clint Schmidt" src="https://cdn2.bloc.io/assets/landing/about/leadership/Clint-077705339b04c0e5f7cc2296a54b54e6.jpg" /></div>
+<div class='FeaturedMember-namegroup'>
+<div class='FeaturedMember-name'>Clint Schmidt</div>
+<div class='FeaturedMember-title'>CEO</div>
+</div>
+<div class='MemberBio' ng_class="{'MemberBio--is-open': showBio_84f7d12e63d44c8f87ef6af56894e1ca}">
+<div class='MemberBio-toggle' ng_click='showBio_84f7d12e63d44c8f87ef6af56894e1ca = !showBio_84f7d12e63d44c8f87ef6af56894e1ca'>
+Biography
+</div>
+<div class='MemberBio-content'>Clint Schmidt is a veteran of e-commerce and online marketplaces. Clint has held executive marketing, business development, and product management roles at Half.com, eBay, 1-800-CONTACTS, Livemocha, Roblox, Wantful, and Good Eggs, along with a stint at Harrison Metal, a leading seed-stage venture capital firm in Silicon Valley. Clint earned a Bachelor of Science degree in Entrepreneurial Management from The Wharton School of the University of Pennsylvania.</div>
+</div>
+</div>
+
+</div>
+<div class='FeatureGrid-item'>
+<!-- / HACK: easy way to get a uniq key for each bio so we can hide/show it with angular. -->
+<!-- / Doesn't require a controller or directive or anything. -->
+<!-- / We should probably abstract this though. -->
+<div class='FeaturedMember'>
+<div class='FeaturedMember-photo'><img alt="Dave Paola" src="https://cdn0.bloc.io/assets/landing/about/leadership/Dave-c990f23e0d87ea0c7e4d09bc386e0066.jpg" /></div>
+<div class='FeaturedMember-namegroup'>
+<div class='FeaturedMember-name'>Dave Paola</div>
+<div class='FeaturedMember-title'>CTO and Cofounder</div>
+</div>
+<div class='MemberBio' ng_class="{'MemberBio--is-open': showBio_154d99c79d074a71a5cd3c02fd758ba1}">
+<div class='MemberBio-toggle' ng_click='showBio_154d99c79d074a71a5cd3c02fd758ba1 = !showBio_154d99c79d074a71a5cd3c02fd758ba1'>
+Biography
+</div>
+<div class='MemberBio-content'>Dave Paola is a software engineer turned founder who learned to code at an early age. Prior to graduating with a computer science degree from the University of Illinois, he worked on hundreds of real projects at ACM, Brechbuhler Scales, the university, and an early-stage startup called Harmonize.fm. Dave co-founded Djangy.com, the world’s first python cloud hosting product, and subsequently joined Kontagent. Bloc is the result of Dave’s lifelong dissatisfaction with K-12 &amp; higher education.</div>
+</div>
+</div>
+
+</div>
+<div class='FeatureGrid-item'>
+<!-- / HACK: easy way to get a uniq key for each bio so we can hide/show it with angular. -->
+<!-- / Doesn't require a controller or directive or anything. -->
+<!-- / We should probably abstract this though. -->
+<div class='FeaturedMember'>
+<div class='FeaturedMember-photo'><img alt="Riley End" src="https://cdn2.bloc.io/assets/landing/about/leadership/Riley-23c02fef232513f3e1f3cb0c9731b8b1.jpg" /></div>
+<div class='FeaturedMember-namegroup'>
+<div class='FeaturedMember-name'>Riley End</div>
+<div class='FeaturedMember-title'>VP of Growth and Operations</div>
+</div>
+<div class='MemberBio' ng_class="{'MemberBio--is-open': showBio_b81636b069524a2f9309d7b242a851e9}">
+<div class='MemberBio-toggle' ng_click='showBio_b81636b069524a2f9309d7b242a851e9 = !showBio_b81636b069524a2f9309d7b242a851e9'>
+Biography
+</div>
+<div class='MemberBio-content'>Riley End brings 8 years of operational, growth, analytics and business development experience to his role at Bloc. Riley began his career with Related, a real estate development and investment firm based in New York before moving into an operating role at Savored, an early-stage restaurant industry startup. In 2012, Riley became co-founder and CEO of Given Goods Co., a social impact ecommerce marketplace featuring over 2,000 products from 150 brands. Riley has an A.B. in Government from Dartmouth College.</div>
+</div>
+</div>
+
+</div>
+<div class='FeatureGrid-item'>
+<!-- / HACK: easy way to get a uniq key for each bio so we can hide/show it with angular. -->
+<!-- / Doesn't require a controller or directive or anything. -->
+<!-- / We should probably abstract this though. -->
+<div class='FeaturedMember'>
+<div class='FeaturedMember-photo'><img alt="Courtland Alves" src="https://cdn0.bloc.io/assets/landing/about/leadership/Courtland-d3918162caac2782efee9fb279751bd5.jpg" /></div>
+<div class='FeaturedMember-namegroup'>
+<div class='FeaturedMember-name'>Courtland Alves</div>
+<div class='FeaturedMember-title'>VP of Product and Mentorship</div>
+</div>
+<div class='MemberBio' ng_class="{'MemberBio--is-open': showBio_05f25db1bbf24790a8e4f6e2bfe023b6}">
+<div class='MemberBio-toggle' ng_click='showBio_05f25db1bbf24790a8e4f6e2bfe023b6 = !showBio_05f25db1bbf24790a8e4f6e2bfe023b6'>
+Biography
+</div>
+<div class='MemberBio-content'>Courtland Alves has 8 years of experience as a product manager, engineering manager and entrepreneur. He joins Bloc through an acquisition of DevBridge, which partnered with coding bootcamps to help their grads find jobs. Courtland has led product and engineering at Yahoo and CrowdStar and was CEO at Hitpost (acquired by Yahoo!). Courtland has a background in software engineering with a degree in Computer Science and Electrical Engineering from UC Berkeley.</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+<!-- -------------------------------------------------------------------------- -->
+<!-- TEAMS -->
+<!-- -------------------------------------------------------------------------- -->
+<section class='AboutSection'>
+<div class='container'>
+<div class='AboutSection-separator'></div>
+<header class='AboutSection-header'>
+<h2 class='AboutSection-title'>Mentor Team</h2>
+<p class='AboutSection-description'>Mentors at Bloc offer students a unique opportunity to work with current industry professionals who provide valuable insight into what is needed in today’s tech economy. Paired with Bloc’s exclusive curriculum, hard-working students have access to all the support they will need to successfully complete the program.</p>
+</header>
+<div class='TeamGrid'>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Joey Kirk" src="https://cdn3.bloc.io/assets/landing/about/team-photos/joey-5b580aca820ae2a253b8e8f15abb9983.jpg" />
+</div>
+<div class='TeamMember-name'>Joey Kirk</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Chris Gillis" src="https://cdn2.bloc.io/assets/landing/about/team-photos/chris-gillis-e84836156ccc1f2ef229cb409f04d166.jpg" />
+</div>
+<div class='TeamMember-name'>Chris Gillis</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Ben Neely" src="https://cdn0.bloc.io/assets/landing/about/team-photos/ben-d6ec7250d1a5c017778c3204a41c7dca.jpg" />
+</div>
+<div class='TeamMember-name'>Ben Neely</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Alissa Likavec" src="https://cdn0.bloc.io/assets/landing/about/team-photos/alissa-likavec-2e540a491292c56a36fc92ec853cc71c.jpg" />
+</div>
+<div class='TeamMember-name'>Alissa Likavec</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Levi Kennedy" src="https://cdn2.bloc.io/assets/landing/about/team-photos/levi-1c7d010d94db3ae29ebb28ec26b56fc5.jpg" />
+</div>
+<div class='TeamMember-name'>Levi Kennedy</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Mark Carpenter" src="https://cdn1.bloc.io/assets/landing/about/team-photos/mark-carpenter-2e409684e2a03385ad86a6b76bbb0033.jpg" />
+</div>
+<div class='TeamMember-name'>Mark Carpenter</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Dennis Eusebio" src="https://cdn3.bloc.io/assets/landing/about/team-photos/dennis-eusebio-c75d009b348b42d70decd02857cb4fc2.jpg" />
+</div>
+<div class='TeamMember-name'>Dennis Eusebio</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Shannon Bertucci" src="https://cdn0.bloc.io/assets/landing/about/team-photos/shannon-bertucci-c4a705240dca307027cc18d8e1d6e5d4.jpg" />
+</div>
+<div class='TeamMember-name'>Shannon Bertucci</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Chris Courtney" src="https://cdn1.bloc.io/assets/landing/about/team-photos/chris-775d86010425d618b138295018863c65.jpg" />
+</div>
+<div class='TeamMember-name'>Chris Courtney</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Jason Perez" src="https://cdn3.bloc.io/assets/landing/about/team-photos/jason-perez-947532dea339e11bdd192888592224d1.jpg" />
+</div>
+<div class='TeamMember-name'>Jason Perez</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Mathew Maxwell" src="https://cdn3.bloc.io/assets/landing/about/team-photos/mathew-maxwell-6126a420eb2da916ee5dcbb6600570a4.jpg" />
+</div>
+<div class='TeamMember-name'>Mathew Maxwell</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Jose Sanchez" src="https://cdn0.bloc.io/assets/landing/about/team-photos/jose-ad8ee4ca8cf8cc558a2375d9a3f73b6e.jpg" />
+</div>
+<div class='TeamMember-name'>Jose Sanchez</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Michael Pell" src="https://cdn1.bloc.io/assets/landing/about/team-photos/michael-pell-4439d9c5a28be911b0458acb57c6d419.jpg" />
+</div>
+<div class='TeamMember-name'>Michael Pell</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Matt Born" src="https://cdn3.bloc.io/assets/landing/about/team-photos/matt-born-622b4adbc3790d4c0ddaca4e672224fd.jpg" />
+</div>
+<div class='TeamMember-name'>Matt Born</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Phil Spitler" src="https://cdn2.bloc.io/assets/landing/about/team-photos/phil-8b81c972e8affca52bad08874f77e304.jpg" />
+</div>
+<div class='TeamMember-name'>Phil Spitler</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Aaron Uyehara" src="https://cdn3.bloc.io/assets/landing/about/team-photos/aaron-uyehara-f22d80cc26f098fc592dabe993240eed.jpg" />
+</div>
+<div class='TeamMember-name'>Aaron Uyehara</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Rob Madden" src="https://cdn2.bloc.io/assets/landing/about/team-photos/rob-madden-e0a762d832c1fa94961307ef891568b6.jpg" />
+</div>
+<div class='TeamMember-name'>Rob Madden</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Tim Barnes" src="https://cdn3.bloc.io/assets/landing/about/team-photos/tim-a85f888363c509055597ee360b6a4c5d.jpg" />
+</div>
+<div class='TeamMember-name'>Tim Barnes</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Mathew Thompson" src="https://cdn2.bloc.io/assets/landing/about/team-photos/mathew-thompson-e278cb3d6f9ce2e93200c9e6b0debb88.jpg" />
+</div>
+<div class='TeamMember-name'>Mathew Thompson</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="John Sawers" src="https://cdn2.bloc.io/assets/landing/about/team-photos/john-sawers-b89a0b97deafeba3d31165e99f9e910a.jpg" />
+</div>
+<div class='TeamMember-name'>John Sawers</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Caila Blanton" src="https://cdn1.bloc.io/assets/landing/about/team-photos/caila-4b86d2b99e5b8dd39d8eb60952228c5f.jpg" />
+</div>
+<div class='TeamMember-name'>Caila Blanton</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Bobbilee Hartman" src="https://cdn0.bloc.io/assets/landing/about/team-photos/bobbilee-hartman-dfe8557d256555490cb40a77b060dc1a.jpg" />
+</div>
+<div class='TeamMember-name'>Bobbilee Hartman</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Adam Louis" src="https://cdn2.bloc.io/assets/landing/about/team-photos/adam-louis-8ea81c229ca01c1d23003ec4d57be08b.jpg" />
+</div>
+<div class='TeamMember-name'>Adam Louis</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Conrad Taylor" src="https://cdn2.bloc.io/assets/landing/about/team-photos/conrad-taylor-12b2ce6f2b5b91014c5a300684630ac1.jpg" />
+</div>
+<div class='TeamMember-name'>Conrad Taylor</div>
+</div>
+</div>
+</div>
+</section>
+<section class='AboutSection'>
+<div class='container'>
+<div class='AboutSection-separator AboutSection-separator--line'></div>
+<header class='AboutSection-header'>
+<h2 class='AboutSection-title'>Student Experience Team</h2>
+<p class='AboutSection-description'>The Student Experience Team consists of Student Advisors, Student Success, and Career Services. The team's primary concerns are the happiness and success of our students. They’re dedicated to helping and empowering our students so they may reach their goals and have a fun, effective, and rewarding learning experience.</p>
+</header>
+<div class='TeamGrid'>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Gina diMarcantonio" src="https://cdn1.bloc.io/assets/landing/about/team-photos/gina-dimarcantonio-dba788382a70d8112ee92b481184ade9.jpg" />
+</div>
+<div class='TeamMember-name'>Gina diMarcantonio</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Prachi Singh" src="https://cdn1.bloc.io/assets/landing/about/team-photos/prachi-c73d2994a989658fa45281d847c79282.jpg" />
+</div>
+<div class='TeamMember-name'>Prachi Singh</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Amanda Mejia" src="https://cdn3.bloc.io/assets/landing/about/team-photos/amanda-6408ce0271df30adc65aeae5fb14094d.jpg" />
+</div>
+<div class='TeamMember-name'>Amanda Mejia</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Katy Waddell" src="https://cdn1.bloc.io/assets/landing/about/team-photos/katy-0fef9e0b43697a90a4e5624d7eaadd04.jpg" />
+</div>
+<div class='TeamMember-name'>Katy Waddell</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Andy Johnston" src="https://cdn2.bloc.io/assets/landing/about/team-photos/andy-1954a92a47af29a672cde91299338d61.jpg" />
+</div>
+<div class='TeamMember-name'>Andy Johnston</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Juline Lamusga" src="https://cdn0.bloc.io/assets/landing/about/team-photos/juline-a2d8712a273a4884cbec21ba3801837f.jpg" />
+</div>
+<div class='TeamMember-name'>Juline Lamusga</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Keri Spencer" src="https://cdn1.bloc.io/assets/landing/about/team-photos/keri-88f07ad042b82a5bd20fdae5e15a3348.jpg" />
+</div>
+<div class='TeamMember-name'>Keri Spencer</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Susannah Ryan" src="https://cdn0.bloc.io/assets/landing/about/team-photos/susannah-a668e9cf4ec2562bf83c85425a2b23b8.jpg" />
+</div>
+<div class='TeamMember-name'>Susannah Ryan</div>
+</div>
+</div>
+</div>
+</section>
+<section class='AboutSection'>
+<div class='container'>
+<div class='AboutSection-separator AboutSection-separator--line'></div>
+<header class='AboutSection-header'>
+<h2 class='AboutSection-title'>Design and Development</h2>
+</header>
+<div class='TeamGrid'>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Ariel Fogel" src="https://cdn1.bloc.io/assets/landing/about/team-photos/ariel-c11f67606b7114ba26d55b87d6a75321.jpg" />
+</div>
+<div class='TeamMember-name'>Ariel Fogel</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Megan Marquardt" src="https://cdn2.bloc.io/assets/landing/about/team-photos/megan-5f3f14833df05af4bf706d47791c9d24.jpg" />
+</div>
+<div class='TeamMember-name'>Megan Marquardt</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Joe Lipper" src="https://cdn3.bloc.io/assets/landing/about/team-photos/joe-f442251a6a734f399b68e0fe8181f4ac.jpg" />
+</div>
+<div class='TeamMember-name'>Joe Lipper</div>
+</div>
+<div class='TeamMember TeamGrid-item'>
+<div class='TeamMember-photo'>
+<img alt="Sanny Lin" src="https://cdn0.bloc.io/assets/landing/about/team-photos/sanny-lin-1967e823d9b14b13391a31832ac54c22.jpg" />
+</div>
+<div class='TeamMember-name'>Sanny Lin</div>
+</div>
+</div>
+</div>
+</section>
+<!-- -------------------------------------------------------------------------- -->
+<!-- PRESS -->
+<!-- -------------------------------------------------------------------------- -->
+<section class='AboutSection'>
+<div class='container'>
+<div class='AboutSection-separator AboutSection-separator--line'></div>
+<header class='AboutSection-header'>
+<h2 class='AboutSection-title'>Bloc in the News</h2>
+<p class='AboutSection-description'>
+For press inquiries please contact us at
+<br>
+<a href="mailto:press@bloc.io">press@bloc.io</a>
+or call us at
+<a href="tel:(650)-741-5682">(650)-741-5682</a>
+</p>
+</header>
+<div class='PressGrid'>
+<div class='PressGrid-item'>
+<article class='PressStory'>
+<a class="PressStory-logo" href="http://www.wired.com/2015/08/guy-rode-bootcamp-startup-success/"><img alt="Wired" src="https://cdn2.bloc.io/assets/landing/about/press/wired-46b7340837fad3eed047f87f038ff754.png" />
+</a><h2 class='h3 PressStory-title'>This Guy Rode a Boot Camp to Startup Success</h2>
+<p class='PressStory-excerpt'>Eliam Medina took Bloc's Rails Web Development course to learn how to build a prototype for Willing, his startup, which ended up being the fastest growing startup in Y-Combinator's Summer 2015 Class and getting funded by top investors.</p>
+<footer class='PressStory-author'>
+<div class='PressStory-author-photo'><img alt="Klint finley" src="https://cdn2.bloc.io/assets/landing/about/press/klint-finley-0ad790abbcc4de5acec0f975df931529.jpg" /></div>
+<div class='PressStory-author-name'>Klint Finley</div>
+</footer>
+<a class="PressStory-link" href="http://www.wired.com/2015/08/guy-rode-bootcamp-startup-success/"></a>
+</article>
+</div>
+<div class='PressGrid-item'>
+<article class='PressStory'>
+<a class="PressStory-logo" href="http://www.entrepreneur.com/article/246947"><img alt="Entrepreneur" src="https://cdn2.bloc.io/assets/landing/about/press/entrepreneur-745e602ff82f3cfd5f4fb9726e939309.png" />
+</a><h2 class='h3 PressStory-title'>How a Developer Boot Camp Marched Its Way to Millions</h2>
+<p class='PressStory-excerpt'>The story of Bloc's founding, how its online bootcamp experience works for students, and future plans for growth.</p>
+<footer class='PressStory-author'>
+<div class='PressStory-author-photo'><img alt="Michelle goodman" src="https://cdn3.bloc.io/assets/landing/about/press/michelle-goodman-f0352405a71ee63949642d7cb7c9f8b1.jpg" /></div>
+<div class='PressStory-author-name'>Michelle Goodman</div>
+</footer>
+<a class="PressStory-link" href="http://www.entrepreneur.com/article/246947"></a>
+</article>
+</div>
+<div class='PressGrid-item'>
+<article class='PressStory'>
+<a class="PressStory-logo" href="http://gizmodo.com/how-do-you-learn-to-code-1714925538"><img alt="Gizmodo" src="https://cdn3.bloc.io/assets/landing/about/press/gizmodo-0a658584f9337662353b6f87d684e520.png" />
+</a><h2 class='h3 PressStory-title'>How Do You Learn To Code?</h2>
+<p class='PressStory-excerpt'>Roshan Choxi, Bloc's CEO, gives 3 critical pieces of advice on how to learn to code - focus on habits, not goals, overcome the pain of learning alone by having a mentor and belonging to a community, and build things. </p>
+<footer class='PressStory-author'>
+<div class='PressStory-author-photo'><img alt="Roshan" src="https://cdn3.bloc.io/assets/landing/about/team-photos/roshan-e2e041ec998b4865be0f21f64d26c47d.jpg" /></div>
+<div class='PressStory-author-name'>Roshan Choxi</div>
+</footer>
+<a class="PressStory-link" href="http://gizmodo.com/how-do-you-learn-to-code-1714925538"></a>
+</article>
+</div>
+<div class='PressGrid-item'>
+<article class='PressStory'>
+<a class="PressStory-logo" href="http://www.businessinsider.com/coding-bootcamps-have-no-standard-measurements-for-job-placement-rates-2015-10"><img alt="Bi" src="https://cdn3.bloc.io/assets/landing/about/press/bi-4c5405acf2c55f8dd3fdefb1712af39d.png" />
+</a><h2 class='h3 PressStory-title'>Here's what you should know about those 99% job placement rates at 'coding bootcamps’</h2>
+<p class='PressStory-excerpt'>Why some bootcamps aren't completely authentic when making claims about their job placement rates.</p>
+<footer class='PressStory-author'>
+<div class='PressStory-author-photo'><img alt="Nathan mcalone" src="https://cdn2.bloc.io/assets/landing/about/press/nathan-mcalone-14ac8d3c9c027e2e519f53076cb85b49.jpg" /></div>
+<div class='PressStory-author-name'>Nathan McAlone</div>
+</footer>
+<a class="PressStory-link" href="http://www.businessinsider.com/coding-bootcamps-have-no-standard-measurements-for-job-placement-rates-2015-10"></a>
+</article>
+</div>
+<div class='PressGrid-item'>
+<article class='PressStory'>
+<a class="PressStory-logo" href="http://venturebeat.com/2015/11/08/coding-bootcamps-are-replacing-computer-science-degrees/"><img alt="Venture beat" src="https://cdn3.bloc.io/assets/landing/about/press/venture-beat-2be5ad7b6afc2b07a8603882be8f31ee.png" />
+</a><h2 class='h3 PressStory-title'>Coding bootcamps are replacing computer science degrees</h2>
+<p class='PressStory-excerpt'>Roshan Choxi, Bloc's CEO, argues that the rise of coding bootcamps has diminished the need for Computer Science degrees, the curricula for which are antiquated in a rapidly evolving field.</p>
+<footer class='PressStory-author'>
+<div class='PressStory-author-photo'><img alt="Roshan" src="https://cdn3.bloc.io/assets/landing/about/team-photos/roshan-e2e041ec998b4865be0f21f64d26c47d.jpg" /></div>
+<div class='PressStory-author-name'>Roshan Choxi</div>
+</footer>
+<a class="PressStory-link" href="http://venturebeat.com/2015/11/08/coding-bootcamps-are-replacing-computer-science-degrees/"></a>
+</article>
+</div>
+<div class='PressGrid-item'>
+<article class='PressStory'>
+<a class="PressStory-logo" href="http://www.wired.com/2015/11/blocs-guarantee-get-a-job-as-a-programmer-or-your-money-back/"><img alt="Wired" src="https://cdn2.bloc.io/assets/landing/about/press/wired-46b7340837fad3eed047f87f038ff754.png" />
+</a><h2 class='h3 PressStory-title'>Bloc’s Guarantee: Get a Job as a Programmer or Your Money Back</h2>
+<p class='PressStory-excerpt'>Announcing the launch of Bloc's Software Engineering Track. This 48-week intensive program, combining Computer Science fundamentals with practical programming skills, better prepares students to get jobs at top tech companies than do traditional bootcamps.</p>
+<footer class='PressStory-author'>
+<div class='PressStory-author-photo'><img alt="Klint finley" src="https://cdn2.bloc.io/assets/landing/about/press/klint-finley-0ad790abbcc4de5acec0f975df931529.jpg" /></div>
+<div class='PressStory-author-name'>Klint Finley</div>
+</footer>
+<a class="PressStory-link" href="http://www.wired.com/2015/11/blocs-guarantee-get-a-job-as-a-programmer-or-your-money-back/"></a>
+</article>
+</div>
+</div>
+</div>
+</section>
+<!-- -------------------------------------------------------------------------- -->
+<!-- Advisors -->
+<!-- -------------------------------------------------------------------------- -->
+<section class='AboutSection'>
+<div class='container'>
+<div class='AboutSection-separator'></div>
+<div class='AboutSection-header'>
+<h2>Advisors and board</h2>
+</div>
+<div class='FeatureGrid'>
+<div class='FeatureGrid-item'>
+<!-- / HACK: easy way to get a uniq key for each bio so we can hide/show it with angular. -->
+<!-- / Doesn't require a controller or directive or anything. -->
+<!-- / We should probably abstract this though. -->
+<div class='FeaturedMember'>
+<div class='FeaturedMember-photo'><img alt="Sean Flynn" src="https://cdn3.bloc.io/assets/landing/about/advisors/Sean-Flynn-557f7fb2252f67cb49077b81dc2c09a7.jpg" /></div>
+<div class='FeaturedMember-namegroup'>
+<div class='FeaturedMember-name'>Sean Flynn</div>
+<div class='FeaturedMember-title'>Managing Director, Shasta Ventures</div>
+</div>
+<div class='MemberBio' ng_class="{'MemberBio--is-open': showBio_6a8f644898ab4368a2bae51480ebed1e}">
+<div class='MemberBio-toggle' ng_click='showBio_6a8f644898ab4368a2bae51480ebed1e = !showBio_6a8f644898ab4368a2bae51480ebed1e'>
+Biography
+</div>
+<div class='MemberBio-content'>Sean invests in mobile-enabled consumer Internet and enterprise software companies. He currently serves on the board of directors for the online learning bootcamp Bloc, secure enterprise messaging company TigerText, mobile digital archive Timehop, as well as video rights and marketing company ZEFR, and payments and analytics company Swipely. He also led the firm’s investments in the anonymous social network Whisper, Dollar Shave Club and Simple (acquired by BBVA).</div>
+</div>
+</div>
+
+</div>
+<div class='FeatureGrid-item'>
+<!-- / HACK: easy way to get a uniq key for each bio so we can hide/show it with angular. -->
+<!-- / Doesn't require a controller or directive or anything. -->
+<!-- / We should probably abstract this though. -->
+<div class='FeaturedMember'>
+<div class='FeaturedMember-photo'><img alt="Adam Wiggins" src="https://cdn3.bloc.io/assets/landing/about/advisors/Adam-Wiggins-8316c3d90d93112f18a95a6003f77d65.jpg" /></div>
+<div class='FeaturedMember-namegroup'>
+<div class='FeaturedMember-name'>Adam Wiggins</div>
+<div class='FeaturedMember-title'>Cofounder, Heroku</div>
+</div>
+<div class='MemberBio' ng_class="{'MemberBio--is-open': showBio_ede8cb05b11d4be39cc09c0ad50e0c3e}">
+<div class='MemberBio-toggle' ng_click='showBio_ede8cb05b11d4be39cc09c0ad50e0c3e = !showBio_ede8cb05b11d4be39cc09c0ad50e0c3e'>
+Biography
+</div>
+<div class='MemberBio-content'>Adam is a digital toolmaker and serial entrepreneur best known for cofounding Heroku. He's passionate about programming literacy and team-building. He lives in Berlin.</div>
+</div>
+</div>
+
+</div>
+<div class='FeatureGrid-item'>
+<!-- / HACK: easy way to get a uniq key for each bio so we can hide/show it with angular. -->
+<!-- / Doesn't require a controller or directive or anything. -->
+<!-- / We should probably abstract this though. -->
+<div class='FeaturedMember'>
+<div class='FeaturedMember-photo'><img alt="Michael Dearing" src="https://cdn3.bloc.io/assets/landing/about/advisors/Michael-Dearing-a370c839d449aa8e82c7b8b588dbeec3.jpg" /></div>
+<div class='FeaturedMember-namegroup'>
+<div class='FeaturedMember-name'>Michael Dearing</div>
+<div class='FeaturedMember-title'>Founder, Harrison Metal</div>
+</div>
+<div class='MemberBio' ng_class="{'MemberBio--is-open': showBio_18a914f584ca43f4a0d0ca9b8caa840c}">
+<div class='MemberBio-toggle' ng_click='showBio_18a914f584ca43f4a0d0ca9b8caa840c = !showBio_18a914f584ca43f4a0d0ca9b8caa840c'>
+Biography
+</div>
+<div class='MemberBio-content'>While building Harrison Metal, Michael was a Consulting Associate Professor at Stanford University’s School of Engineering, teaching classes in Mechanical Engineering, Management Science &amp; Engineering, and the d.school. After finishing his work at Stanford, he decided to continue teaching at Harrison Metal. Today Harrison Metal is a center for teaching and investing in exceptional people. Prior to Stanford and Harrison Metal, Michael spent six-and-a-half years at eBay, where he had tours of duty in category management, corporate strategy, U.S. marketing, and finally as Senior Vice President &amp; General Merchandise Manager for eBay.com. Before eBay, Michael worked at Industrial Shoe Warehouse (COO then CEO), The Walt Disney Company (corporate strategy), Filene’s Basement (operations at the Downtown Boston store), and Bain &amp; Company (Associate Consultant). He earned an AB in Economics, with a focus in economic history, from Brown University, and an MBA with Distinction from Harvard Business School.</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+<!-- -------------------------------------------------------------------------- -->
+<!-- Investors -->
+<!-- -------------------------------------------------------------------------- -->
+<section class='AboutSection'>
+<div class='container'>
+<div class='AboutSection-separator'></div>
+<header class='AboutSection-header'>
+<h2 class='AboutSection-title'>Investors</h2>
+</header>
+<div class='InvestorGrid'>
+<a class="InvestorGrid-item" href="http://www.shastaventures.com/"><img alt="Shasta Ventures" src="https://cdn2.bloc.io/assets/landing/about/investors/shasta-ventures-84f976db27dd44de813da2f8de38c0ed.png" />
+</a><a class="InvestorGrid-item" href="https://www.harrisonmetal.com/"><img alt="Harrison Metal" src="https://cdn3.bloc.io/assets/landing/about/investors/harrison-metal-04b92dbe86ac67cbd5126cfcf68d2d45.png" />
+</a><a class="InvestorGrid-item" href="http://firstround.com/"><img alt="First Round Capital" src="https://cdn1.bloc.io/assets/landing/about/investors/first-round-capital-40923d5c54a61a7aed3cc55c6e56f359.png" />
+</a><a class="InvestorGrid-item" href="http://www.baselinev.com/"><img alt="Baseline Venturs" src="https://cdn3.bloc.io/assets/landing/about/investors/baseline-ventures-30ff0977b028e333d686548e2b94fa6e.png" />
+</a><a class="InvestorGrid-item" href="http://learncapital.com/"><img alt="Learn Capital" src="https://cdn2.bloc.io/assets/landing/about/investors/learn-capital-9c4da85915688dbbae354032e5d0abe2.png" />
+</a></div>
+</div>
+</section>
+<!-- -------------------------------------------------------------------------- -->
+<!-- JOBS -->
+<!-- -------------------------------------------------------------------------- -->
+<div id='jobs'>
+<section class='AboutSection'>
+<div class='container'>
+<div class='AboutSection-separator'></div>
+<header class='AboutSection-header'>
+<h2 class='AboutSection-title'>Come Innovate With Us</h2>
+<p class='AboutSection-description'>We're a product-driven team committed to providing outstanding experiences to our students and mentors. If you or someone you know wants to make a positive impact on education, email us at with why you're interested and an example of work. We are actively recruiting full-stack software engineers with excellent product taste.</p>
+</header>
+<div class='row'>
+<div class='col-sm-6'>
+<table class='table'>
+<thead>
+<tr>
+<td>Title</td>
+<td>Duration</td>
+<td>Location</td>
+</tr>
+</thead>
+<tr>
+<td><a href="https://jobs.lever.co/bloc/ba79718f-a04b-4405-9968-601ca8563b7d">Software Engineer</a></td>
+<td>Full Time</td>
+<td>San Francisco</td>
+</tr>
+<tr>
+<td><a href="https://jobs.lever.co/bloc/80cd9b57-7f64-4b6a-af35-7ceca7bf3fc4">Account Executive </a></td>
+<td>Full Time</td>
+<td>San Francisco</td>
+</tr>
+</table>
+</div>
+<div class='benefits col-sm-5 col-sm-offset-1'>
+<h3 class='mini-headline'>Tools</h3>
+<p>Whatever tools you need to get the job done. Start with a Cinema Display and Macbook of choice.</p>
+<h3 class='mini-headline'>Education</h3>
+<p>Never stop learning. Take any Bloc apprenticeship for free. Get your conference expenses covered.</p>
+<h3 class='mini-headline'>Wellness</h3>
+<p>100% individual health coverage and 50% for dependents. Dental and vision included.</p>
+<h3 class='mini-headline'>Rest and Relaxation</h3>
+<p>Take time off when you need it. Work the hours that work for you.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+
+<div class='full-page-footer hidden-xs'>
+<div class='container'>
+<div class='column-wrapper'>
+<div class='column'>
+<h6>Programs</h6>
+<div class='course-links'>
+<section class='tracks'>
+<div class='label'>Become a Software Developer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="software-developer-track.html"><i class='fa fa-tasks fa-fw'></i>
+Software Developer Track
+</a></li>
+</ul>
+</section>
+<section class='tracks'>
+<div class='label'>Become a Web Developer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="web-developer-career-track.html"><i class='fa fa-cubes fa-fw'></i>
+Part-Time Web Developer Track
+</a></li>
+</ul>
+</section>
+<section class='tracks'>
+<div class='label'>Become a Designer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="design-bootcamp.html"><i class='fa fa-picture-o fa-fw'></i>
+Designer Track
+</a></li>
+</ul>
+</section>
+<section class='courses'>
+<div class='label'>Broaden Your Skills</div>
+<ul>
+<li class='course-icon-link web-dev'>
+<a href="web-development-bootcamp.html"><i class='fa fa-terminal fa-fw'></i>
+Rails Fundamentals
+</a></li>
+<li class='course-icon-link frontend'>
+<a href="frontend-development-bootcamp.html"><i class='fa fa-code fa-fw'></i>
+Frontend Fundamentals
+</a></li>
+<li class='course-icon-link design'>
+<a href="ux-design-bootcamp.html"><i class='fa fa-picture-o fa-fw'></i>
+UX/UI Design Fundamentals
+</a></li>
+<li class='course-icon-link android'>
+<a href="android-bootcamp.html"><i class='fa fa-android fa-fw'></i>
+Android Fundamentals
+</a></li>
+<li class='course-icon-link ios'>
+<a href="ios-bootcamp.html"><i class='fa fa-apple fa-fw'></i>
+iOS Fundamentals
+</a></li>
+</ul>
+</section>
+</div>
+
+</div>
+<div class='column'>
+<h6>About Bloc</h6>
+<ul>
+<li>
+<a href="about.html">Our Team | Jobs</a>
+</li>
+<li>
+<a href="http://try.bloc.io/dev-bootcamp-for-veterans/" target="_blank">Bloc Veterans Program</a>
+</li>
+<li>
+<a href="http://try.bloc.io/new-relic-bootcamp-diversity-scholarship/" target="_blank">Bloc&#39;s Diversity Scholarship</a>
+</li>
+<li>
+<a href="faq.html">FAQ</a>
+</li>
+<li>
+<a href="http://blog.bloc.io">Blog</a>
+</li>
+<li>
+<a href="http://code.bloc.io" target="_blank">Engineering Blog</a>
+</li>
+<li>
+<a href="privacy.html">Privacy Policy</a>
+</li>
+<li>
+<a href="terms.html">Terms of Service</a>
+</li>
+<li>
+<a href="https://blog.bloc.io/bloc-reviews-from-real-students/">Read Reviews of Bloc</a>
+</li>
+<li>
+<a href="Bloc-Catalog.pdf">Course Catalog</a>
+</li>
+</ul>
+</div>
+<div class='column'>
+<h6>Made By Bloc</h6>
+<ul>
+<li>
+<a href="http://try.bloc.io/tech-talks/" target="_blank">Tech Talks &amp; Resources</a>
+</li>
+<li>
+<a href="coding-bootcamp-calculator.html">Coding Bootcamp Calculator</a>
+</li>
+<li>
+<a href="coding-bootcamp-comparison.html">Programming Bootcamp Comparison</a>
+</li>
+<li>
+
+</li>
+<li>
+
+</li>
+<li>
+
+</li>
+<li>
+<a href="ruby-warrior.html">Ruby Warrior</a>
+</li>
+<li>
+<a href="https://bloc.io/learn-to-code">Bootcamp Selector</a>
+</li>
+</ul>
+<h6>HIRE OUR GRADS</h6>
+<ul class='contact-list'>
+<li>
+<i class='fa fa-envelope-o'></i>
+<div class='contact-wrapper'>
+<a href="mailto:outcomes@bloc.io">Contact Career Services</a>
+</div>
+</li>
+</ul>
+</div>
+<div class='column'>
+<h6>Sign Up For Our Mailing List</h6>
+<div class='footer-email-form' ng_controller='FooterEmail.controller'>
+<form class='emelyn-form-elements' id='footer_email_capture' name='footer_email_capture'>
+<input class="input-dark email" id="email" name="email" ng_model="subscription.email" required="required" type="email" />
+<input class='btn btn-dark-gray btn-mini submit' id='footer_email_signup_btn' ng_click='submit()' ng_disabled='isSubmitDisabled()' type='submit' value='Send'>
+</form>
+</div>
+<ul class='contact-list'>
+<li>
+<i class='fa fa-envelope-o'></i>
+<div class='contact-wrapper'>
+<a href="mailto:hello@bloc.io">hello@bloc.io</a>
+</div>
+</li>
+<li>
+<i class='fa fa-phone'></i>
+<div class='contact-wrapper'>
+Considering enrolling?
+<br>
+(404) 480-2562
+</div>
+</li>
+<li>
+<i class='fa fa-phone'></i>
+<div class='contact-wrapper'>
+Partnership / Corporate Inquiries?
+<br>
+(650) 741-5682
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class='bottom'>
+<p class='copyright'>Copyright © 2017 Bloc</p>
+<ul class='social-link-list'>
+<li>
+<a href="https://www.facebook.com/trybloc" target="_blank"><i class='fa fa-facebook'></i>
+</a></li>
+<li>
+<a href="https://twitter.com/trybloc" target="_blank"><i class='fa fa-twitter'></i>
+</a></li>
+<li>
+<a href="https://plus.google.com/112610125572984281932" rel="publisher" target="_blank"><i class='fa fa-google-plus'></i>
+</a></li>
+<li>
+<a href="https://www.youtube.com/user/BlocContent" target="_blank"><i class='fa fa-youtube'></i>
+</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<script defer="defer" src="https://cdn1.bloc.io/webpack/lightweight_ng-bundle-d5548dadeeea4f4647bd.js"></script>
+<script defer type='text/javascript'>
+// Leave this in its own script tag so it won't blow up the rest of the JS.
+$.getScript('//munchkin.marketo.net/munchkin.js', initMunchkin);
+function initMunchkin () {
+  Munchkin.init("412-ZQR-205", {
+    domainLevel: 2
+  });
+}
+
+
+</script>
+<script defer type='text/javascript'>
+Analytics.quantcast.setup("p-fzmcqmjeqmw-j");
+Analytics.segment.setup("aoqc6vja9l", Bloc.current_user)
+
+
+</script>
+
+
+<script>
+  console.log("No referrer override.");
+</script>
+
+<script src="https://cdn0.bloc.io/assets/mixpanel_tracking-f7fa15a586fa60d3cb902445d4b203fb.js"></script>
+
+<noscript>
+<div style='display: none;'></div>
+<img alt='Quantcast' border='0' height='1' src='https://pixel.quantserve.com/pixel/p-fzmcqmjeqmw-j.gif' width='1'>
+</noscript>
+</body>
+</html>

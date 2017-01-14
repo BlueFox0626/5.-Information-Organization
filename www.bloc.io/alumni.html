@@ -1,0 +1,3288 @@
+<!DOCTYPE html>
+<html data-ng-app='NgBloc' itemscope='' itemtype='http://schema.org/Product'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"a93f3122a8","applicationID":"442416","transactionName":"JlxYRUsJCQ5RS00NBQtXX19eSQQOQVQMCA==","queueTime":1,"applicationTime":21,"agentToken":null,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQIDUldUGwcEVlVTAQ=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),s.xhrWrappable&&t(9),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),c=t(7),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),c.on(m,function(){this.bstStart=Date.now()}),c.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(17)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",c)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),c=t(16),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[y[n]];return f&&f.push([g,n,r,i]),i}}function p(t,e){v[t]=h(t).concat(e)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var v={},y={},g={on:p,emit:n,get:m,listeners:h,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(15),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=g.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(v,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(15),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(12);var w=""+location,v={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},y=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:a(),origin:w,features:{},xhrWrappable:y};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,10,4,3]);</script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700%7COpen+Sans+Condensed:700" media="screen" rel="stylesheet" />
+<link href="https://cdn1.bloc.io/assets/application-b7c7d1541a4a48edb60dde0064587e17.css" media="all" rel="stylesheet" />
+<script type="text/javascript">
+//<![CDATA[
+window.gon={};gon.footer_email_params={"channel":"footer","course_kind":"generic"};gon.utm_params=["utm_ad","utm_adgroup","utm_bonus","utm_campaign","utm_content","utm_keyword","utm_medium","utm_source"];gon.cta_email_params={"course_kind":"alumni","channel":"alumni"};gon.courses=[{"name":"Full Stack Web Developer Track","occupation_name":"Web Developer","landing_path":"http://try.bloc.io/web-developer-career-track/","image_icon":"//cdn0.bloc.io/assets/landing/course_icons/menu/web_dev_track-101683c0c83486594ad4e384a9ea58c9.png","kind":"web_dev_track","level_name":"Tracks","analytics_slug":"web_dev_track"},{"name":"Frontend Job Prep","occupation_name":"","landing_path":"/frontend-development","image_icon":"//cdn0.bloc.io/assets/landing/course_icons/menu/frontend-510ac33c3f87866567481e97fedb65e4.png","kind":"frontend","level_name":null,"analytics_slug":"frontend"},{"name":"Rails Job Prep","occupation_name":"Web Developer","landing_path":"/web-development","image_icon":"//cdn3.bloc.io/assets/landing/course_icons/menu/web_dev-cfab6ae6bbe996a803498c14ef665174.png","kind":"web_dev","level_name":null,"analytics_slug":"web_dev"},{"name":"UX Design Job Prep","occupation_name":"","landing_path":"/design","image_icon":"//cdn0.bloc.io/assets/landing/course_icons/menu/design-d270f97a022ce4946f94a513c93167e0.png","kind":"design","level_name":null,"analytics_slug":"design"},{"name":"iOS 4 weeks","occupation_name":"","landing_path":"/ios","image_icon":"//cdn2.bloc.io/assets/landing/course_icons/menu/ios-1efe639a921346783c77bf4506f7818f.png","kind":"ios","level_name":"Courses","analytics_slug":"ios"},{"name":"Android Job Prep","occupation_name":null,"landing_path":"/android","image_icon":"//cdn0.bloc.io/assets/landing/course_icons/menu/android-b07e7d5d69a2689f38d2c0c690aaec35.png","kind":"android","level_name":null,"analytics_slug":"android"},{"name":"Designer Track","occupation_name":"Designer","landing_path":"http://try.bloc.io/designer-career-track/","image_icon":"//cdn1.bloc.io/assets/landing/course_icons/menu/design_track-1900b816d838464ac1a9366a9bf1b473.png","kind":"design_track","level_name":"Tracks","analytics_slug":"design_track"},{"name":"Designer Track","occupation_name":"Designer","landing_path":null,"image_icon":"//cdn1.bloc.io/landing/course_icons/menu/design_track_v2.png","kind":"design_track_v2","level_name":"Tracks","analytics_slug":"design_track_v2"},{"name":"Software Engineering Track","occupation_name":"Software Engineer","landing_path":null,"image_icon":"//cdn0.bloc.io/landing/course_icons/menu/software_eng_track.png","kind":"software_eng_track","level_name":"Tracks","analytics_slug":"software_eng_track"},{"name":"Part-Time Web Developer Track","occupation_name":"Web Developer","landing_path":null,"image_icon":"//cdn3.bloc.io/landing/course_icons/menu/part_time_web_dev_track.png","kind":"part_time_web_dev_track","level_name":"Tracks","analytics_slug":"part_time_web_dev_track"},{"name":"Open Source Apprenticeship","occupation_name":"Software Engineer","landing_path":null,"image_icon":"//cdn0.bloc.io/landing/course_icons/menu/software_apprenticeship.png","kind":"software_apprenticeship","level_name":"Courses","analytics_slug":"software_apprenticeship"},{"name":"Software Developer Track","occupation_name":"Software Engineer","landing_path":null,"image_icon":"//cdn0.bloc.io/landing/course_icons/menu/software_dev_track.png","kind":"software_dev_track","level_name":"Courses","analytics_slug":"software_dev_track"},{"name":"Software Engineering Principles","occupation_name":"","landing_path":null,"image_icon":"//cdn2.bloc.io/landing/course_icons/menu/software_principles.png","kind":"software_principles","level_name":"Courses","analytics_slug":"software_principles"}];
+//]]>
+</script>
+<title>Bloc | Coding Bootcamp - Alumni and Graduates</title>
+<meta name='description'>
+
+<!-- / Canonical URL -->
+<!-- / Responsive Enabled -->
+<meta content='Bloc alumni, bootcamp graduates' name='keywords'>
+<!-- Google -->
+<meta content='z3HPw1Nm4ihrRs_dA0-OZbMNipfhdT0vu3g4s5tRSQ8' name='google-site-verification'>
+<!-- Twitter Card data -->
+<meta content='summary' name='twitter:card'>
+<meta content='@trybloc' name='twitter:site'>
+<meta content='Bloc' name='twitter:title'>
+<meta content='Bloc Alumni have become web developers at top tier companies.  Others are successful startup founders.  See where notable graduates have landed after Bloc.' name='twitter:description'>
+<meta content='https://cdn3.bloc.io/assets/logos/bloc-logo-square-500x500-white-f85bec150478dc93d64865b33941ab6d.png' name='twitter:image'>
+<!-- Open Graph data -->
+<meta content='Bloc | Coding Bootcamp - Alumni and Graduates' property='og:title'>
+<meta content='website' property='og:type'>
+<meta content='https://www.bloc.io/alumni' property='og:url'>
+<meta content='https://cdn3.bloc.io/assets/logos/bloc-logo-square-500x500-white-f85bec150478dc93d64865b33941ab6d.png' property='og:image'>
+<meta content='Bloc Alumni have become web developers at top tier companies.  Others are successful startup founders.  See where notable graduates have landed after Bloc.' property='og:description'>
+<meta content='Bloc' property='og:site_name'>
+<meta content='1932106' property='fb:admins'>
+<!-- Schema markup -->
+<meta content='Bloc | Coding Bootcamp - Alumni and Graduates' itemprop='name'>
+<meta content='Bloc Alumni have become web developers at top tier companies.  Others are successful startup founders.  See where notable graduates have landed after Bloc.' itemprop='description'>
+<meta content='https://cdn3.bloc.io/assets/logos/bloc-logo-square-500x500-white-f85bec150478dc93d64865b33941ab6d.png' itemprop='image'>
+<!-- Taboola tracking -->
+
+
+<script>
+  var env = "production";
+  var _rollbarConfig = {
+      accessToken: "4b86c2fdc5454fbea1382e5fff6f9889",
+      captureUncaught: true,
+      logLevel: 'error',
+      payload: {
+        environment: env
+      }
+  };
+  
+  
+  !function(a,b){function c(b){this.shimId=++h,this.notifier=null,this.parentShim=b,this.logger=function(){},a.console&&void 0===a.console.shimId&&(this.logger=a.console.log)}function d(b,c,d){!d[4]&&a._rollbarWrappedError&&(d[4]=a._rollbarWrappedError,a._rollbarWrappedError=null),b.uncaughtError.apply(b,d),c&&c.apply(a,d)}function e(b){var d=c;return g(function(){if(this.notifier)return this.notifier[b].apply(this.notifier,arguments);var c=this,e="scope"===b;e&&(c=new d(this));var f=Array.prototype.slice.call(arguments,0),g={shim:c,method:b,args:f,ts:new Date};return a._rollbarShimQueue.push(g),e?c:void 0})}function f(a,b){if(b.hasOwnProperty&&b.hasOwnProperty("addEventListener")){var c=b.addEventListener;b.addEventListener=function(b,d,e){c.call(this,b,a.wrap(d),e)};var d=b.removeEventListener;b.removeEventListener=function(a,b,c){d.call(this,a,b&&b._wrapped?b._wrapped:b,c)}}}function g(a,b){return b=b||this.logger,function(){try{return a.apply(this,arguments)}catch(c){b("Rollbar internal error:",c)}}}var h=0;c.init=function(a,b){var e=b.globalAlias||"Rollbar";if("object"==typeof a[e])return a[e];a._rollbarShimQueue=[],a._rollbarWrappedError=null,b=b||{};var h=new c;return g(function(){if(h.configure(b),b.captureUncaught){var c=a.onerror;a.onerror=function(){var a=Array.prototype.slice.call(arguments,0);d(h,c,a)};var g,i,j="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(g=0;g<j.length;++g)i=j[g],a[i]&&a[i].prototype&&f(h,a[i].prototype)}return a[e]=h,h},h.logger)()},c.prototype.loadFull=function(a,b,c,d){var e=g(function(){var a=b.createElement("script"),e=b.getElementsByTagName("script")[0];a.src=d.rollbarJsUrl,a.async=!c,a.onload=f,e.parentNode.insertBefore(a,e)},this.logger),f=g(function(){if(void 0===a._rollbarPayloadQueue)for(var b,c,d,e,f=new Error("rollbar.js did not load");b=a._rollbarShimQueue.shift();)for(d=b.args,e=0;e<d.length;++e)if(c=d[e],"function"==typeof c){c(f);break}},this.logger);g(function(){c?e():a.addEventListener?a.addEventListener("load",e,!1):a.attachEvent("onload",e)},this.logger)()},c.prototype.wrap=function(b){try{if("function"!=typeof b)return b;if(b._isWrap)return b;if(!b._wrapped){b._wrapped=function(){try{return b.apply(this,arguments)}catch(c){throw a._rollbarWrappedError=c,c}},b._wrapped._isWrap=!0;for(var c in b)b.hasOwnProperty(c)&&(b._wrapped[c]=b[c])}return b._wrapped}catch(d){return b}};for(var i="log,debug,info,warn,warning,error,critical,global,configure,scope,uncaughtError".split(","),j=0;j<i.length;++j)c.prototype[i[j]]=e(i[j]);var k="//d37gvrvc0wt4s1.cloudfront.net/js/v1.1/rollbar.min.js";_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||k;var l=c.init(a,_rollbarConfig);l.loadFull(a,b,!1,_rollbarConfig)}(window,document);
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash-compat/3.10.1/lodash.min.js"></script>
+<script src="https://cdn1.bloc.io/webpack/init-bundle-d5548dadeeea4f4647bd.js"></script>
+<script>
+  Bloc = window.Bloc
+  Bloc = (typeof Bloc !== "undefined" && Bloc !== null) ? Bloc : {};
+  Bloc.login_url = "/users/auth/facebook";
+  Bloc.facebook_image_url = "https://cdn1.bloc.io/assets/facebook-a1675421f41dd6897a434ee2aa147c9f.jpg";
+  Bloc.current_visit = {"old_id":null,"visit_token":null,"visitor_token":null,"ip":"172.56.19.12","user_agent":"Mozilla/5.0 (Linux; Android 6.0.1; SM-G550T1 Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.91 Mobile Safari/537.36","referrer":"https://m.facebook.com/","landing_page":"https://www.bloc.io/web-developer-career-bootcamp?utm_source=facebook\u0026utm_medium=social\u0026utm_content=social\u0026utm_campaign=facebook_set_retargeting\u0026utm_adgroup=facebook_retargeting_fst_08_23_16\u0026utm_keyword=facebook_retargeting_fst_08_23_16_1c","user_id":null,"user_type":null,"referring_domain":"m.facebook.com","search_keyword":null,"browser":"Chrome Mobile","os":"Android","device_type":"Mobile","country":"United States","region":"New York","city":"The Bronx","utm_source":"facebook","utm_medium":"social","utm_term":null,"utm_content":"social","utm_campaign":"facebook_set_retargeting","created_at":"2017-01-12T11:01:26.964-05:00","id":"b91af88c-c920-464c-bd0a-f9fe32bac9fe","visitor_id":"5199fc42-1c69-4307-a14f-541171d81fd5","screen_height":640,"screen_width":360,"started_at":"2017-01-12T11:01:26.959-05:00"};
+</script>
+<script>
+  Bloc.current_user = {};
+</script>
+<script>
+  Bloc.current_user.role = "visitor"
+</script>
+
+
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="46q41hMR7KXo5r5Gz8pNWiZtazpEVFJMFNjRw4AuuWw=" name="csrf-token" />
+<meta content='width=590, initial-scale=1' name='viewport'>
+
+
+</head>
+<body class='full-page-base-style' ng_class="{ 'showing-mobile-nav': isShowingMobileNav }">
+<div class='default-js-flash-container'>
+
+</div>
+
+<div class='alumni landing-new'>
+<div class='course-page-content'>
+<div class='landing-navigation hidden-xs hidden-sm'>
+<div class='container'>
+<a id='top'></a>
+<div class='links pull-left'>
+<div class='logo'>
+<div class='header-logo'>
+<a href="index.html"><img alt="Logo white" height="30" src="https://cdn1.bloc.io/assets/landing/logo-white-8288ab35ab214ba341ab283ea2c79200.png" width="80" />
+</a></div>
+
+</div>
+<div class='dropdown' dropdown_selector='.course-dropdown-menu' menu_dropdown>
+<span>Programs</span>
+<div class='course-dropdown-menu ng-cloak'>
+<div class='inner'>
+<div class='course-links'>
+<section class='tracks'>
+<div class='label'>Become a Software Developer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="software-developer-track.html"><i class='fa fa-tasks fa-fw'></i>
+Software Developer Track
+</a></li>
+</ul>
+</section>
+<section class='tracks'>
+<div class='label'>Become a Web Developer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="web-developer-career-track.html"><i class='fa fa-cubes fa-fw'></i>
+Part-Time Web Developer Track
+</a></li>
+</ul>
+</section>
+<section class='tracks'>
+<div class='label'>Become a Designer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="design-bootcamp.html"><i class='fa fa-picture-o fa-fw'></i>
+Designer Track
+</a></li>
+</ul>
+</section>
+<section class='courses'>
+<div class='label'>Broaden Your Skills</div>
+<ul>
+<li class='course-icon-link web-dev'>
+<a href="web-development-bootcamp.html"><i class='fa fa-terminal fa-fw'></i>
+Rails Fundamentals
+</a></li>
+<li class='course-icon-link frontend'>
+<a href="frontend-development-bootcamp.html"><i class='fa fa-code fa-fw'></i>
+Frontend Fundamentals
+</a></li>
+<li class='course-icon-link design'>
+<a href="ux-design-bootcamp.html"><i class='fa fa-picture-o fa-fw'></i>
+UX/UI Design Fundamentals
+</a></li>
+<li class='course-icon-link android'>
+<a href="android-bootcamp.html"><i class='fa fa-android fa-fw'></i>
+Android Fundamentals
+</a></li>
+<li class='course-icon-link ios'>
+<a href="ios-bootcamp.html"><i class='fa fa-apple fa-fw'></i>
+iOS Fundamentals
+</a></li>
+</ul>
+</section>
+</div>
+
+</div>
+</div>
+</div>
+<a href='mentors.html'>Mentors</a>
+<a href='alumni.html'>Alumni</a>
+</div>
+<div class='links pull-right'>
+<a href="sign_in.html">Log in
+</a><div class='divider'>
+|
+</div>
+<a class='enroll-btn btn' href='enrollments/new-course_kind=web_dev.html'>Enroll </a>
+
+</div>
+<div class='clear'></div>
+</div>
+</div>
+<div class='mobile-nav-container visible-xs visible-sm' ng_class="{'full-height': menuOpen}" ng_controller='MobileNavCtrl' ng_init='init()'>
+<div class='mobile-nav-header'>
+<div class='bloc-main'>
+<a href="index.html"><img alt="Square 50x50 black" src="https://cdn0.bloc.io/assets/logos/square-50x50-black-0b7e99cf95d6360357a703be16f3ad42.png" />
+</a></div>
+<div class='menu-button' ng_click='toggleMenu()' ng_hide='menuOpen'></div>
+<div class='menu-x ng-cloak icon fa fa-close' ng_click='toggleMenu()' ng_hide='!menuOpen'></div>
+</div>
+<div class='mobile-menu ng-cloak'>
+<div class='mobile-nav' ng_class='{"left": subNavPosition + "%"}'>
+<ul class='mobile-list-nav'>
+<li ng_class='{active: tog==1}' ng_click='toggleProgramList()'>
+Programs
+</li>
+<li ng_class='{active: tog==2}' ng_click='toggleAboutList()'>
+About
+</li>
+<li ng_class='{active: tog==3}' ng_click='toggleContactList()'>
+Contact
+</li>
+</ul>
+</div>
+<div class='mobile-subnav-list' ng_style='{"left": subNavPosition + "%"}'>
+<div class='list-group'>
+<ul class='link-list'>
+<li>
+<a href="enrollments/new-token=TODAY.html">Enroll</a>
+</li>
+<li>
+<a href="sign_in.html">Log in / Register</a>
+</li>
+</ul>
+<div class='label'>Become a Software Developer</div>
+<ul class='link-list'>
+<li>
+<a href="software-developer-track.html"><i class='icon fa fa-tasks'></i>
+Software Developer Track
+</a></li>
+</ul>
+<div class='label'>Become a Web Developer</div>
+<ul class='link-list'>
+<li>
+<a href="web-developer-career-track.html"><i class='icon fa fa-desktop fa-fw'></i>
+Full Stack Web Developer Track
+</a></li>
+</ul>
+<div class='label'>Become a Designer</div>
+<ul class='link-list'>
+<li>
+<a href="design-bootcamp.html"><i class='icon fa fa-picture-o fa-fw'></i>
+Designer Track
+</a></li>
+</ul>
+<div class='label'>
+Broaden Your Skills
+</div>
+<ul class='link-list'>
+<li>
+<a href="web-development-bootcamp.html"><i class='icon icon-web-development'></i>
+Rails Fundamentals
+</a></li>
+<li>
+<a href="frontend-development-bootcamp.html"><i class='icon icon-frontend'></i>
+Frontend Fundamentals
+</a></li>
+<li>
+<a href="android-bootcamp.html"><i class='icon icon-android'></i>
+Android Fundamentals
+</a></li>
+<li>
+<a href="ios-bootcamp.html"><i class='icon icon-ios'></i>
+iOS Fundamentals
+</a></li>
+<li>
+<a href="ux-design-bootcamp.html"><i class='icon icon-design'></i>
+UX/UI Design Fundamentals
+</a></li>
+</ul>
+</div>
+<div class='list-group'>
+<ul class='link-list'>
+<li>
+<a href="mentors.html">Mentors</a>
+</li>
+<li>
+<a href="alumni.html">Alumni</a>
+</li>
+<li>
+<a href="about.html">Our Team | Jobs</a>
+</li>
+<li>
+<a href="http://try.bloc.io/dev-bootcamp-for-veterans/" target="_blank">Bloc Veterans Program</a>
+</li>
+<li>
+<a href="http://try.bloc.io/new-relic-bootcamp-diversity-scholarship/" target="_blank">Bloc&#39;s Diversity Scholarship</a>
+</li>
+<li>
+<a href="faq.html">FAQ</a>
+</li>
+<li>
+<a href="http://blog.bloc.io">Blog</a>
+</li>
+<li>
+<a href="http://code.bloc.io" target="_blank">Engineering Blog</a>
+</li>
+<li>
+<a href="privacy.html">Privacy Policy</a>
+</li>
+<li>
+<a href="terms.html">Terms of Service</a>
+</li>
+</ul>
+</div>
+<div class='list-group'>
+<div class='nav-email-form'>
+<div class='label no-border'>
+Sign Up For Our Mailing List
+</div>
+<form class='emelyn-form-elements' id='nav_email_capture' name='nav_email_capture'>
+<div class='input-wrapper email'>
+<input class="input-dark" id="email" name="email" ng_model="subscription.email" required="required" type="email" />
+</div>
+<div class='input-wrapper submit'>
+<input class='btn btn-mini' id='nav_email_signup_btn' ng_click='submit()' ng_disabled='isSubmitDisabled()' type='submit' value='Send'>
+</div>
+</form>
+</div>
+<ul class='link-list'>
+<li class='contact'>
+<a href="mailto:hello@bloc.io"><i class='icon fa fa-envelope-o fa-nav'></i>
+hello@bloc.io
+</a></li>
+<li class='contact'>
+<span>
+<i class='icon fa fa-phone fa-nav'></i>
+<div class='contact-wrapper'>
+Considering enrolling?
+<br>
+(404) 480-2562
+</div>
+</span>
+</li>
+<li class='contact'>
+<span>
+<i class='icon fa fa-phone fa-nav'></i>
+<div class='contact-wrapper'>
+Partnership / Corporate Inquiries?
+<br>
+(650) 741-5692
+</div>
+</span>
+</li>
+</ul>
+<div class='footer'>
+<div class='social-link-list-wrapper'>
+<ul class='social-link-list'>
+<li>
+<a href="https://www.facebook.com/trybloc" target="_blank"><i class='fa fa-facebook'></i>
+</a></li>
+<li>
+<a href="https://twitter.com/trybloc" target="_blank"><i class='fa fa-twitter'></i>
+</a></li>
+<li>
+<a href="https://plus.google.com/112610125572984281932" rel="publisher" target="_blank"><i class='fa fa-google-plus'></i>
+</a></li>
+<li>
+<a href="https://www.youtube.com/user/BlocContent" target="_blank"><i class='fa fa-youtube'></i>
+</a></li>
+</ul>
+
+</div>
+<div class='copyright'>
+COPYRIGHT ©  2017 BLOC
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<header class='alumni-header'>
+<div class='container'>
+<div class='row'>
+<div class='col-sm-5'>
+<h1>Bloc Students Thrive in the Wild</h1>
+<p>Armed with portfolios of real projects and insights gleaned from working closely with their mentor, <a href="https://www.linkedin.com/edu/alumni?id=162130">Bloc alumni</a> go on to start new careers, launch start-ups, and bring their ideas to life.</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-5'>
+<span class='course-report-ratings'>
+<div class='fa fa-star'></div>
+<div class='fa fa-star'></div>
+<div class='fa fa-star'></div>
+<div class='fa fa-star'></div>
+<div class='fa fa-star-half-o'></div>
+</span>
+<p>
+Over 120 student reviews on CourseReport, the #1 site for bootcamp reviews.
+<a href='https://www.coursereport.com/schools/bloc' target='_blank'>
+Read what our students say
+<span class='fa fa-arrow-right'></span>
+</a>
+</p>
+</div>
+</div>
+</div>
+</header>
+<div class='alumni-body'>
+<div class='container'>
+<section class='landing-section'>
+<h3 class='mini-headline muted center-text'>
+Companies with Bloc Alumni
+</h3>
+<div class='center-text'>
+<img alt="Companies" src="https://cdn3.bloc.io/assets/landing/alumni/companies-bb71098bcb519bd786005ee5c6e7dfa1.png" />
+</div>
+</section>
+<section class='tier1 featured-alumni'>
+<article class='alumni-story featured-alumnus full-layout light_text' style="background-image: url('https://cdn-photos.bloc.io/alum_stories/photos/000/000/120/original/eliam-tier-1.jpg?1466712582')">
+
+<div class='content'>
+<h1 class='title'>Eliam, CEO of YC backed Willing</h1>
+<p class='subtitle'>Eliam's Capstone Project got him accepted into Y Combinator. Now he's enrolled in his 2nd Bloc program, which he's able to fit into his schedule as the Founder of Willing. </p>
+<div class='alumnus-quote quote-box'>
+I'd sign up for Bloc for life. They have a world-class curriculum and the best mentors out there. 
+</div>
+</div>
+
+</article>
+<article class='alumni-story featured-alumnus full-layout light_text' style="background-image: url('https://cdn-photos.bloc.io/alum_stories/photos/000/000/052/original/gemma.jpg?1466712573')">
+
+<div class='content'>
+<h1 class='title'>Gemma, Frontend Developer at Sephora.</h1>
+<p class='subtitle'>Gemma was bold enough to take Bloc's UX/UI Design Course immediately followed by the Frontend course. It paid off — she scored a position as a Frontend Developer.</p>
+<div class='alumnus-project'>
+<div class='screen'>
+<img alt="Jottly gemma" src="https://cdn-photos.bloc.io/alum_stories/screenshots/000/000/052/original/Jottly_gemma.jpg?1466712594" />
+</div>
+</div>
+</div>
+
+</article>
+<article class='alumni-story featured-alumnus full-layout light_text' style="background-image: url('https://cdn-photos.bloc.io/alum_stories/photos/000/000/104/original/Tier1_small.jpg?1466712579')">
+
+<div class='content'>
+<h1 class='title'>Tien, Sr. QA Manager at CapLinked</h1>
+<p class='subtitle'>Tien was a project manager when she enrolled in Bloc's Rails Course. She built on her development skills and is now at CapLinked managing releases, and coaching with RailsGirls.</p>
+<div class='alumnus-quote quote-box'>
+It's really valuable to pair with a mentor. Eliot is the reason why I love Ruby, testing and TDD.
+</div>
+</div>
+
+</article>
+<article class='alumni-story dark_text featured-alumnus full-layout' style="background-image: url('https://cdn-photos.bloc.io/alum_stories/photos/000/000/055/original/pablo.jpg?1466712574')">
+
+<div class='content'>
+<h1 class='title'>Pablo, Frontend Developer for RogerVoice</h1>
+<p class='subtitle'>Pablo put his new skills to work developing RogerVoice, an app for the deaf and hard of hearing — successfully funded via Kickstarter!</p>
+<div class='alumnus-quote quote-box'>
+&quot;[Bloc] is the perfect place to get going. It gives you the context to becoming a developer.&quot;
+
+</div>
+</div>
+
+</article>
+</section>
+<section class='tier2 featured-alumni landing-section'>
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>It was the best decision I've ever made. I wanted to test my resolve in transitioning from PM/Biz to a full-time engineer. I went to bed thinking about my code, dreamed about it, and woke up excited to continue writing it.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="E47a1a075c89 ryan walker   4 24 14" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/155/original/e47a1a075c89-Ryan_Walker___4_24_14.png?1470258840" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Entreprenuer, Lawyer
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Wireless Software Engineer at Apple
+</div>
+</div>
+<div class='name'>
+Ryan, iOS Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Meet Rachel, Product Designer at Salesforce.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Rachel weissman" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/143/original/rachel-weissman.png?1467057140" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Experience Designer
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Product Designer
+</div>
+</div>
+<div class='name'>
+Rachel, Frontend Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Meet Lindsey, Designer at BuzzFeed.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Lindsey maratta" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/097/original/lindsey_maratta.jpg?1466712578" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Emirates Cabin Crew
+</div>
+<div class='title'>
+<span class='label'>now</span>
+UX/UI Designer
+</div>
+</div>
+<div class='name'>
+Lindsey, UX/UI Design alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Dan Loman is an iOS Engineering Intern at Instacart.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Aaeaaqaaaaaaaadmaaaajdg3nwnimdflltm0mtktngzlni1hymnmltbhztayytm1mta3na" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/156/original/AAEAAQAAAAAAAAdMAAAAJDg3NWNiMDFlLTM0MTktNGZlNi1hYmNmLTBhZTAyYTM1MTA3NA.jpg?1468954399" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Partner Development
+</div>
+<div class='title'>
+<span class='label'>now</span>
+iOS Engineer
+</div>
+</div>
+<div class='name'>
+Dan, iOS Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout success-story'>
+<div class='fa fa-star'></div>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Meet Zach, Application Development Specialist at IBM.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="5283c5c6e581 zacharymelancon" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/141/original/5283c5c6e581-ZacharyMelancon.jpg?1466712592" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+English Teacher
+</div>
+<div class='title'>
+<span class='label'>now</span>
+App Dev Specialist
+</div>
+</div>
+<div class='name'>
+Zachary, Full Stack Web Developer Track alum
+</div>
+</div>
+<a class='success-story-overlay' href='https://blog.bloc.io/bloc-reviews-high-school-teacher-turned-ibm-app-dev-specialist/'>
+Read Success Story
+<span class='fa fa-arrow-right'></span>
+</a>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>&quot;Bloc set me up with the right pragmatic &amp; analytical skills. The real key to success is learning to think through a problem self sufficiently. I was able to switch into a career I love.&quot;</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Carltruong" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/157/original/carltruong.png?1470240587" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Business Consultant
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Full Stack Developer at Planomatic
+</div>
+</div>
+<div class='name'>
+Carl, Full Stack Web Developer Track alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>&quot;[After taking Bloc], I've found something I really can see myself doing and being passionate about for a long time to come.&quot;</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="C7063c6a74bf concert crop" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/158/original/c7063c6a74bf-concert_crop.jpeg?1470245429" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Sales
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Web Developer at Earthwave Technologies
+</div>
+</div>
+<div class='name'>
+Caroline, Full Stack Web Developer Track alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Meet Jose, Senior Developer at E*Trade.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Screen shot 2016 06 08 at 4.47.05 pm" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/142/original/Screen_Shot_2016-06-08_at_4.47.05_PM.png?1466712592" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Technical Lead
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Sr. Developer
+</div>
+</div>
+<div class='name'>
+Jose, iOS Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout success-story'>
+<div class='fa fa-star'></div>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Katelyn went from History student to Customer Support Engineer at Fastly.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Khertel" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/154/original/khertel.png?1468262600" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+University student
+</div>
+<div class='title'>
+<span class='label'>now</span>
+CS Engineer
+</div>
+</div>
+<div class='name'>
+Katelyn, Rails Web Development alum
+</div>
+</div>
+<a class='success-story-overlay' href='https://blog.bloc.io/bloc-alumni-spotlight-katelyn-hertel/'>
+Read Success Story
+<span class='fa fa-arrow-right'></span>
+</a>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Alice Suckling is now a Jr. Frontend Developer at Thin Martian.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Alicesuckling" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/153/original/alicesuckling.png?1468262192" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Accounts Assistant 
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Frontend Developer
+</div>
+</div>
+<div class='name'>
+Alice, Full Stack Web Developer Track alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Jonathan is now a Jr. Ruby Developer at ePublishing.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="194c4ea" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/151/original/194c4ea.jpg?1468261103" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Genius Bar at Apple
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Jr. Ruby Developer
+</div>
+</div>
+<div class='name'>
+Jonathan, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Lucas Konopka is now on the engineering team at Two Point Conversions.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Lukaskonopka" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/152/original/lukaskonopka.png?1468261831" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Lyft Driver
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Special Projects
+</div>
+</div>
+<div class='name'>
+Lucas, Full Stack Web Developer Track alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout success-story'>
+<div class='fa fa-star'></div>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Patricia Ehrhardt switched careers–from freelancing to Jr. Ruby Developer.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Patriciaehrhardt" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/145/original/PatriciaEhrhardt.jpg?1467994682" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Admin and Freelancer
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Jr. Ruby Developer
+</div>
+</div>
+<div class='name'>
+Patricia, Full Stack Web Developer Track alum
+</div>
+</div>
+<a class='success-story-overlay' href='https://blog.bloc.io/its-never-too-late-patricias-journey-coding-over-40/'>
+Read Success Story
+<span class='fa fa-arrow-right'></span>
+</a>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Sarah Binion is now a Client Side Engineer at Nerdery.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="118a2dbffc84 sarah binion 512px" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/150/original/118a2dbffc84-Sarah_Binion_512px.jpg?1468260720" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Graphic Designer
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Client Side Engineer
+</div>
+</div>
+<div class='name'>
+Sarah, Frontend Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Designer Track grad Erin is now a Product Designer at Guideline.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Eringrirard" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/149/original/ErinGrirard.jpg?1468260296" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Merchandiser
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Product Designer
+</div>
+</div>
+<div class='name'>
+Erin, Designer Track alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Chelsea Otakan is now a Sr. Product Manager at Sourcegraph</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Chelseaotakan" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/148/original/chelseaotakan.png?1468259504" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Design Director
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Sr. Product Manager
+</div>
+</div>
+<div class='name'>
+Chelsea, Frontend Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>John is now an engineer after serving in the US Air Force.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Johnmcintosh" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/146/original/JohnMcIntosh.jpg?1467995187" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+US Air Force
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Engineer at Revature
+</div>
+</div>
+<div class='name'>
+John, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Jon Malis transitioned from FedEx employee to Developer.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Jonmalis" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/147/original/jonmalis.png?1468019381" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+FedEx Employee
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Developer
+</div>
+</div>
+<div class='name'>
+Jon, Full Stack Web Developer Track alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout success-story'>
+<div class='fa fa-star'></div>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Meet Abdullah, Technical Writer at Compose.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Abdullah alger  2" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/144/original/abdullah-alger--2.jpg?1467055759" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Literature Professor
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Technical Writer
+</div>
+</div>
+<div class='name'>
+Abdullah, Rails Web Development alum
+</div>
+</div>
+<a class='success-story-overlay' href='https://blog.bloc.io/www-blog-bloc-ioalumni-spotlight-abdullah-alger/'>
+Read Success Story
+<span class='fa fa-arrow-right'></span>
+</a>
+</article>
+
+<article class='alumni-story layout-text_photo_layout success-story'>
+<div class='fa fa-star'></div>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Meet Jenn, Designer at ACTIVE Network.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Jennifer slayton" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/140/original/jennifer-slayton.jpg?1467057001" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Teacher
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Designer
+</div>
+</div>
+<div class='name'>
+Jenn, UX/UI Design alum
+</div>
+</div>
+<a class='success-story-overlay' href='https://blog.bloc.io/bloc-alumni-spotlight-jennifer-slayton/'>
+Read Success Story
+<span class='fa fa-arrow-right'></span>
+</a>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Meet Alex, UX Designer at JR Thompson.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Alexferguson" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/139/original/alexferguson.jpg?1466712590" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Student
+</div>
+<div class='title'>
+<span class='label'>now</span>
+UX Designer
+</div>
+</div>
+<div class='name'>
+Alex, Designer Track alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Meet Joel, Jr. Web Developer at MediaRails.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Joelscalera" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/138/original/joelscalera.jpg?1466712590" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Student
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Jr. Web Developer
+</div>
+</div>
+<div class='name'>
+Joel, Full Stack Web Developer Track alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Meet In, Web Services Manager at SCU.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Inchung" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/137/original/inchung.jpg?1466712590" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Sales &amp; Marketing
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Web Services Manager
+</div>
+</div>
+<div class='name'>
+In, UX/UI Design alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Meet Rene, Developer at Onovative.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Rene gomez" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/134/original/rene-gomez.png?1467057181" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Counselor
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Developer
+</div>
+</div>
+<div class='name'>
+Rene, Full Stack Web Developer Track alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout success-story'>
+<div class='fa fa-star'></div>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Meet Fong, Software Engineer at Adorable.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Screen shot 2016 04 08 at 12.51.33 pm" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/136/original/Screen_Shot_2016-04-08_at_12.51.33_PM.png?1466712589" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Technical Services
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Software Engineer
+</div>
+</div>
+<div class='name'>
+Fong, Rails Web Development alum
+</div>
+</div>
+<a class='success-story-overlay' href='https://blog.bloc.io/alumni-fong-fan/'>
+Read Success Story
+<span class='fa fa-arrow-right'></span>
+</a>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>From Genius Bar employee to Developer at Architect Now.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Don jacobsmeyer" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/133/original/don-jacobsmeyer.png?1467056085" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Genius Bar Employee
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Developer
+</div>
+</div>
+<div class='name'>
+Don, Full Stack Web Developer Track alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Small business owner lands new role as a Visual Designer at Malwarebytes </div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Kirstie lee" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/132/original/kirstie-lee.jpg?1467057096" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Small Business Owner
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Visual Designer 
+</div>
+</div>
+<div class='name'>
+Kirstie, UX/UI Design alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Edwin, Frontend Engineer at Cask Data.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Edwin elia" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/129/original/edwin-elia.jpg?1467056107" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Systems Analyst
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Frontend Engineer
+</div>
+</div>
+<div class='name'>
+Edwin, Frontend Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Cassie, Jr. Developer at A La Mode.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Cassie herd" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/128/original/cassie-herd.png?1467056038" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+School Principal
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Junior FE Developer
+</div>
+</div>
+<div class='name'>
+Cassie, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Ashton, Web Developer at SCHAWEL + COLES</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Ashton levier" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/130/original/ashton-levier.png?1467055867" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Marketing Specialist
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Web Developer
+</div>
+</div>
+<div class='name'>
+Ashton, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Tyler went from applying to dental school to software engineering at Sungevity.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Tylerball" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/123/original/tylerball.jpg?1467057688" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Pre-dental student
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Software Engineer
+</div>
+</div>
+<div class='name'>
+Tyler, Frontend Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Jack, Developer at Tsu.co</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Jack pope" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/122/original/jack-pope.jpg?1467056305" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Marketing Manager
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Developer
+</div>
+</div>
+<div class='name'>
+Jack, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Jesse, Rails Developer at RSS.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Jesse pledger" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/127/original/jesse-pledger.jpg?1467057025" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Sales Associate
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Rails Developer
+</div>
+</div>
+<div class='name'>
+Jesse, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Meet John, Software Engineer at Trunk Club.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="John romas  2" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/124/original/john-romas--2.png?1467057074" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Business Analyst
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Software Engineer
+</div>
+</div>
+<div class='name'>
+John, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Raymond, Software Engineer at Ceatus Media Group</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Raymond georges" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/126/original/raymond-georges.jpg?1467057161" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+System Engineer
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Software Engineer
+</div>
+</div>
+<div class='name'>
+Raymond, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Nathan, Web Developer at FleishmanHillard</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Me" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/125/original/me.jpg?1466712584" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Spanish Teacher
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Web Developer
+</div>
+</div>
+<div class='name'>
+Nathan, Frontend Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Meet John, Ruby Developer at Autodesk.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="John thomas 1" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/067/original/john-thomas-1.jpg?1466712575" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Technical Support
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Ruby Developer
+</div>
+</div>
+<div class='name'>
+John, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Meet Harry, Software Engineer at Mojo Lingo.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Harry levine" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/121/original/harry-levine.jpg?1467056129" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Director of Training
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Software Engineer
+</div>
+</div>
+<div class='name'>
+Harry, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Meet Brittany, Lead Ruby Developer.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Brittany martin" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/038/original/brittany-martin.jpg?1467055921" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Marketing Manager
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Ruby Developer
+</div>
+</div>
+<div class='name'>
+Brittany, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Meet Felipe, Developer Evangelist at SendGrid</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Felipemilian" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/116/original/felipemilian.jpg?1467058326" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Entreprenuer
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Developer Evangelist
+</div>
+</div>
+<div class='name'>
+Felipe, Frontend Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Nina, transitioned from Graphic Designer to Interaction Designer at Tata Communications.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Nina rumbines  2" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/050/original/nina-rumbines--2.jpg?1467057115" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Graphic Designer
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Interaction Designer
+</div>
+</div>
+<div class='name'>
+Nina, UX/UI Design alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Creator of OneBreath, Trisha is now a Software Developer for BoardVitals Inc.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Trisha hadley" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/043/original/trisha-hadley.jpeg?1467057220" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Graduate Student
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Software Developer 
+</div>
+</div>
+<div class='name'>
+Trisha, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Kristin, Software Engineer at Synctree</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Kristin gonzalez" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/113/original/kristin-gonzalez.jpg?1467058524" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+English Teacher
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Software Engineer
+</div>
+</div>
+<div class='name'>
+Kristin, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Organized Startup Weekend Orlando and Orlando Tech, two of the largest startup groups in Florida. </div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Orrett davis" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/048/original/Orrett-Davis.png?1466712572" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Entrepreneur
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Executive Director 
+</div>
+</div>
+<div class='name'>
+Orrett, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Steven used his new skills to become CTO at NuWellness</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Steve schofield" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/046/original/steve-schofield.jpg?1467057203" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Freelance Consultant
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Developer
+</div>
+</div>
+<div class='name'>
+Steven, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Brian is now an engineer at Bloc.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Brian douglas" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/045/original/brian-douglas.jpg?1467055894" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Sales Rep
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Rails Developer 
+</div>
+</div>
+<div class='name'>
+Brian, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Victor, Founder of HeyCheff</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Victor yudi" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/103/original/victor-yudi.png?1467057238" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+University Student
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Founder
+</div>
+</div>
+<div class='name'>
+Victor, iOS Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Once an entrepreneur, Jared used his skills to score a job as a Software Engineer at Bloc. </div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Jared rader 2" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/042/original/jared-rader-2.jpg?1467056979" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Entrepreneur
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Software Engineer 
+</div>
+</div>
+<div class='name'>
+Jared, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Ben created trophytrips.com for his company, and is passing on his new knowledge to his colleagues.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Ben simmons" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/044/original/ben-simmons.png?1466712570" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Developer
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Developer 
+</div>
+</div>
+<div class='name'>
+Ben, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>Edwin, Founder of 11th Hour.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Edwin wargo" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/051/original/edwin-wargo.jpg?1467058492" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Reacher
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Founder
+</div>
+</div>
+<div class='name'>
+Edwin, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-text_photo_layout'>
+
+<div class='profile'>
+<div class='text-col'>
+<div class='headline'>From actor to developer, Chris completely switched gears to pursue a career in Rails.</div>
+</div>
+<div class='photo-col'>
+<div class='photo'>
+<img alt="Chris elwood  2" src="https://cdn-photos.bloc.io/alum_stories/photos/000/000/040/original/chris-elwood--2.jpg?1467056064" />
+</div>
+</div>
+</div>
+<div class='before-after'>
+<div class='titles'>
+<div class='title'>
+<span class='label'>was</span>
+Actor
+</div>
+<div class='title'>
+<span class='label'>now</span>
+Junior Web Developer
+</div>
+</div>
+<div class='name'>
+Chris, Rails Web Development alum
+</div>
+</div>
+</article>
+
+<article class='alumni-story layout-app_layout'>
+
+<div class='application ios_app_type'>
+<img alt="Screen shot 2015 03 18 at 2.36.44 pm" src="https://cdn-photos.bloc.io/alum_stories/screenshots/000/000/072/original/Screen_Shot_2015-03-18_at_2.36.44_PM.png?1466712600" />
+</div>
+<div class='text-col'>
+<h1 class='headline h3'>UXplore</h1>
+<p class='attribution'>
+built by Valeria, UX/UI Design alum
+</p>
+<p class='description'>Inspires UX/UI designers, and helps them organize the initial phases of a new project.</p>
+</div>
+</article>
+
+<article class='alumni-story layout-app_layout'>
+
+<div class='application web_app_type'>
+<img alt="Screen shot 2015 05 08 at 12.31.15 pm" src="https://cdn-photos.bloc.io/alum_stories/screenshots/000/000/080/original/Screen_Shot_2015-05-08_at_12.31.15_PM.png?1466712602" />
+</div>
+<div class='text-col'>
+<h1 class='headline h3'>Brunch &amp; Booze</h1>
+<p class='attribution'>
+built by Kristopher, Frontend Web Development alum
+</p>
+<p class='description'>Search for the right drink to pair with your meal</p>
+</div>
+</article>
+
+<article class='alumni-story layout-app_layout'>
+
+<div class='application web_app_type'>
+<img alt="Screen shot 2015 05 08 at 10.54.49 am" src="https://cdn-photos.bloc.io/alum_stories/screenshots/000/000/078/original/Screen_Shot_2015-05-08_at_10.54.49_AM.png?1466712601" />
+</div>
+<div class='text-col'>
+<h1 class='headline h3'>Caddy</h1>
+<p class='attribution'>
+built by Brian, UX/UI Design alum
+</p>
+<p class='description'>A golfing app designed exclusively for the apple watch. </p>
+</div>
+</article>
+
+<article class='alumni-story layout-app_layout'>
+
+<div class='application web_app_type'>
+<img alt="5thvg8qmzmrzvg oc0bffxdhnsscbxsc jzupj5bkdfoumyngk5troemc p8itrzsblt imk cyqjww15g0dh8bh fp3sd8a4jcpn7r8ocdsirejdr0hpyqdamhxubgo q" src="https://cdn-photos.bloc.io/alum_stories/screenshots/000/000/070/original/5ThVG8QmzmRzVg_oC0BfFxDHnssCBXSC_jzupJ5BKdFoUmynGK5TRoeMC-p8ITrzsblt_IMk_cYQjwW15G0dH8BH_Fp3SD8A4JCPN7R8OCDsIReJDR0hPYqDamHxUBgO-Q.png?1466712599" />
+</div>
+<div class='text-col'>
+<h1 class='headline h3'>BodyByYou</h1>
+<p class='attribution'>
+built by Irwin, Frontend Web Development alum
+</p>
+<p class='description'>Irwin is now a junior developer at Magnetik NYC</p>
+</div>
+</article>
+
+<article class='alumni-story layout-app_layout'>
+
+<div class='application web_app_type'>
+<img alt="Screen shot 2015 05 08 at 12.43.20 pm" src="https://cdn-photos.bloc.io/alum_stories/screenshots/000/000/093/original/Screen_Shot_2015-05-08_at_12.43.20_PM.png?1466712604" />
+</div>
+<div class='text-col'>
+<h1 class='headline h3'>Retroshop</h1>
+<p class='attribution'>
+built by Esther, Rails Web Development alum
+</p>
+<p class='description'>Find and purchase retro video games online</p>
+</div>
+</article>
+
+<article class='alumni-story layout-app_layout'>
+
+<div class='application ios_app_type'>
+<img alt="Screen322x572" src="https://cdn-photos.bloc.io/alum_stories/screenshots/000/000/082/original/screen322x572.jpg?1466712602" />
+</div>
+<div class='text-col'>
+<h1 class='headline h3'>Palettes for Phillips Hue</h1>
+<p class='attribution'>
+built by Trevor, iOS Development alum
+</p>
+<p class='description'>An easy to use, everyday light control app for Phillips Hue light bulbs.</p>
+</div>
+</article>
+
+<article class='alumni-story layout-app_layout'>
+
+<div class='application web_app_type'>
+<img alt="Screen shot 2015 03 17 at 12.13.16 pm" src="https://cdn-photos.bloc.io/alum_stories/screenshots/000/000/073/original/Screen_Shot_2015-03-17_at_12.13.16_PM.png?1466712600" />
+</div>
+<div class='text-col'>
+<h1 class='headline h3'>Personal Portfolio</h1>
+<p class='attribution'>
+built by Jeya, UX/UI Design alum
+</p>
+<p class='description'>A selection of Jeya's projects and designs.</p>
+</div>
+</article>
+
+<article class='alumni-story layout-app_layout'>
+
+<div class='application web_app_type'>
+<img alt="Screen shot 2015 02 09 at 3.49.51 pm" src="https://cdn-photos.bloc.io/alum_stories/screenshots/000/000/063/original/Screen_Shot_2015-02-09_at_3.49.51_PM.png?1466712596" />
+</div>
+<div class='text-col'>
+<h1 class='headline h3'>A Helping Hand</h1>
+<p class='attribution'>
+built by Jonathan, UX/UI Design alum
+</p>
+<p class='description'>Crowdfunding platform for charities - users can donate to charities or create their own.</p>
+</div>
+</article>
+
+<article class='alumni-story layout-app_layout'>
+
+<div class='application web_app_type'>
+<img alt="Screen shot 2015 02 09 at 3.31.11 pm" src="https://cdn-photos.bloc.io/alum_stories/screenshots/000/000/061/original/Screen_Shot_2015-02-09_at_3.31.11_PM.png?1466712595" />
+</div>
+<div class='text-col'>
+<h1 class='headline h3'>Hungry4Web</h1>
+<p class='attribution'>
+built by Christine, UX/UI Design alum
+</p>
+<p class='description'>Christine's portfolio -she offers design solutions to improve companies' presences online.</p>
+</div>
+</article>
+
+<article class='alumni-story layout-app_layout'>
+
+<div class='application web_app_type'>
+<img alt="Screen shot 2015 02 03 at 11.07.10 am" src="https://cdn-photos.bloc.io/alum_stories/screenshots/000/000/058/original/Screen_Shot_2015-02-03_at_11.07.10_AM.png?1466712594" />
+</div>
+<div class='text-col'>
+<h1 class='headline h3'>Midnight Express</h1>
+<p class='attribution'>
+built by Michael, UX/UI Design alum
+</p>
+<p class='description'>An Uber-for-busses startup that offers late-night bus service from SF to the South Bay.</p>
+</div>
+</article>
+
+<article class='alumni-story layout-app_layout'>
+
+<div class='application ios_app_type'>
+<img alt="Screen shot 2015 02 10 at 2.37.17 pm" src="https://cdn-photos.bloc.io/alum_stories/screenshots/000/000/060/original/Screen_Shot_2015-02-10_at_2.37.17_PM.png?1466712595" />
+</div>
+<div class='text-col'>
+<h1 class='headline h3'>nuscore</h1>
+<p class='attribution'>
+built by Sergio, UX/UI Design alum
+</p>
+<p class='description'>An app that advises users what to eat, when to exercise, and how to improve wellness. </p>
+</div>
+</article>
+
+<article class='alumni-story layout-app_layout'>
+
+<div class='application web_app_type'>
+<img alt="Screen shot 2015 02 09 at 4.14.42 pm" src="https://cdn-photos.bloc.io/alum_stories/screenshots/000/000/066/original/Screen_Shot_2015-02-09_at_4.14.42_PM.png?1466712597" />
+</div>
+<div class='text-col'>
+<h1 class='headline h3'>Squarebean</h1>
+<p class='attribution'>
+built by Eric, Rails Web Development alum
+</p>
+<p class='description'>Online made-to-order site that specializes in custom made desserts. </p>
+</div>
+</article>
+
+<article class='alumni-story layout-app_layout'>
+
+<div class='application web_app_type'>
+<img alt="Travelpoker paddy" src="https://cdn-photos.bloc.io/alum_stories/screenshots/000/000/064/original/travelpoker_Paddy.png?1466712596" />
+</div>
+<div class='text-col'>
+<h1 class='headline h3'>Travel Poker</h1>
+<p class='attribution'>
+built by Paddy, Rails Web Development alum
+</p>
+<p class='description'>Compile a deck of cards with places you've visited to inspire discovery and travel.</p>
+</div>
+</article>
+
+<article class='alumni-story layout-app_layout'>
+
+<div class='application ios_app_type'>
+<img alt="Screen shot 2015 02 10 at 2.35.01 pm" src="https://cdn-photos.bloc.io/alum_stories/screenshots/000/000/062/original/screen_shot_2015-02-10_at_2.35.01_pm.png?1466712595" />
+</div>
+<div class='text-col'>
+<h1 class='headline h3'>SpareTime</h1>
+<p class='attribution'>
+built by Lukasz, iOS Development alum
+</p>
+<p class='description'>Connect friends and family easily using the contacts in your phone.</p>
+</div>
+</article>
+
+<article class='alumni-story layout-app_layout'>
+
+<div class='application web_app_type'>
+<img alt="Screen shot 2015 01 07 at 1.38.03 pm 1024x607" src="https://cdn-photos.bloc.io/alum_stories/screenshots/000/000/068/original/Screen-Shot-2015-01-07-at-1.38.03-PM-1024x607.png?1466712598" />
+</div>
+<div class='text-col'>
+<h1 class='headline h3'>Mind on Rails</h1>
+<p class='attribution'>
+built by Harry, Rails Web Development alum
+</p>
+<p class='description'>A memory aid and notes capture app for developers learning Rails.</p>
+</div>
+</article>
+
+<article class='alumni-story layout-app_layout'>
+
+<div class='application web_app_type'>
+<img alt="Screen shot 2015 02 09 at 3.24.14 pm" src="https://cdn-photos.bloc.io/alum_stories/screenshots/000/000/059/original/Screen_Shot_2015-02-09_at_3.24.14_PM.png?1466712594" />
+</div>
+<div class='text-col'>
+<h1 class='headline h3'>To-read</h1>
+<p class='attribution'>
+built by Luca, Rails Web Development alum
+</p>
+<p class='description'>A web app that allows users to easily bookmark websites and articles online.</p>
+</div>
+</article>
+
+</section>
+<section class='alumni-quotes landing-section'>
+<div class='row'>
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+I can put something out in my industry that no one else has done. This is going to be phenomenal for my career.
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Jw linkedin" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2301194/JW_LinkedIn.jpg?1424580552" width="50" />
+</div>
+<div class='name'>
+Joel
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+Building my portfolio is what I'll use to get a job. I'll really have the ability to show employers that I can think through problems.
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Th profile pic" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2300425/TH_Profile_Pic.JPG?1422919056" width="50" />
+</div>
+<div class='name'>
+Theresa
+∙
+UX/UI Design
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+Bloc is a great way to go. The 1:1 interaction with someone in the industry is imperative.
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="1470194 10151760241891537 686716235 n" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2300394/1470194_10151760241891537_686716235_n.jpg?1421955505" width="50" />
+</div>
+<div class='name'>
+Umar
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+Got a job within 2 days of graduating. If you're struggling, keep plugging away, the rewards are definitely worth it.
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="885895 1498646447042208 8773230684002795175 o" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2300465/885895_1498646447042208_8773230684002795175_o.jpg?1422833079" width="50" />
+</div>
+<div class='name'>
+Andrew
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+This experience has been so significant for me in so many ways, and I'm so thankful for you guys.
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Img 7041 2" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2300041/IMG_7041_2.jpg?1420673726" width="50" />
+</div>
+<div class='name'>
+Marta
+∙
+UX/UI Design
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;I like that the Bloc content isn't just something you can Google - it's original, and goes beyond the other resources out there&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="10496915 871497814959 4247345107807328928 o" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2091329/10496915_871497814959_4247345107807328928_o.jpg?1409183721" width="50" />
+</div>
+<div class='name'>
+Katrina
+∙
+UX/UI Design
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+Having someone dedicated to answering your questions is really valuable. [My mentor] was really knowledgeable.
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Img 9436" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2300909/IMG_9436.jpg?1424219944" width="50" />
+</div>
+<div class='name'>
+Ryan
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+Building things from scratch is extremely helpful. You can do all the tutorials in the world, but putting it all together in a project is critical.
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Bloc" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2300278/Bloc.jpg?1422270925" width="50" />
+</div>
+<div class='name'>
+Adrian
+∙
+iOS Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;[Bloc] teaches you the right stuff to get started coding apps which would've taken much longer if I was doing it on my own. I would have known half of what I know now.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Photo" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2295611/photo.jpg?1415029941" width="50" />
+</div>
+<div class='name'>
+Luiz
+∙
+iOS Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;I think I’ve learned what I need to become a Junior Web Programmer from here. Bloc’s experience is worth the money.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Dsc 0212" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2294510/DSC_0212.JPG?1414642943" width="50" />
+</div>
+<div class='name'>
+Lei
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;If you want something done, you have to go at it by yourself in some capacity. If you get stuck take a break, clear your mind, and come back to it.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Csb mug1" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2299749/CSB_mug1.jpg?1420564382" width="50" />
+</div>
+<div class='name'>
+Courtney
+∙
+UX/UI Design
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;Paul, my mentor, wouldn't just answer my questions, he would give me more resources. He taught me how to find the answer myself.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Me" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/1699164/me.jpg?1403664177" width="50" />
+</div>
+<div class='name'>
+Julicia
+∙
+iOS Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+ &quot;Both Chris and Ben are incredible. They both know their stuff and I really appreciated when I had time to work with them. It was a great learning experience!&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Dale photo 2" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2299651/Dale_Photo_2.jpg?1420218734" width="50" />
+</div>
+<div class='name'>
+Dale
+∙
+Full Stack Web Developer Track
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;I like the fact that [the mentors] are out of reach. It pushes you to keep pressing toward a solution on your own&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Photo on 1 4 15 at 4.40 pm  2" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2299230/Photo_on_1-4-15_at_4.40_PM__2.jpg?1420411468" width="50" />
+</div>
+<div class='name'>
+Dan
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+Now having gone through the program, if I can think it up, I can create it. In mobile, in a browser, across the board. I can do so much more than I even expected.
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Britney jake charliemaddiewedding" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2299672/Britney_Jake-CharlieMaddieWedding.jpg?1422204721" width="50" />
+</div>
+<div class='name'>
+Jake
+∙
+Frontend Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;I wouldn't have learned any of this without Bloc. You can self-teach most programming languages but to have someone answering questions really makes the process faster.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Art" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2299821/art.jpg?1420353560" width="50" />
+</div>
+<div class='name'>
+Mark
+∙
+Android Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+If you want to learn something and if you have time to concentrate on a program, Bloc is the right thing to do.
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Missing" class="circle-photo" height="50" src="https://cdn1.bloc.io/assets/defaults/missing-1d1dbb07b7f1a04a2128ed3e7b657da3.png" width="50" />
+</div>
+<div class='name'>
+Praveena
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;I learned how to ask questions—you have to ask the correct question to get the right answer.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="20140902 230841" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2288766/20140902_230841.jpg?1414987763" width="50" />
+</div>
+<div class='name'>
+Raymond
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+It's such a great experience—I have no words for it. I would do it over and over again and down the line I'll probably take another Bloc course.
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Img 0688" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2120103/IMG_0688.PNG?1411395650" width="50" />
+</div>
+<div class='name'>
+William
+∙
+Frontend Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+Eliot [my mentor] actually looked at my code and I learned a lot from that personal feedback. That 1-on-1 relationship was my favorite part of the program.
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="1148822 10151833047031420 2081561952 n" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/1991849/1148822_10151833047031420_2081561952_n.jpg?1409286282" width="50" />
+</div>
+<div class='name'>
+JaYa
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+I have loved my learning and would certainly recommend bloc to a friend!
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Missing" class="circle-photo" height="50" src="https://cdn1.bloc.io/assets/defaults/missing-1d1dbb07b7f1a04a2128ed3e7b657da3.png" width="50" />
+</div>
+<div class='name'>
+Sullivan
+∙
+Frontend Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;[My mentor] Matt Tanguay-Carel was great! He was always willing to go the extra mile to make sure I was taken care of.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Benji" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2260180/benji.jpg?1411571442" width="50" />
+</div>
+<div class='name'>
+Benji
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;Have patience. Don't be afraid to ask questions. Learning new things is difficult, but once you solve those problems you become a bit more motivated.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="45096 24 4x6 tay  13" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2119633/45096_24_4x6_tay__13.jpg?1409518194" width="50" />
+</div>
+<div class='name'>
+Abdullah
+∙
+Frontend Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+“Everything has been great, everyone here is nice. You guys are doing something right.&quot; 
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="311457 10151316119391974 620170074 n" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/614371/311457_10151316119391974_620170074_n.jpg?1388124867" width="50" />
+</div>
+<div class='name'>
+J. Terrell 
+∙
+UX/UI Design
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+“The whole workflow was really eye-opening. My relations with my clients are a lot more productive now, and I'm able to speak their language.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Avatar new" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2290633/avatar-new.jpg?1415039015" width="50" />
+</div>
+<div class='name'>
+Chris
+∙
+iOS Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+“Find a mentor, especially one that you can match with finding out what you do now. This is knowledge to run with.”
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Img 1783" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/1601597/IMG_1783.JPG?1416620167" width="50" />
+</div>
+<div class='name'>
+Matthew
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;Be persistent in working through any problem, and not giving up on trying to figure out the problem, very important in life and programming.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Brad glasses hair" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/1032372/brad-glasses-hair.jpg?1462452936" width="50" />
+</div>
+<div class='name'>
+Brad
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+“Stay on track with the work, because the checkpoints are really good. Some are longer than others, but you’ll have a better idea of what your progress should be.”
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="1e39eca" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/1147236/1e39eca.jpg?1393873884" width="50" />
+</div>
+<div class='name'>
+Narin
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;As a developer, it opened a whole new world for me. I am really happy with Bloc. It can change your professional career and open very exciting new options.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Photo 25" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/976166/photo-25.JPG?1390852788" width="50" />
+</div>
+<div class='name'>
+Miguel
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;I feel that I had a really involved mentor who I could reach out to when I needed help with web-related issues, or when I wanted feedback on new ideas.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="303685 10200359091719115 2045338326 n" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/2260613/303685_10200359091719115_2045338326_n.jpg?1411436398" width="50" />
+</div>
+<div class='name'>
+Shayon
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;Bloc really helped me get rid of the negative association I had with learning how to code. I proved to myself that I could learn to code and build something useful.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="252894 697334104749 4800169 35949032 2126417 n" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/1203/252894_697334104749_4800169_35949032_2126417_n.jpg?1359988979" width="50" />
+</div>
+<div class='name'>
+Hiram
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;Bloc was a stepping stone for me into the world of web. My career used to be limited by a lack of programming skills, but now I can step into any job confidently.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Stringio" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/5675/stringio.txt?1364931711" width="50" />
+</div>
+<div class='name'>
+Henry
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;I forgot how much I loved programming Assembly and Basic in my Commodore 64 days, and you not only helped me with my startup, you made me feel in love again.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Photo on 3 8 13 at 8.27 am" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/216/Photo_on_3-8-13_at_8.27_AM.jpg?1363660325" width="50" />
+</div>
+<div class='name'>
+Constantino
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+Bloc was a great experience not only for learning Rails, but for the coding fundamentals you learn that apply to any language or framework you'll pick up in your career as a developer.
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Open uri20131029 9 aud0mz?1383077090" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/631954/open-uri20131029-9-aud0mz?1383077090" width="50" />
+</div>
+<div class='name'>
+Ben
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;I had the direction I needed to figure out what I needed to learn, and I was able to get help applying new concepts to my Capstone.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Canyon" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/219/canyon.jpg?1410186748" width="50" />
+</div>
+<div class='name'>
+Sasha
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+“Thanks to Bloc, my life is on a new and much better path than before. If I had to sum up my experience in one word, I would say, PHENOMENAL.”
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Bloc profile pic" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/481640/Bloc_Profile_Pic.jpg?1378748106" width="50" />
+</div>
+<div class='name'>
+Forrest
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;(My mentor) went above and beyond, and sometimes would go over on meetings, and was always very willing to lend a hand. That felt really special.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Fb" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/1103414/fb.jpg?1396483971" width="50" />
+</div>
+<div class='name'>
+Nathan
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+“I think Bloc gave me more confidence so that I can produce working code.”
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Profile" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/390205/profile.png?1395685257" width="50" />
+</div>
+<div class='name'>
+David
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;In order to be a good Rails programmer, you have to have a good understanding of Ruby itself. The better you know Ruby, the easier time you’ll have with Rails.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Stringio" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/1115121/stringio.txt?1393092633" width="50" />
+</div>
+<div class='name'>
+Kevin
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;The best part was that feeling of finishing an app and moving on to the next one. The feeling of 'I did this!' and having a good portfolio is gratifying and useful.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Missing" class="circle-photo" height="50" src="https://cdn1.bloc.io/assets/defaults/missing-1d1dbb07b7f1a04a2128ed3e7b657da3.png" width="50" />
+</div>
+<div class='name'>
+Shawn
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;Sometimes order/structure is needed to coax someone out of a lull. Bloc definitely provided that, especially with its tight project deadlines.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Mb1" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/838319/MB1.jpg?1388368679" width="50" />
+</div>
+<div class='name'>
+Erik
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;[I] think [Bloc] was a tremendous help and I made some apps that I’m really proud of.”
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="3f9f627" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/1515068/3f9f627.jpg?1404242179" width="50" />
+</div>
+<div class='name'>
+Fernando
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+“After many years of studying and teaching human languages, I’ve developed a new interest in learning computer languages. I’m excited to see what the future will hold!&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Val" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/1445160/val.jpg?1404582596" width="50" />
+</div>
+<div class='name'>
+Valerie
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+“I looked forward to every [mentor] meeting and what would come out of it.”
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Apr 0473 2" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/1695506/APR-0473_2.jpg?1403477577" width="50" />
+</div>
+<div class='name'>
+Michael
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+Chris appreciated the “chance to pick the brain of someone who’s already in the game, and [learn] how they would approach something.”
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="1903992 10202002847605098 1999035602 n" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/1459573/1903992_10202002847605098_1999035602_n.jpg?1399251112" width="50" />
+</div>
+<div class='name'>
+Christopher
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+“I wouldn’t have been able to do this myself, or through Treehouse. You need that person to explain things.”
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Stringio" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/917/stringio.txt?1354487663" width="50" />
+</div>
+<div class='name'>
+Devan
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+“I loved the projects and the tutorial for building the app. It’s phenomenal... I’ve seen a lot of tutorials, and [Bloc’s] was so great.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Dsc00233" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/1332979/DSC00233.JPG?1398196033" width="50" />
+</div>
+<div class='name'>
+Adam
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;I really liked that it taught you how to apply your knowledge to the project. It was innovative and resourceful at the same time; it’s like being in your own sandbox.&quot;
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Wahoo" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/1353387/wahoo.jpg?1398134560" width="50" />
+</div>
+<div class='name'>
+Stephen
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+“Just one year after attending the Bloc program I have been able to build a fully integrated e-commerce website.”
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Open uri20130310 21 13claq9?1362951663" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/1386/open-uri20130310-21-13claq9?1362951663" width="50" />
+</div>
+<div class='name'>
+Robert
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+<article class='alumni-story alumni-quote col-sm-6 col-lg-4'>
+
+<div class='quote-box'>
+&quot;Make sure you have goals in mind. If you don’t have that inspiration then it’s harder to move through. Everything clicked because I was shooting for something specific.”
+</div>
+<div class='author'>
+<div class='photo'>
+<img alt="Stringio" class="circle-photo" height="50" src="https://cdn-photos.bloc.io/square/1235588/stringio.txt?1395406855" width="50" />
+</div>
+<div class='name'>
+Seth
+∙
+Rails Web Development
+</div>
+</div>
+</article>
+
+</div>
+</section>
+</div>
+</div>
+<section class='course-section landing-section context-container--gray90'>
+<h2 class='landing-headline center-text'>Join the hundreds of Bloc alums<br /> making a career change.</h2>
+<div class='alumni-email-capture'>
+<div class='inner center-text'>
+<div button_class='btn btn-orange' class='capture-form emelyn-form-elements' cta_email_form id='email_capt'></div>
+</div>
+</div>
+</section>
+</div>
+</div>
+
+<div class='full-page-footer hidden-xs'>
+<div class='container'>
+<div class='column-wrapper'>
+<div class='column'>
+<h6>Programs</h6>
+<div class='course-links'>
+<section class='tracks'>
+<div class='label'>Become a Software Developer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="software-developer-track.html"><i class='fa fa-tasks fa-fw'></i>
+Software Developer Track
+</a></li>
+</ul>
+</section>
+<section class='tracks'>
+<div class='label'>Become a Web Developer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="web-developer-career-track.html"><i class='fa fa-cubes fa-fw'></i>
+Part-Time Web Developer Track
+</a></li>
+</ul>
+</section>
+<section class='tracks'>
+<div class='label'>Become a Designer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="design-bootcamp.html"><i class='fa fa-picture-o fa-fw'></i>
+Designer Track
+</a></li>
+</ul>
+</section>
+<section class='courses'>
+<div class='label'>Broaden Your Skills</div>
+<ul>
+<li class='course-icon-link web-dev'>
+<a href="web-development-bootcamp.html"><i class='fa fa-terminal fa-fw'></i>
+Rails Fundamentals
+</a></li>
+<li class='course-icon-link frontend'>
+<a href="frontend-development-bootcamp.html"><i class='fa fa-code fa-fw'></i>
+Frontend Fundamentals
+</a></li>
+<li class='course-icon-link design'>
+<a href="ux-design-bootcamp.html"><i class='fa fa-picture-o fa-fw'></i>
+UX/UI Design Fundamentals
+</a></li>
+<li class='course-icon-link android'>
+<a href="android-bootcamp.html"><i class='fa fa-android fa-fw'></i>
+Android Fundamentals
+</a></li>
+<li class='course-icon-link ios'>
+<a href="ios-bootcamp.html"><i class='fa fa-apple fa-fw'></i>
+iOS Fundamentals
+</a></li>
+</ul>
+</section>
+</div>
+
+</div>
+<div class='column'>
+<h6>About Bloc</h6>
+<ul>
+<li>
+<a href="about.html">Our Team | Jobs</a>
+</li>
+<li>
+<a href="http://try.bloc.io/dev-bootcamp-for-veterans/" target="_blank">Bloc Veterans Program</a>
+</li>
+<li>
+<a href="http://try.bloc.io/new-relic-bootcamp-diversity-scholarship/" target="_blank">Bloc&#39;s Diversity Scholarship</a>
+</li>
+<li>
+<a href="faq.html">FAQ</a>
+</li>
+<li>
+<a href="http://blog.bloc.io">Blog</a>
+</li>
+<li>
+<a href="http://code.bloc.io" target="_blank">Engineering Blog</a>
+</li>
+<li>
+<a href="privacy.html">Privacy Policy</a>
+</li>
+<li>
+<a href="terms.html">Terms of Service</a>
+</li>
+<li>
+<a href="https://blog.bloc.io/bloc-reviews-from-real-students/">Read Reviews of Bloc</a>
+</li>
+<li>
+<a href="Bloc-Catalog.pdf">Course Catalog</a>
+</li>
+</ul>
+</div>
+<div class='column'>
+<h6>Made By Bloc</h6>
+<ul>
+<li>
+<a href="http://try.bloc.io/tech-talks/" target="_blank">Tech Talks &amp; Resources</a>
+</li>
+<li>
+<a href="coding-bootcamp-calculator.html">Coding Bootcamp Calculator</a>
+</li>
+<li>
+<a href="coding-bootcamp-comparison.html">Programming Bootcamp Comparison</a>
+</li>
+<li>
+
+</li>
+<li>
+
+</li>
+<li>
+
+</li>
+<li>
+<a href="ruby-warrior.html">Ruby Warrior</a>
+</li>
+<li>
+<a href="https://bloc.io/learn-to-code">Bootcamp Selector</a>
+</li>
+</ul>
+<h6>HIRE OUR GRADS</h6>
+<ul class='contact-list'>
+<li>
+<i class='fa fa-envelope-o'></i>
+<div class='contact-wrapper'>
+<a href="mailto:outcomes@bloc.io">Contact Career Services</a>
+</div>
+</li>
+</ul>
+</div>
+<div class='column'>
+<h6>Sign Up For Our Mailing List</h6>
+<div class='footer-email-form' ng_controller='FooterEmail.controller'>
+<form class='emelyn-form-elements' id='footer_email_capture' name='footer_email_capture'>
+<input class="input-dark email" id="email" name="email" ng_model="subscription.email" required="required" type="email" />
+<input class='btn btn-dark-gray btn-mini submit' id='footer_email_signup_btn' ng_click='submit()' ng_disabled='isSubmitDisabled()' type='submit' value='Send'>
+</form>
+</div>
+<ul class='contact-list'>
+<li>
+<i class='fa fa-envelope-o'></i>
+<div class='contact-wrapper'>
+<a href="mailto:hello@bloc.io">hello@bloc.io</a>
+</div>
+</li>
+<li>
+<i class='fa fa-phone'></i>
+<div class='contact-wrapper'>
+Considering enrolling?
+<br>
+(404) 480-2562
+</div>
+</li>
+<li>
+<i class='fa fa-phone'></i>
+<div class='contact-wrapper'>
+Partnership / Corporate Inquiries?
+<br>
+(650) 741-5682
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class='bottom'>
+<p class='copyright'>Copyright © 2017 Bloc</p>
+<ul class='social-link-list'>
+<li>
+<a href="https://www.facebook.com/trybloc" target="_blank"><i class='fa fa-facebook'></i>
+</a></li>
+<li>
+<a href="https://twitter.com/trybloc" target="_blank"><i class='fa fa-twitter'></i>
+</a></li>
+<li>
+<a href="https://plus.google.com/112610125572984281932" rel="publisher" target="_blank"><i class='fa fa-google-plus'></i>
+</a></li>
+<li>
+<a href="https://www.youtube.com/user/BlocContent" target="_blank"><i class='fa fa-youtube'></i>
+</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<script defer="defer" src="https://cdn1.bloc.io/webpack/lightweight_ng-bundle-d5548dadeeea4f4647bd.js"></script>
+<script defer type='text/javascript'>
+// Leave this in its own script tag so it won't blow up the rest of the JS.
+$.getScript('//munchkin.marketo.net/munchkin.js', initMunchkin);
+function initMunchkin () {
+  Munchkin.init("412-ZQR-205", {
+    domainLevel: 2
+  });
+}
+
+
+</script>
+<script defer type='text/javascript'>
+Analytics.quantcast.setup("p-fzmcqmjeqmw-j");
+Analytics.segment.setup("aoqc6vja9l", Bloc.current_user)
+
+
+</script>
+
+
+<script>
+  console.log("No referrer override.");
+</script>
+
+<script src="https://cdn0.bloc.io/assets/mixpanel_tracking-f7fa15a586fa60d3cb902445d4b203fb.js"></script>
+
+<!-- begin olark code -->
+<script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+f[z]=function(){
+(a.s=a.s||[]).push(arguments)};var a=f[z]._={
+},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+0:+new Date};a.P=function(u){
+a.p[u]=new Date-a.p[0]};function s(){
+a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+b.contentWindow[g].open()}catch(w){
+c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+/* custom configuration goes here (www.olark.com/documentation) */
+olark.identify('1431-802-10-9437');/*]]>*/</script><noscript><a href="https://www.olark.com/site/1431-802-10-9437/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+<!-- end olark code -->
+
+<noscript>
+<div style='display: none;'></div>
+<img alt='Quantcast' border='0' height='1' src='https://pixel.quantserve.com/pixel/p-fzmcqmjeqmw-j.gif' width='1'>
+</noscript>
+</body>
+</html>

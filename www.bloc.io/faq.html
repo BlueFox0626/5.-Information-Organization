@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html data-ng-app='NgBloc' itemscope itemtype='http://schema.org/Product'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"a93f3122a8","applicationID":"442416","transactionName":"JlxYRUsJCQ5RS00RBQJWRR5fBxQ=","queueTime":4,"applicationTime":577,"agentToken":null,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQIDUldUGwcEVlVTAQ=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),s.xhrWrappable&&t(9),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),c=t(7),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),c.on(m,function(){this.bstStart=Date.now()}),c.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(17)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",c)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),c=t(16),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[y[n]];return f&&f.push([g,n,r,i]),i}}function p(t,e){v[t]=h(t).concat(e)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var v={},y={},g={on:p,emit:n,get:m,listeners:h,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(15),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=g.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(v,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(15),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(12);var w=""+location,v={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},y=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:a(),origin:w,features:{},xhrWrappable:y};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,10,4,3]);</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700%7COpen+Sans+Condensed:700" media="screen" rel="stylesheet" />
+<script type="text/javascript">
+//<![CDATA[
+window.gon={};gon.footer_email_params={"channel":"footer","course_kind":"generic"};gon.utm_params=["utm_ad","utm_adgroup","utm_bonus","utm_campaign","utm_content","utm_keyword","utm_medium","utm_source"];gon.cta_email_params={"channel":"faq"};
+//]]>
+</script>
+<title>Bloc | Coding Bootcamp - Frequently Asked Questions</title>
+<meta content='Learn to code online with a Mentor at Bloc | FAQs' name='description'>
+<!-- / Canonical URL -->
+<!-- / Responsive Enabled -->
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<meta content='frequently asked questions' name='keywords'>
+<!-- Google -->
+<meta content='z3HPw1Nm4ihrRs_dA0-OZbMNipfhdT0vu3g4s5tRSQ8' name='google-site-verification'>
+<!-- Twitter Card data -->
+<meta content='summary' name='twitter:card'>
+<meta content='@trybloc' name='twitter:site'>
+<meta content='Bloc' name='twitter:title'>
+<meta content='Learn to code online with a Mentor at Bloc | FAQs' name='twitter:description'>
+<meta content='https://cdn3.bloc.io/assets/logos/bloc-logo-square-500x500-white-f85bec150478dc93d64865b33941ab6d.png' name='twitter:image'>
+<!-- Open Graph data -->
+<meta content='Bloc | Coding Bootcamp - Frequently Asked Questions' property='og:title'>
+<meta content='website' property='og:type'>
+<meta content='https://www.bloc.io/faq' property='og:url'>
+<meta content='https://cdn3.bloc.io/assets/logos/bloc-logo-square-500x500-white-f85bec150478dc93d64865b33941ab6d.png' property='og:image'>
+<meta content='Learn to code online with a Mentor at Bloc | FAQs' property='og:description'>
+<meta content='Bloc' property='og:site_name'>
+<meta content='1932106' property='fb:admins'>
+<!-- Schema markup -->
+<meta content='Bloc | Coding Bootcamp - Frequently Asked Questions' itemprop='name'>
+<meta content='Learn to code online with a Mentor at Bloc | FAQs' itemprop='description'>
+<meta content='https://cdn3.bloc.io/assets/logos/bloc-logo-square-500x500-white-f85bec150478dc93d64865b33941ab6d.png' itemprop='image'>
+<!-- Taboola tracking -->
+
+<link href="https://cdn0.bloc.io/assets/application-0ca019f2cb8f5eba945742ddefca36d4.css" media="all" rel="stylesheet" />
+
+<script>
+  var env = "production";
+  var _rollbarConfig = {
+      accessToken: "4b86c2fdc5454fbea1382e5fff6f9889",
+      captureUncaught: true,
+      logLevel: 'error',
+      payload: {
+        environment: env
+      }
+  };
+  
+  
+  !function(a,b){function c(b){this.shimId=++h,this.notifier=null,this.parentShim=b,this.logger=function(){},a.console&&void 0===a.console.shimId&&(this.logger=a.console.log)}function d(b,c,d){!d[4]&&a._rollbarWrappedError&&(d[4]=a._rollbarWrappedError,a._rollbarWrappedError=null),b.uncaughtError.apply(b,d),c&&c.apply(a,d)}function e(b){var d=c;return g(function(){if(this.notifier)return this.notifier[b].apply(this.notifier,arguments);var c=this,e="scope"===b;e&&(c=new d(this));var f=Array.prototype.slice.call(arguments,0),g={shim:c,method:b,args:f,ts:new Date};return a._rollbarShimQueue.push(g),e?c:void 0})}function f(a,b){if(b.hasOwnProperty&&b.hasOwnProperty("addEventListener")){var c=b.addEventListener;b.addEventListener=function(b,d,e){c.call(this,b,a.wrap(d),e)};var d=b.removeEventListener;b.removeEventListener=function(a,b,c){d.call(this,a,b&&b._wrapped?b._wrapped:b,c)}}}function g(a,b){return b=b||this.logger,function(){try{return a.apply(this,arguments)}catch(c){b("Rollbar internal error:",c)}}}var h=0;c.init=function(a,b){var e=b.globalAlias||"Rollbar";if("object"==typeof a[e])return a[e];a._rollbarShimQueue=[],a._rollbarWrappedError=null,b=b||{};var h=new c;return g(function(){if(h.configure(b),b.captureUncaught){var c=a.onerror;a.onerror=function(){var a=Array.prototype.slice.call(arguments,0);d(h,c,a)};var g,i,j="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(g=0;g<j.length;++g)i=j[g],a[i]&&a[i].prototype&&f(h,a[i].prototype)}return a[e]=h,h},h.logger)()},c.prototype.loadFull=function(a,b,c,d){var e=g(function(){var a=b.createElement("script"),e=b.getElementsByTagName("script")[0];a.src=d.rollbarJsUrl,a.async=!c,a.onload=f,e.parentNode.insertBefore(a,e)},this.logger),f=g(function(){if(void 0===a._rollbarPayloadQueue)for(var b,c,d,e,f=new Error("rollbar.js did not load");b=a._rollbarShimQueue.shift();)for(d=b.args,e=0;e<d.length;++e)if(c=d[e],"function"==typeof c){c(f);break}},this.logger);g(function(){c?e():a.addEventListener?a.addEventListener("load",e,!1):a.attachEvent("onload",e)},this.logger)()},c.prototype.wrap=function(b){try{if("function"!=typeof b)return b;if(b._isWrap)return b;if(!b._wrapped){b._wrapped=function(){try{return b.apply(this,arguments)}catch(c){throw a._rollbarWrappedError=c,c}},b._wrapped._isWrap=!0;for(var c in b)b.hasOwnProperty(c)&&(b._wrapped[c]=b[c])}return b._wrapped}catch(d){return b}};for(var i="log,debug,info,warn,warning,error,critical,global,configure,scope,uncaughtError".split(","),j=0;j<i.length;++j)c.prototype[i[j]]=e(i[j]);var k="//d37gvrvc0wt4s1.cloudfront.net/js/v1.1/rollbar.min.js";_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||k;var l=c.init(a,_rollbarConfig);l.loadFull(a,b,!1,_rollbarConfig)}(window,document);
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash-compat/3.10.1/lodash.min.js"></script>
+<script src="https://cdn0.bloc.io/webpack/init-bundle-86306a01aa3e6d28d412.js"></script>
+<script src="https://cdn0.bloc.io/webpack/application-bundle-86306a01aa3e6d28d412.js"></script>
+<script>
+  Bloc = window.Bloc
+  Bloc = (typeof Bloc !== "undefined" && Bloc !== null) ? Bloc : {};
+  Bloc.login_url = "/users/auth/facebook";
+  Bloc.facebook_image_url = "https://cdn1.bloc.io/assets/facebook-a1675421f41dd6897a434ee2aa147c9f.jpg";
+  Bloc.current_visit = null;
+</script>
+<script>
+  Bloc.current_user = {};
+</script>
+<script>
+  Bloc.current_user.role = "visitor"
+</script>
+
+
+<script defer type='text/javascript'>
+// Leave this in its own script tag so it won't blow up the rest of the JS.
+$.getScript('//munchkin.marketo.net/munchkin.js', initMunchkin);
+function initMunchkin () {
+  Munchkin.init("412-ZQR-205", {
+    domainLevel: 2
+  });
+}
+
+
+</script>
+<script defer type='text/javascript'>
+Analytics.quantcast.setup("p-fzmcqmjeqmw-j");
+Analytics.segment.setup("aoqc6vja9l", Bloc.current_user)
+
+
+</script>
+
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="NoSV+3PRUwqxQWnH9VMES8895OzaFJkT5S5BWnzesiM=" name="csrf-token" />
+
+</head>
+<body class='full-page-base-style' ng-class="{ 'showing-overlay': isShowingOverlay }">
+
+<div id='full_page'>
+<div class='default-js-flash-container'>
+
+</div>
+
+<div class='emelyn-layout middle'>
+<div class='landing-navigation hidden-xs hidden-sm'>
+<div class='container'>
+<a id='top'></a>
+<div class='links pull-left'>
+<div class='logo'>
+<div class='header-logo'>
+<a href="index.html"><img alt="Logo white" height="30" src="https://cdn1.bloc.io/assets/landing/logo-white-8288ab35ab214ba341ab283ea2c79200.png" width="80" />
+</a></div>
+
+</div>
+<div class='dropdown' dropdown_selector='.course-dropdown-menu' menu_dropdown>
+<span>Programs</span>
+<div class='course-dropdown-menu ng-cloak'>
+<div class='inner'>
+<div class='course-links'>
+<section class='tracks'>
+<div class='label'>Become a Software Developer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="software-developer-track.html"><i class='fa fa-tasks fa-fw'></i>
+Software Developer Track
+</a></li>
+</ul>
+</section>
+<section class='tracks'>
+<div class='label'>Become a Web Developer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="web-developer-career-track.html"><i class='fa fa-cubes fa-fw'></i>
+Part-Time Web Developer Track
+</a></li>
+</ul>
+</section>
+<section class='tracks'>
+<div class='label'>Become a Designer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="design-bootcamp.html"><i class='fa fa-picture-o fa-fw'></i>
+Designer Track
+</a></li>
+</ul>
+</section>
+<section class='courses'>
+<div class='label'>Broaden Your Skills</div>
+<ul>
+<li class='course-icon-link web-dev'>
+<a href="web-development-bootcamp.html"><i class='fa fa-terminal fa-fw'></i>
+Rails Fundamentals
+</a></li>
+<li class='course-icon-link frontend'>
+<a href="frontend-development-bootcamp.html"><i class='fa fa-code fa-fw'></i>
+Frontend Fundamentals
+</a></li>
+<li class='course-icon-link design'>
+<a href="ux-design-bootcamp.html"><i class='fa fa-picture-o fa-fw'></i>
+UX/UI Design Fundamentals
+</a></li>
+<li class='course-icon-link android'>
+<a href="android-bootcamp.html"><i class='fa fa-android fa-fw'></i>
+Android Fundamentals
+</a></li>
+<li class='course-icon-link ios'>
+<a href="ios-bootcamp.html"><i class='fa fa-apple fa-fw'></i>
+iOS Fundamentals
+</a></li>
+</ul>
+</section>
+</div>
+
+</div>
+</div>
+</div>
+<a href='mentors.html'>Mentors</a>
+<a href='alumni.html'>Alumni</a>
+</div>
+<div class='links pull-right'>
+<a href="sign_in.html">Log in
+</a><div class='divider'>
+|
+</div>
+<a class='enroll-btn btn' href='enrollments/new-course_kind=web_dev.html'>Enroll </a>
+
+</div>
+<div class='clear'></div>
+</div>
+</div>
+<div class='mobile-nav-container visible-xs visible-sm' ng_class="{'full-height': menuOpen}" ng_controller='MobileNavCtrl' ng_init='init()'>
+<div class='mobile-nav-header'>
+<div class='bloc-main'>
+<a href="index.html"><img alt="Square 50x50 black" src="https://cdn0.bloc.io/assets/logos/square-50x50-black-0b7e99cf95d6360357a703be16f3ad42.png" />
+</a></div>
+<div class='menu-button' ng_click='toggleMenu()' ng_hide='menuOpen'></div>
+<div class='menu-x ng-cloak icon fa fa-close' ng_click='toggleMenu()' ng_hide='!menuOpen'></div>
+</div>
+<div class='mobile-menu ng-cloak'>
+<div class='mobile-nav' ng_class='{"left": subNavPosition + "%"}'>
+<ul class='mobile-list-nav'>
+<li ng_class='{active: tog==1}' ng_click='toggleProgramList()'>
+Programs
+</li>
+<li ng_class='{active: tog==2}' ng_click='toggleAboutList()'>
+About
+</li>
+<li ng_class='{active: tog==3}' ng_click='toggleContactList()'>
+Contact
+</li>
+</ul>
+</div>
+<div class='mobile-subnav-list' ng_style='{"left": subNavPosition + "%"}'>
+<div class='list-group'>
+<ul class='link-list'>
+<li>
+<a href="enrollments/new-token=TODAY.html">Enroll</a>
+</li>
+<li>
+<a href="sign_in.html">Log in / Register</a>
+</li>
+</ul>
+<div class='label'>Become a Software Developer</div>
+<ul class='link-list'>
+<li>
+<a href="software-developer-track.html"><i class='icon fa fa-tasks'></i>
+Software Developer Track
+</a></li>
+</ul>
+<div class='label'>Become a Web Developer</div>
+<ul class='link-list'>
+<li>
+<a href="web-developer-career-track.html"><i class='icon fa fa-desktop fa-fw'></i>
+Full Stack Web Developer Track
+</a></li>
+</ul>
+<div class='label'>Become a Designer</div>
+<ul class='link-list'>
+<li>
+<a href="design-bootcamp.html"><i class='icon fa fa-picture-o fa-fw'></i>
+Designer Track
+</a></li>
+</ul>
+<div class='label'>
+Broaden Your Skills
+</div>
+<ul class='link-list'>
+<li>
+<a href="web-development-bootcamp.html"><i class='icon icon-web-development'></i>
+Rails Fundamentals
+</a></li>
+<li>
+<a href="frontend-development-bootcamp.html"><i class='icon icon-frontend'></i>
+Frontend Fundamentals
+</a></li>
+<li>
+<a href="android-bootcamp.html"><i class='icon icon-android'></i>
+Android Fundamentals
+</a></li>
+<li>
+<a href="ios-bootcamp.html"><i class='icon icon-ios'></i>
+iOS Fundamentals
+</a></li>
+<li>
+<a href="ux-design-bootcamp.html"><i class='icon icon-design'></i>
+UX/UI Design Fundamentals
+</a></li>
+</ul>
+</div>
+<div class='list-group'>
+<ul class='link-list'>
+<li>
+<a href="mentors.html">Mentors</a>
+</li>
+<li>
+<a href="alumni.html">Alumni</a>
+</li>
+<li>
+<a href="about.html">Our Team | Jobs</a>
+</li>
+<li>
+<a href="http://try.bloc.io/dev-bootcamp-for-veterans/" target="_blank">Bloc Veterans Program</a>
+</li>
+<li>
+<a href="http://try.bloc.io/new-relic-bootcamp-diversity-scholarship/" target="_blank">Bloc&#39;s Diversity Scholarship</a>
+</li>
+<li>
+<a href="faq.html">FAQ</a>
+</li>
+<li>
+<a href="http://blog.bloc.io">Blog</a>
+</li>
+<li>
+<a href="http://code.bloc.io" target="_blank">Engineering Blog</a>
+</li>
+<li>
+<a href="privacy.html">Privacy Policy</a>
+</li>
+<li>
+<a href="terms.html">Terms of Service</a>
+</li>
+</ul>
+</div>
+<div class='list-group'>
+<div class='nav-email-form'>
+<div class='label no-border'>
+Sign Up For Our Mailing List
+</div>
+<form class='emelyn-form-elements' id='nav_email_capture' name='nav_email_capture'>
+<div class='input-wrapper email'>
+<input class="input-dark" id="email" name="email" ng_model="subscription.email" required="required" type="email" />
+</div>
+<div class='input-wrapper submit'>
+<input class='btn btn-mini' id='nav_email_signup_btn' ng_click='submit()' ng_disabled='isSubmitDisabled()' type='submit' value='Send'>
+</div>
+</form>
+</div>
+<ul class='link-list'>
+<li class='contact'>
+<a href="mailto:hello@bloc.io"><i class='icon fa fa-envelope-o fa-nav'></i>
+hello@bloc.io
+</a></li>
+<li class='contact'>
+<span>
+<i class='icon fa fa-phone fa-nav'></i>
+<div class='contact-wrapper'>
+Considering enrolling?
+<br>
+(404) 480-2562
+</div>
+</span>
+</li>
+<li class='contact'>
+<span>
+<i class='icon fa fa-phone fa-nav'></i>
+<div class='contact-wrapper'>
+Partnership / Corporate Inquiries?
+<br>
+(650) 741-5692
+</div>
+</span>
+</li>
+</ul>
+<div class='footer'>
+<div class='social-link-list-wrapper'>
+<ul class='social-link-list'>
+<li>
+<a href="https://www.facebook.com/trybloc" target="_blank"><i class='fa fa-facebook'></i>
+</a></li>
+<li>
+<a href="https://twitter.com/trybloc" target="_blank"><i class='fa fa-twitter'></i>
+</a></li>
+<li>
+<a href="https://plus.google.com/112610125572984281932" rel="publisher" target="_blank"><i class='fa fa-google-plus'></i>
+</a></li>
+<li>
+<a href="https://www.youtube.com/user/BlocContent" target="_blank"><i class='fa fa-youtube'></i>
+</a></li>
+</ul>
+
+</div>
+<div class='copyright'>
+COPYRIGHT ©  2017 BLOC
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class='spacer'></div>
+<div class='fixed-section-container faq-content'>
+<div class='top-header'>
+<div class='center-text'>
+<h1>Frequently Asked Questions</h1>
+</div>
+</div>
+<div class='header-text center-div faq-content'>
+<h2>Our Approach</h2>
+
+<p><strong>What is your teaching philosophy?</strong></p>
+
+<p>Founded in 2011, Bloc was one of the world’s first bootcamps and the first to be 100% online. Since then we’ve helped thousands of students achieve their goals. We believe in leveraging technology to deliver an immersive outcomes-focused program. Rather than a traditional classroom, we employ a flipped classroom, mastery learning approach where you’ll work one-on-one with an experienced developer who is vested in your success. </p>
+
+<p>These are the four pillars of our teaching philosophy:</p>
+
+<p><strong>Consistency and Discipline.</strong> Our program is long, tough, and challenges you to figure out problems as a professional developer would. As such, Bloc requires consistency and discipline to have a successful outcome.</p>
+
+<p><strong>Built for Outcomes.</strong> We designed our programs with input from top engineering firms to produce software developers that can contribute to a team on their first day at the job. Salesforce, Autodesk, IBM, BuzzFeed, Lumosity, and Groupon are among the companies who’ve hired Bloc alumni. </p>
+
+<p><strong>Mutual Accountability.</strong> Students hold us accountable for getting the outcome they desire. We hold students accountable for trusting their mentor, remaining disciplined, completing the assignments and projects, and believing in themselves.</p>
+
+<p><strong>Education, not Edutainment.</strong> We focus on what really matters: learning by building. You won’t find an over-reliance on visuals or an abundance of theoretical lessons in our curriculum. Bloc teaches the tangible skills that employers care about, and students learn by applying those skills to real projects. Bloc is fun, but our top priority is a world-class education.</p>
+
+<p><strong>What makes Bloc more effective than other coding bootcamps?</strong></p>
+
+<p>Bloc was founded by two engineering graduates of a top tier computer science program, and they discovered that students learned faster by building real projects working with experienced professionals — not sitting in a classroom. And that’s exactly how they designed Bloc.
+We’ve had many years to get feedback from our alumni, mentors, and employers to refine our approach. We’ve helped thousands of students launch new careers and start companies, and you don’t have to take our word for it. </p>
+
+<p>We’ve published over 100 testimonials from happy alumni hired by companies like Salesforce, Autodesk, IBM, BuzzFeed, Lumosity, and Groupon. We didn’t develop our programs in a vacuum either; we had help from amazing mentors who work at prolific technology companies like Apple, Uber, Netflix, Amazon, and Heroku. </p>
+
+<p>Bloc has a lot in common with on-premise bootcamps but here are two hurdles which all on-site bootcamps require students to overcome: </p>
+
+<ol>
+<li>Their full-time programs restrict students to a physical location.</li>
+<li>The traditional classroom model is not the most effective way to learn a new skill. </li>
+</ol>
+
+<p>Bloc was created as a 100% online program that offers both full-time and part-time options, so students and mentors aren’t bound by location. And Bloc is designed as a one-on-one, apprenticeship-style program so you’re never constrained by a teacher’s limited attention. If asked, many developers will admit that they learned more from a senior developer on their first job than they did from their classrooms. This is exactly how Bloc works; you&#39;re simulating on-the-job learning from day one.</p>
+
+<p><strong>What do you look for in students? What does a successful Bloc student look like?</strong></p>
+
+<p>We’ve written a lot about the idea that learning to code requires a lot of hard work. You can’t learn by osmosis, you have to build. You have to bang your head against problems and work your way out. </p>
+
+<p>So, we look for students who are empowered learners with the following qualities:</p>
+
+<ul>
+<li><strong>Driven.</strong> Our best students enroll with a clear goal and work to achieve it.</li>
+<li><strong>Hard-working.</strong> Our students who consistently put in the time and work get the most out of Bloc.</li>
+<li><strong>Ready to learn.</strong> You don’t need to have a degree or prior programming experience, but our best students take the initiative to learn on their own, and are ready to commit to a rigorous, challenging program.</li>
+</ul>
+
+<p><strong>How is Bloc’s curriculum created?</strong></p>
+
+<p>Bloc’s curriculum is designed and developed in-house by experienced developers and designers. Our curriculum development team consistently gathers feedback from students, mentors, and employers to iterate our curricula daily. They ensure that you’re always learning the most modern, relevant skills. Our curriculum was designed with input from developers at top companies including Facebook, Twitter, YouTube, Heroku, Yelp, Affirm, Trunk Club, and TaskRabbit.</p>
+
+<p>Our curriculum development team contributes significantly to Stack Overflow and Quora. They also create resources for the development community like Swiftris, a free tutorial for learning Swift, read by over 20,000 students. </p>
+
+<p><strong>Can I sample the material?</strong></p>
+
+<p>Absolutely. <a href="sign_in.html">Register for an account</a> and explore on your own, or <a href="web-developer-info-sessions.html">attend an info session</a>. Once you’ve attended an info session, if you still have questions, email us at <a href="mailto:hello@bloc.io">hello@bloc.io</a> to schedule a call with a Student Advisor.   </p>
+
+<p><strong>How deep does your program go? How much of Bloc is in-house curriculum vs. outside resources?</strong></p>
+
+<p>We have developed our own project-based, hand-crafted curriculum designed to get you the outcome you want. Our curriculum is divided into two sections: the Foundation and Projects.</p>
+
+<p>The Foundation is designed to teach you the basic concepts of your program as you build an app. In the Projects, you take those concepts and build your own work. We employ a combination of text-based curriculum, supplemental videos, and structured assignments where you apply what you’ve learned. </p>
+
+<p>It’s important to teach you how to fish. And so as you move from Foundations to Projects, you’ll lean less heavily on the Bloc curriculum and begin tackling open ended problems the way a real developer would — by figuring it out on your own, and through pairing with a more experienced developer. </p>
+
+<p>For example, you might work with a product requirements document with user stories, just like you’d receive from a project manager in the real world. One user story might state that your product can overlay locations on a Google Map. In that case, you’ll need to read the public Google Maps documentation just like you would in the real world. This is an important and necessary step in becoming an effective developer.</p>
+
+<p><strong>What is Bloc’s acceptance rate?</strong></p>
+
+<p>100%. We believe that education should be accessible to everyone. Because our program is online and delivered 1-on-1, we don’t have the physical space constraints of an on-premises university or bootcamp, which allows us to teach differently. </p>
+
+<p><strong>What’s the difference between Bloc’s Programs?</strong></p>
+
+<p>The Web Developer Track is Bloc’s leading web developer bootcamp. The program covers the practical skills you’ll need to get hired as a developer and add value on day zero. Bloc’s Software Developer Track is designed to combine the practical skills of a bootcamp with the theory and depth you’ll need to be effective at top engineering firms. Bloc&#39;s Designer Track combines UX and UI Design with Frontend Web Development to prepare students for a job as a Designer. All of our available Track programs are specifically designed to help students switch careers and are backed by a Tuition Reimbursement Guarantee. </p>
+
+<ul>
+<li><a href="web-developer-career-track.html">Web Developer Track</a> — A 27-week part-time online bootcamp that covers two languages and frameworks (JavaScript + AngularJS and Ruby on Rails) and amply prepares you for web developer roles. This program offers rigor, curriculum, and career support comparable to the leading in-person bootcamps, but with the flexibility of part-time online options. If you don’t land a job in web development, we’ll refund your tuition.</li>
+<li><a href="software-developer-track.html">Software Developer Track</a> — At 36 weeks full-time, the Software Developer Track is three times as long as the typical coding bootcamp and is designed to be a modern replacement for a Computer Science degree. This is our most comprehensive program, was designed with input from top engineering teams like Amazon, Google, and Facebook, and prepares grads to tackle the most challenging technical problems. If you don’t land a job as a developer, we’ll refund your tuition.</li>
+<li><a href="design-bootcamp.html">Designer Track</a> — At 24 weeks full-time, the Designer Track is twice as long as the typical Design bootcamp and covers the entire design process arc. The Designer Track combines the research, testing and design components of UX/UI with the Frontend development skills needed to build and deploy your projects. If you don’t land a job in design, we’ll refund your tuition.</li>
+</ul>
+
+<p>Some students aren’t looking for a career change, which is why we offer shorter programs designed to help you extend your skills. We have three programs for three skill sets:</p>
+
+<ul>
+<li><a href="web-development-bootcamp.html">Rails Fundamentals</a></li>
+<li><a href="frontend-development-bootcamp.html">Frontend Web Fundamentals</a></li>
+<li><a href="ux-design-bootcamp.html">UX/UI Design Fundamentals</a></li>
+</ul>
+
+<p>Need help deciding which option is the best for you? Attend an info session or <a href="mailto:hello@bloc.io">contact one of our Student Advisors</a> for guidance.</p>
+
+<div id='tuition_guarantee'></div>
+
+<h2>Tuition</h2>
+
+<p><strong>How does the Web Developer Track’s Tuition Reimbursement Guarantee work? Will my tuition be reimbursed if I don’t land a developer job?</strong></p>
+
+<p>Yes, if you do not land a job as a developer, we’ll completely refund your tuition. We believe in mutual accountability. You hold us accountable to help you get a job, and we’ll hold you accountable for doing the work.</p>
+
+<p>Here’s what we’re guaranteeing:</p>
+
+<ul>
+<li>You’ll get a paying job in the web development industry</li>
+<li>Within 180 days of graduating</li>
+<li>This may include full-time, contract-to-hire, contractor, and internship positions </li>
+</ul>
+
+<p>But it’s all about mutual accountability. So here’s what you’ll need to do to be eligible: </p>
+
+<ul>
+<li>You must complete each phase of the program in full with mentor approval.</li>
+<li>Students who fall more than 15% behind pace will be moved to the slowest pacing option of one mentor session per week until caught up.</li>
+<li>A student who falls more than 30% behind pace at any time is no longer eligible for tuition reimbursement, even if he/she catches up later.</li>
+<li>You must have completed all career prep checkpoints, completed your Bloc student profile and made your profile public.</li>
+<li>You must reply to requests from the outcomes team within 72hrs.</li>
+<li>You must apply to at least 10 software development jobs per week and submit weekly job search logs to the Career Support team. </li>
+<li>3 of the 10 weekly job applications must be sent through networking (personal connection, personal connection, or cold outreach).</li>
+<li>You must track all correspondence related to your job search and be able to furnish details upon reimbursement request relating to employer, position, date of submission, and application materials.</li>
+<li>You must be a fluent English writer and speaker.</li>
+<li>You must be eligible to work in the metropolitan area(s) and country you choose  for the 18 months after your graduation.</li>
+<li>You must be willing to accept a job in the web developer field if offered. If you decline a role in the software development field, you are no longer eligible for the guarantee. </li>
+<li>If you live in a rural area, it is difficult for Bloc to guarantee you a job. So you must live in one of these top 23 major North American metro areas encompassing over 100 cities:
+Metro Atlanta, Greater Austin, Greater Boston, Chicago Metropolitan Area, Denver-Aurora-Lakewood, Las Vegas Valley, Greater Los Angeles Metropolitan Area, Miami Metropolitan Area, New York Metropolitan Area, Greater Portland, San Francisco Bay Area, Seattle Metropolitan Area, Baltimore/Washington Metropolitan Area, Greater Toronto and Hamilton Area, Dallas/Fort Worth Metroplex, Delaware Valley (Philadelphia), Minneapolis-Saint Paul, San Diego County, Metro Phoenix, Metro Vancouver, Metro Detroit, Raleigh-Cary ‘Triangle’ and Greater Houston.</li>
+<li>If you do not live in one of these areas, you have two options:
+
+<ul>
+<li>Enroll anyway and waive the tuition reimbursement guarantee.</li>
+<li>Focus your job search on any two metro areas on this list, and we guarantee you&#39;ll get a job creating software in one of these two cities. You must be willing to relocate to one of these cities at your own expense upon graduation.</li>
+</ul></li>
+<li>Graduate must explicitly request their reimbursement within one calendar month after the job search is complete. Failure to provide timely notice will void the guarantee.</li>
+</ul>
+
+<p><strong>How does the Software Developer Track’s Tuition Reimbursement Guarantee work? Will my tuition be reimbursed if I don’t land a developer job?</strong></p>
+
+<p>Yes, if you do not land a job as a developer, we’ll completely refund your tuition. We believe in mutual accountability. You hold us accountable to help you get a job, and we’ll hold you accountable for doing the work. </p>
+
+<p>Here&#39;s what we&#39;re guaranteeing:</p>
+
+<ul>
+<li>You&#39;ll get a paying job creating software with a salary of at least $60,000 (US only)</li>
+<li>Within 120 days of graduating</li>
+</ul>
+
+<p>Here&#39;s what we&#39;re going to hold you accountable for:</p>
+
+<ul>
+<li>You must complete each phase of the program in full with mentor approval</li>
+<li>Students who fall more than 15% behind pace will be moved to the slowest pacing option of one mentor session per week until caught up.</li>
+<li>A student who falls more than 30% behind pace at any time is no longer eligible for tuition reimbursement, even if he/she catches up later.</li>
+<li>You must have completed all career prep checkpoints, completed your Bloc student profile, and made your profile public</li>
+<li>When getting help from our Career Services team, you need to be responsive and reply to requests within 72hrs.</li>
+<li>You must apply to at least 10 software development jobs per week and submit weekly job search logs to the Career Support team. </li>
+<li>3 of the 10 weekly job applications must be sent through networking (personal connection, personal connection, or cold outreach).</li>
+<li>We&#39;re going to require you to track all the employers and positions you apply to, as well as dates, email correspondence, and application materials related to your job search. You&#39;ll need to provide all of this to the Career Services team so they can help you as much as possible. </li>
+<li>You must be eligible to work in the metropolitan area(s) and country you choose for the 18 months after your graduation.</li>
+<li>You must be willing to accept a job in the software development field with a salary of at least $60,000 (median US software developer salary is $93,000).</li>
+<li>If you live in a rural area, it&#39;s difficult for Bloc to guarantee you a job. So you must live in one of these top 23 major North American metro areas encompassing over 100 cities: Metro Atlanta, Greater Austin, Greater Boston, Chicago Metropolitan Area, Denver-Aurora-Lakewood, Las Vegas Valley, Greater Los Angeles Metropolitan Area, Miami Metropolitan Area, New York Metropolitan Area, Greater Portland, San Francisco Bay Area, Seattle Metropolitan Area, Baltimore/Washington Metropolitan Area, Greater Toronto and Hamilton Area, Dallas/Fort Worth Metroplex, Delaware Valley (Philadelphia), Minneapolis-Saint Paul, San Diego County, Metro Phoenix, Metro Vancouver, Metro Detroit, Raleigh-Cary ‘Triangle’ and Greater Houston.</li>
+<li>If you don&#39;t live in one of these areas, you have two options:
+
+<ul>
+<li>Enroll anyway and waive the tuition reimbursement guarantee.</li>
+<li>Focus your job search on any two metro areas on this list, and we guarantee you&#39;ll get a job creating software in one of these two cities. You must be willing to relocate to one of these cities at your own expense upon graduation.</li>
+</ul></li>
+<li>You must explicitly request your reimbursement within one calendar month after the job search is complete. Failure to provide timely notice will void the guarantee.</li>
+<li>You must be a fluent English writer and speaker, and at least 18 years old.</li>
+</ul>
+
+<p><strong>How does the Designer Track’s Tuition Reimbursement Guarantee work? Will my tuition be reimbursed if I don’t land a designer job?</strong></p>
+
+<p>Yes, if you do not land a job as a designer, we’ll completely refund your tuition. We believe in mutual accountability. You hold us accountable to help you get a job, and we’ll hold you accountable for doing the work.</p>
+
+<p>Here&#39;s what we&#39;re guaranteeing:</p>
+
+<ul>
+<li>You&#39;ll get a paying design-related job (design jobs include, but are not limited to: UX designer, UX researcher, UI designer, product designer, product manager, etc...)</li>
+<li>Within 180 days of graduating</li>
+<li>This may include full-time, contract-to-hire, contractor, and internship positions </li>
+</ul>
+
+<p>Here&#39;s what we&#39;re going to hold you accountable for:</p>
+
+<ul>
+<li>Students must complete each phase of the program in full with mentor approval. Each project will be reviewed on a set guideline and students will be required to complete project revisions per Lead Mentor direction before being allowed to begin new projects.<br></li>
+<li>Students who fall more than 10% behind pace will be moved to the slowest pacing option of one mentor session per week until caught up.</li>
+<li>A student who falls more than 20% behind pace at any time is no longer eligible for tuition reimbursement, even if he/she catches up later. </li>
+<li>To qualify for tuition reimbursement, a student must complete at least 100% of the required curriculum (students can complete greater than 100% if they complete more projects than are required). </li>
+</ul>
+
+<p>Other requirements: </p>
+
+<ul>
+<li>You must have completed all career prep checkpoints, completed your Bloc student profile, and made your profile public.</li>
+<li>When getting help from our Career Services team, you need to be responsive and reply to requests within 72hrs.</li>
+<li>You must apply to at least 10 design-related jobs per week and submit weekly job search logs to the Career Support team.</li>
+<li>3 of the 10 weekly job applications must be sent through networking (personal connection, personal connection, or cold outreach).</li>
+<li>We&#39;re going to require you to track all the employers and positions you apply to, as well as dates, email correspondence, and application materials related to your job search. You&#39;ll need to provide all of this to the Career Services team so they can help you as much as possible.</li>
+<li>You must be eligible to work in one of the metropolitan area(s) listed below during the 18 months after your graduation.</li>
+<li>You must be willing to accept a job in a design-related field (UX, UI, Product). The combined median US salary for these positions is $84,000.</li>
+<li>If you live in a rural area, it&#39;s difficult for Bloc to guarantee you a job. So you must live in one of these top 23 major North American metro areas encompassing over 100 cities: Metro Atlanta, Greater Austin, Greater Boston, Chicago Metropolitan Area, Denver-Aurora-Lakewood, Las Vegas Valley, Greater Los Angeles Metropolitan Area, Miami Metropolitan Area, New York Metropolitan Area, Greater Portland, San Francisco Bay Area, Seattle Metropolitan Area, Baltimore/Washington Metropolitan Area, Greater Toronto and Hamilton Area, Dallas/Fort Worth Metroplex, Delaware Valley (Philadelphia), Minneapolis-Saint Paul, San Diego County, Metro Phoenix, Metro Vancouver, Metro Detroit, Raleigh-Cary ‘Triangle’ and Greater Houston.</li>
+<li>If you don&#39;t live in one of these areas, you have two options:
+
+<ul>
+<li>Enroll anyway and waive the tuition reimbursement guarantee.</li>
+<li>Focus your job search on any two metro areas on this list, and we guarantee you&#39;ll get a design-related job in one of these two cities. You must be willing to relocate to one of these cities at your own expense upon graduation.</li>
+</ul></li>
+<li>You must explicitly request your reimbursement within one calendar month after the job search is complete. Failure to provide timely notice will void the guarantee.</li>
+<li>You must be a fluent English writer and speaker, and at least 18 years old.</li>
+</ul>
+
+<p><strong>Do you offer tuition payment plan options?</strong></p>
+
+<p>Yes. We offer a range of payment plan options for all of our programs. Share your budget with your Student Advisor and they can lay out all the options available to you. </p>
+
+<p><strong>Do you offer any scholarships?</strong></p>
+
+<p>Yes. We believe in promoting diversity in technology. We have three diversity scholarship programs: </p>
+
+<ul>
+<li><a href="http://try.bloc.io/new-relic-bootcamp-diversity-scholarship/">New Relic Diversity Scholarship</a> - $500 partial scholarship for women, veterans, and minorities underrepresented in tech. Applicable to all Bloc programs.</li>
+<li><a href="http://try.bloc.io/women-who-code-scholarship/">Women Who Code Scholarship</a> - $1000 partial merit-based scholarship awarded to one Women Who Code member each month. Applicable only to the Part Time Web Developer Track, the Designer Track and the Software Developer Track.</li>
+<li><a href="http://try.bloc.io/operation-code-bootcamp-scholarship/">Operation Code Scholarship</a> - $1000 partial scholarship for all US Military Veterans. Applicable only to Part Time Web Developer Track, the Designer Track and the Software Developer Track. </li>
+</ul>
+
+<p><strong>Can my employer pay for Bloc?</strong></p>
+
+<p>Yes! About 20% of Bloc students have an employer sponsoring their tuition. Check with your employer on their policy, then <a href="mailto:hello@bloc.io">speak with one of our Student Advisors</a> for documentation on our program, an invoice, and a certificate of completion for your employer when you complete the program.</p>
+
+<p><strong>What payment methods do you accept?</strong></p>
+
+<p>We accept all credit and debit cards, PayPal, and checks. If you plan to pay via PayPal or check, you must pay in full upfront. Please speak with your Student Advisor or contact <a href="mailto:hello@bloc.io">hello@bloc.io</a>.</p>
+
+<p><strong>What&#39;s your refund policy?</strong></p>
+
+<p>We believe in mutual accountability and your enrollment with Bloc is at will. If you don’t believe Bloc is a great fit for you, you can withdraw at any time. If we don’t believe you are a great fit for Bloc, we may withdraw you from the program at any time. Bloc is backed by a withdrawal policy that is simple and fair: withdraw in your first week for a full refund. Withdraw later, and get a prorated refund based on the number of days you&#39;ve spent in the program, minus a non-refundable cancellation fee of $250.</p>
+
+<p>If more than 60% of your program time has elapsed, you are no longer eligible for a refund.</p>
+
+<p>If you have not completed your program within two years of your Start Date, you will be dropped out of the program and will no longer be eligible for a refund. If you are enrolled in our Software Developer Track and on the 108-week pace, you will be dropped out and ineligible for a refund after three years. If you are enrolled in our Software Engineering Track and on the 144-week pace, you will be dropped out and ineligible for a refund after four years.</p>
+
+<p>If you need a refund, Bloc will only refund the account that was originally charged.</p>
+
+<p><strong>Am I eligible for a tax refund for my education with Bloc?</strong></p>
+
+<p>No. This currently only applies to traditional universities.</p>
+
+<h2>Getting Started</h2>
+
+<p><strong>When can I start?</strong></p>
+
+<p>Unlike university and bootcamp programs that have a handful of start dates each year, you can start Bloc at any time. Cohorts start every Monday, and you can contact a Student Adviser to enroll two weeks before your desired start date.</p>
+
+<p>There are three important dates:</p>
+
+<ul>
+<li><strong>Enroll Date</strong> - Enroll in the program and make your initial payment.</li>
+<li><strong>Orientation Week</strong> - One week before your start date, you&#39;ll read through orientation material, fill in account information, select your mentor and select your meeting times. In the Designer Track, you&#39;ll also complete about 25-30 hours of mandatory pre-work during this week. </li>
+<li><strong>Start Date</strong> -  This is when the program starts, and it will be your first week of mentor appointments.</li>
+</ul>
+
+<p><strong>Is there any required prework?</strong></p>
+
+<p>In the Web Developer Track and Software Developer Track, you&#39;ll work on the fundamentals in Phase 1 with your mentor; no prework is required for these programs. 
+Prework is <strong>required</strong> for our Designer Track. We&#39;ll provide you with prework assignments and an assessment prior to your start date. Completing the prework provides you with an excellent introduction to the program and sets you up for success during your Bloc experience. </p>
+
+<p><strong>Who are these Student Advisors you keep talking about?</strong></p>
+
+<p>Bloc’s Student Advisors help you find the right program for you. They are usually Bloc alumni and they can introduce you to mentors and other alumni, give you a tour of the curriculum, and answer any questions you may have about Bloc. </p>
+
+<p><strong>Will I work with the same mentor throughout the program?</strong></p>
+
+<p>Students taking Fundamentals usually work with the same mentor throughout. For Bloc Tracks, you may work with a different mentor for each phase of the program.</p>
+
+<p><strong>What kind of hardware is required?</strong></p>
+
+<p>Generally our students and mentors prefer Macs. However, you can take Bloc using a Mac, Windows, or Linux machine. </p>
+
+<p><strong>Do I need to purchase any software or tools?</strong></p>
+
+<p>No! Everything you need is included with your tuition or available for free. </p>
+
+<p><strong>What is the time commitment?</strong></p>
+
+<p>We designed Bloc as a structured, immersive program that still fits into your life. That means you can enroll in Bloc without relocating or quitting your job. But this isn’t an “at your own pace” kind of program — we expect you to dedicate the time and do the work every single week. </p>
+
+<p>If you can’t make a regular, dedicated commitment, Bloc might not be the best fit for you. See the following table for time commitment via program:</p>
+
+<table><thead>
+<tr>
+<th></th>
+<th>Intense</th>
+<th>Moderate</th>
+<th>Steady</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><strong>Part-Time Web Developer Track</strong></td>
+<td></td>
+<td>27 Weeks, 20 Hours/Week</td>
+<td>54 Weeks, 12 Hours/Week</td>
+</tr>
+<tr>
+<td><strong>Software Developer Track</strong></td>
+<td>36 Weeks, 40 Hours/Week</td>
+<td>54 Weeks, 20 Hours/Week</td>
+<td>108 Weeks, 15 Hours/Week</td>
+</tr>
+<tr>
+<td><strong>Designer Track</strong></td>
+<td>24 Weeks, 40 Hours/Week</td>
+<td>36 Weeks, 25-30 Hours/Week</td>
+<td>72 Weeks, 12-15 Hours/Week</td>
+</tr>
+<tr>
+<td><strong>Fundamentals</strong></td>
+<td></td>
+<td>16 Weeks, 25-30 Hours/Week</td>
+<td>32 Weeks, 12-15 Hours/Week</td>
+</tr>
+</tbody></table>
+
+<p><br>
+<strong>Can I switch my pace after enrolling?</strong></p>
+
+<p>We do allow for pace switching after you start your program. This is a discussion you’ll need to have with your mentor to make sure the change is within your best interest, but there is no extra cost to changing your pace if it is approved. </p>
+
+<p><strong>Can I switch programs after enrolling?</strong></p>
+
+<p>Each program is designed to help you achieve a different outcome. That means that we work with you from day one to help you achieve a particular goal. As a result, we don’t allow students to switch from one to the other. You&#39;ll need to drop your current program and enroll in a new one from the beginning. If you’re interested in learning more about another program, attend an info session, speak with your Student Advisor, or contact <a href="mailto:hello@bloc.io">hello@bloc.io</a>.</p>
+
+<p><strong>What happens after I enroll?</strong></p>
+
+<p>After you enroll, you&#39;ll go through orientation. During your orientation, you’ll learn about expectations for your program, tell Bloc about your goals, and complete any required prework. A week prior to your start date, you&#39;ll set your schedule with your mentor.
+On your start date, we unlock access to the curriculum. You complete the first few checkpoints before your first mentor appointment, where you&#39;ll discuss your goals with your mentor and review your work.</p>
+
+<p><strong>Can I get in contact with other students?</strong></p>
+
+<p>Yes! We have an active community of students and alumni. You can join the community after you enroll during orientation week.</p>
+
+<p><strong>What if I fall sick or can&#39;t keep up?</strong></p>
+
+<p>This is a big commitment, and we expect you to put in the necessary hours. If your weekly workload feels too overwhelming, talk with your mentor about slowing your pace.</p>
+
+<p>If life happens — a serious illness, an unexpected life change — you have the option to <strong>freeze your program</strong> in one-week increments for a total of four weeks for Web Developer Track and Designer Track and six weeks for Software Developer Track. We’ll save your progress, and when you return you’ll pick-up where you left off. We do not offer extended freezing so make sure to save this option for only when it&#39;s necessary.</p>
+
+<p>If you fail to complete your program within two years of your program Start Date (three years if you&#39;re enrolled in our SET pace of 108-weeks, and four years if you&#39;re enrolled in our SET pace of 144-weeks), you will be dropped out of the program without eligibility for a refund.</p>
+
+<p><strong>May I freeze during the holiday season?</strong></p>
+
+<p>During the holiday season (December 1 - January 10), you may freeze a maximum of two additional weeks. If you celebrate religious holidays outside of these dates, please discuss these with your mentors. These holiday freezes will not count towards your freeze maximum.</p>
+
+<p><strong>Do I get access to the Bloc curriculum after I graduate?</strong></p>
+
+<p>Yes. Bloc graduates get lifetime access to their program curriculum, including all updates and improvements, so you can stay sharp with a world-class curriculum as a reference.</p>
+
+<h2>Mentorship</h2>
+
+<p><strong>How exactly do mentor appointments work?</strong></p>
+
+<p>At Bloc, we teach with a flipped classroom model: you learn, complete assignments, and tackle challenges on your own, consulting your mentor for help getting unstuck and discussing broad concepts.</p>
+
+<p>When you get stuck throughout the week, you can message your mentor any time through Bloc. During your weekly video call appointments, you&#39;ll dive deep into tricky concepts, seek professional advice, or discuss your progress.</p>
+
+<p>In return, your mentor will push you in ways that a typical online curriculum can&#39;t. When you complete assignments, your mentor will review your code and critique your approach, giving you detailed feedback and advice. During appointments, your mentor will work with you to develop good habits and pair program with you on tricky problems.</p>
+
+<p>Your mentor is like a Personal Trainer: they know when to push you, when to let you work through your problem, and when to help get you unstuck. Above all, they’re committed to your success. Trust your mentor, and you’ll go far in Bloc.</p>
+
+<p><strong>How do I choose my mentor?</strong></p>
+
+<p>During your orientation week — a week before your start date — you’ll have the option to choose your mentor. Each mentor has a profile consisting of a brief introduction, their professional background, their characteristics (timezone, what operating systems they support, what languages they speak), and their appointment schedule. Select a mentor that fits with your study schedule and your goals.
+If you have a specific or unusual goal with Bloc, contact a Student Advisor to find a mentor that fits your needs before your program start date.</p>
+
+<p><strong>What if I want to switch mentors?</strong></p>
+
+<p>No problem. If your mentor is not a good fit, let us know and we&#39;ll make it happen.</p>
+
+<h2>Career Support &amp; Outcomes</h2>
+
+<p>Bloc Career Services is a holistic collection of curriculum and services reserved for our Software Developer Track, Part-Time Web Developer Track and Designer Track students living in the United States and specific Canadian metropolitan locations. Career support is only effective when it’s integrated throughout the program rather than haphazardly tacked onto the end. Bloc Career Services prepares our students for the technical recruiting process and provides the non-technical skills needed to conduct an effective job search.</p>
+
+<p><strong>Career Services includes:</strong></p>
+
+<ul>
+<li>Technical mastery evaluations to ensure job readiness</li>
+<li>Portfolio review to ensure your skills are well-represented to hiring companies</li>
+<li>Resume and cover letter review</li>
+<li>Job search planning consultation with your mentor to ensure you’re targeting the right roles</li>
+<li>Mock interviews (assessments) to prepare you for your first technical interview</li>
+<li>Negotiation guidance</li>
+<li>The ability to view past jobs filled by Bloc graduates in order to learn about what types of roles and companies our students are filling and working for</li>
+<li>Addition to Bloc’s Job-Seeking Student Directory that’s shared with recruiters and employers</li>
+<li>Professional networking opportunities with Bloc students, mentors, and alumni</li>
+</ul>
+
+<p><strong>Career Services does NOT include:</strong></p>
+
+<ul>
+<li>Someone to conduct your job search for you</li>
+<li>Employers lined up waiting for you to graduate</li>
+<li>Introductions to employers</li>
+<li>An easy job search without a lot of hard work from you</li>
+</ul>
+
+<p>Career Services is not offered to students in our Fundamentals programs. Students seriously considering a career switch into development or design should consider the following Bloc programs:
+Software Developer Track
+Part-Time Web Developer Track
+Designer Track</p>
+
+<p><strong>Technical Readiness</strong></p>
+
+<p>Throughout the Software Developer and Part-Time Web Developer Tracks, Bloc will test your technical knowledge through a series of quizzes and long form assessments. Quizzes help you and your mentor identify gaps in your technical skills that require additional attention, and assessments are a cumulative review of the concepts covered in the quizzes. Assessments are similar to technical interviews, and you must pass to move to the next phase of the program. You’ll be given up to three opportunities to take each assessment.</p>
+
+<p><strong>Non-Technical Skill Building</strong></p>
+
+<p>Starting in Week 1 and continuing throughout the program, you’ll learn how to map out what segment of the industry you’re most passionate about pursuing, which technologies you’ll focus on to give you a competitive edge in a crowded candidate pool, and how to build your professional network effectively to create more opportunities. By the time you’re ready to start your job hunt, you’ll have a portfolio showcasing 8-10 projects, an updated resume, polished LinkedIn and GitHub profiles, and mock interviews under your belt. </p>
+
+<p><strong>Career Services Eligibility</strong></p>
+
+<p>We’ve seen hundreds of Bloc graduates land developer and designer jobs after completing Bloc, and all of these students share common traits: 
+1. They prepare a strong project portfolio to demonstrate their skills to potential employers.
+2. They exhibit the tenacity, perseverance and accountability required to secure that first job.</p>
+
+<p>Eligibility for career services is based on three criteria:
+- Passing all assessments throughout your program
+- Completing your portfolio of projects
+- Sustaining effort in your job hunt</p>
+
+<p>Failure to meet the following criteria will result in ineligibility for Career Services:</p>
+
+<ul>
+<li>Complete each module of the program, in full, with mentor approval</li>
+<li>Complete all career prep checkpoints in full, at the time you’re prompted to complete them, with Career Services team approval</li>
+<li>Complete all quizzes</li>
+<li>Complete all programming reinforcement checkpoints</li>
+<li>Complete portfolio project</li>
+<li>Pass every assessment (up to three attempts per assessment)</li>
+<li>Keep response times with the Bloc Career Services team under 72hrs</li>
+<li>Start your job search prior to graduation date</li>
+<li>Apply to at least 10 development or design jobs per week until first offer is received</li>
+<li>Track all job applications (company, position, date of application, etc.) in your job tracker sheet</li>
+<li>Send weekly Career Progress Updates to the Career Services team during the job search phase</li>
+<li>Conduct outreach to 2 industry professionals per week in order to build and maintain a lifelong network of peers and professionals</li>
+</ul>
+
+<p>For more information on our Tuition Reimbursement Guarantee specific to each Track, please refer to the Tuition section above.</p>
+
+</div>
+</div>
+<div class='spacer'></div>
+
+</div>
+<div class='full-page-footer hidden-xs'>
+<div class='container'>
+<div class='column-wrapper'>
+<div class='column'>
+<h6>Programs</h6>
+<div class='course-links'>
+<section class='tracks'>
+<div class='label'>Become a Software Developer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="software-developer-track.html"><i class='fa fa-tasks fa-fw'></i>
+Software Developer Track
+</a></li>
+</ul>
+</section>
+<section class='tracks'>
+<div class='label'>Become a Web Developer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="web-developer-career-track.html"><i class='fa fa-cubes fa-fw'></i>
+Part-Time Web Developer Track
+</a></li>
+</ul>
+</section>
+<section class='tracks'>
+<div class='label'>Become a Designer</div>
+<ul>
+<li class='course-icon-link web-track'>
+<a href="design-bootcamp.html"><i class='fa fa-picture-o fa-fw'></i>
+Designer Track
+</a></li>
+</ul>
+</section>
+<section class='courses'>
+<div class='label'>Broaden Your Skills</div>
+<ul>
+<li class='course-icon-link web-dev'>
+<a href="web-development-bootcamp.html"><i class='fa fa-terminal fa-fw'></i>
+Rails Fundamentals
+</a></li>
+<li class='course-icon-link frontend'>
+<a href="frontend-development-bootcamp.html"><i class='fa fa-code fa-fw'></i>
+Frontend Fundamentals
+</a></li>
+<li class='course-icon-link design'>
+<a href="ux-design-bootcamp.html"><i class='fa fa-picture-o fa-fw'></i>
+UX/UI Design Fundamentals
+</a></li>
+<li class='course-icon-link android'>
+<a href="android-bootcamp.html"><i class='fa fa-android fa-fw'></i>
+Android Fundamentals
+</a></li>
+<li class='course-icon-link ios'>
+<a href="ios-bootcamp.html"><i class='fa fa-apple fa-fw'></i>
+iOS Fundamentals
+</a></li>
+</ul>
+</section>
+</div>
+
+</div>
+<div class='column'>
+<h6>About Bloc</h6>
+<ul>
+<li>
+<a href="about.html">Our Team | Jobs</a>
+</li>
+<li>
+<a href="http://try.bloc.io/dev-bootcamp-for-veterans/" target="_blank">Bloc Veterans Program</a>
+</li>
+<li>
+<a href="http://try.bloc.io/new-relic-bootcamp-diversity-scholarship/" target="_blank">Bloc&#39;s Diversity Scholarship</a>
+</li>
+<li>
+<a href="faq.html">FAQ</a>
+</li>
+<li>
+<a href="http://blog.bloc.io">Blog</a>
+</li>
+<li>
+<a href="http://code.bloc.io" target="_blank">Engineering Blog</a>
+</li>
+<li>
+<a href="privacy.html">Privacy Policy</a>
+</li>
+<li>
+<a href="terms.html">Terms of Service</a>
+</li>
+<li>
+<a href="https://blog.bloc.io/bloc-reviews-from-real-students/">Read Reviews of Bloc</a>
+</li>
+<li>
+<a href="Bloc-Catalog.pdf">Course Catalog</a>
+</li>
+</ul>
+</div>
+<div class='column'>
+<h6>Made By Bloc</h6>
+<ul>
+<li>
+<a href="http://try.bloc.io/tech-talks/" target="_blank">Tech Talks &amp; Resources</a>
+</li>
+<li>
+<a href="coding-bootcamp-calculator.html">Coding Bootcamp Calculator</a>
+</li>
+<li>
+<a href="coding-bootcamp-comparison.html">Programming Bootcamp Comparison</a>
+</li>
+<li>
+
+</li>
+<li>
+
+</li>
+<li>
+
+</li>
+<li>
+<a href="ruby-warrior.html">Ruby Warrior</a>
+</li>
+<li>
+<a href="https://bloc.io/learn-to-code">Bootcamp Selector</a>
+</li>
+</ul>
+<h6>HIRE OUR GRADS</h6>
+<ul class='contact-list'>
+<li>
+<i class='fa fa-envelope-o'></i>
+<div class='contact-wrapper'>
+<a href="mailto:outcomes@bloc.io">Contact Career Services</a>
+</div>
+</li>
+</ul>
+</div>
+<div class='column'>
+<h6>Sign Up For Our Mailing List</h6>
+<div class='footer-email-form' ng_controller='FooterEmail.controller'>
+<form class='emelyn-form-elements' id='footer_email_capture' name='footer_email_capture'>
+<input class="input-dark email" id="email" name="email" ng_model="subscription.email" required="required" type="email" />
+<input class='btn btn-dark-gray btn-mini submit' id='footer_email_signup_btn' ng_click='submit()' ng_disabled='isSubmitDisabled()' type='submit' value='Send'>
+</form>
+</div>
+<ul class='contact-list'>
+<li>
+<i class='fa fa-envelope-o'></i>
+<div class='contact-wrapper'>
+<a href="mailto:hello@bloc.io">hello@bloc.io</a>
+</div>
+</li>
+<li>
+<i class='fa fa-phone'></i>
+<div class='contact-wrapper'>
+Considering enrolling?
+<br>
+(404) 480-2562
+</div>
+</li>
+<li>
+<i class='fa fa-phone'></i>
+<div class='contact-wrapper'>
+Partnership / Corporate Inquiries?
+<br>
+(650) 741-5682
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class='bottom'>
+<p class='copyright'>Copyright © 2017 Bloc</p>
+<ul class='social-link-list'>
+<li>
+<a href="https://www.facebook.com/trybloc" target="_blank"><i class='fa fa-facebook'></i>
+</a></li>
+<li>
+<a href="https://twitter.com/trybloc" target="_blank"><i class='fa fa-twitter'></i>
+</a></li>
+<li>
+<a href="https://plus.google.com/112610125572984281932" rel="publisher" target="_blank"><i class='fa fa-google-plus'></i>
+</a></li>
+<li>
+<a href="https://www.youtube.com/user/BlocContent" target="_blank"><i class='fa fa-youtube'></i>
+</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+  console.log("No referrer override.");
+</script>
+
+<script src="https://cdn0.bloc.io/assets/mixpanel_tracking-f7fa15a586fa60d3cb902445d4b203fb.js"></script>
+
+<noscript>
+<div style='display: none;'></div>
+<img alt='Quantcast' border='0' height='1' src='https://pixel.quantserve.com/pixel/p-fzmcqmjeqmw-j.gif' width='1'>
+</noscript>
+</body>
+</html>
